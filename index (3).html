@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRACK_N10 | Leonardo Sales Santos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f0f1b;
+            --secondary: #1a1a2e;
+            --accent: #45FFBE;
+            --accent2: #00B2FF;
+            --accent3: #A12FFD;
+            --accent4: #000393;
+            --text: #FFFFFF;
+            --text-light: #FFFFFF;
+            --card-bg: rgba(30, 30, 46, 0.8);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--text);
+            min-height: 100vh;
+            padding: 2rem 1rem;
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-top: 1rem;
+        }
+        
+        .profile-container {
+            display: inline-block;
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+        
+        .profile-picture {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid transparent;
+            background: 
+                linear-gradient(var(--card-bg), var(--secondary)) padding-box,
+                linear-gradient(135deg, var(--accent), var(--accent2)) border-box;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(90deg, var(--accent), var(--accent2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+        
+        .title {
+            font-size: 1.4rem;
+            color: var(--text-light);
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Boxes */
+        .box-container {
+            display: grid;
+            gap: 1.8rem;
+            margin-bottom: 3rem;
+        }
+        
+        .box {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 1.8rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            cursor: pointer;
+        }
+        
+        .box::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(135deg, var(--grad1), var(--grad2));
+            z-index: -1;
+            border-radius: 22px;
+        }
+        
+        .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+        }
+        
+        .box h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .box h3 i {
+            font-size: 1.4rem;
+        }
+        
+        .box p {
+            font-size: 1.05rem;
+            color: var(--text-light);
+            margin-bottom: 0;
+        }
+        
+        /* MODIFICAÇÃO 1: Boxes Music e Books com gradiente roxo e menos translúcido */
+        .purple-box {
+            background: linear-gradient(135deg, rgba(108, 0, 255, 0.5), rgba(250, 0, 255, 0.5));
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        
+        /* MODIFICAÇÃO 3: Boxes dos web apps com gradiente mais forte */
+        .app-box {
+            background: linear-gradient(135deg, rgba(141, 0, 255, 0.7), rgba(0, 223, 255, 0.7));
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        
+        /* MODIFICAÇÃO 2: Seção de texto sem box */
+        .text-section {
+            text-align: center;
+            margin: 2.5rem 0;
+            padding: 0 1rem;
+        }
+        
+        .text-section h3 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, var(--accent), var(--accent2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+        
+        .text-section p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+        
+        /* Support section */
+        .support {
+            text-align: center;
+            padding: 2rem;
+            margin: 2.5rem 0;
+            border-radius: 20px;
+            background: linear-gradient(135deg, rgba(30, 30, 46, 0.7), rgba(26, 26, 42, 0.7));
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .support h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            background: linear-gradient(90deg, #ff6b6b, #ffa36c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .support p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 1.5rem;
+            color: var(--text-light);
+        }
+        
+        /* Social icons */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin-top: 2.5rem;
+        }
+        
+        .social-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: var(--card-bg);
+            color: var(--text);
+            font-size: 1.8rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            color: var(--accent);
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .name {
+                font-size: 2rem;
+            }
+            
+            .title {
+                font-size: 1.2rem;
+            }
+            
+            .box {
+                padding: 1.5rem;
+            }
+            
+            .text-section h3 {
+                font-size: 1.5rem;
+            }
+            
+            .social-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .profile-picture {
+                width: 140px;
+                height: 140px;
+            }
+            
+            .name {
+                font-size: 1.8rem;
+            }
+            
+            .support {
+                padding: 1.5rem;
+            }
+            
+            .text-section h3 {
+                font-size: 1.4rem;
+            }
+        }
+        
+        /* Animations */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .profile-picture {
+            animation: float 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header com foto e nome -->
+        <header class="header">
+            <div class="profile-container">
+                <img src="https://www.dropbox.com/scl/fi/cux1j2x3cwktomn6qilcf/20250611_114147.webp?rlkey=5xw8ij7ie1jsdlgp5wdzg8qt2&st=5pplcw3v&dl=1" alt="TRACK_N10 aka Leonardo Sales Santos" class="profile-picture">
+            </div>
+            <h1 class="name">TRACK_N10 aka Leonardo Sales Santos</h1>
+            <p class="title">Musician, Writer and Newbie Web Developer</p>
+        </header>
+        
+        <!-- Boxes com links -->
+        <div class="box-container">
+            <!-- MODIFICAÇÃO 1: Box Music com gradiente roxo -->
+            <div class="box purple-box" onclick="window.open('https://linktr.ee/TRACK_N10', '_blank');">
+                <h3><i class="fas fa-music"></i> My Music</h3>
+                <p>TRACK_N10 fans, from happy hardcore, Techno to neoclassical and IDM songs.</p>
+            </div>
+            
+            <!-- MODIFICAÇÃO 1: Box Books com gradiente roxo -->
+            <div class="box purple-box" onclick="window.open('https://linktr.ee/leo_salles', '_blank');">
+                <h3><i class="fas fa-book"></i> My Books</h3>
+                <p>Leonardo Sales Santos fans, from my hard sci-fi series Ultra Qualia to complex drama/horror Intrusive Thoughts.</p>
+            </div>
+        </div>
+        
+        <!-- MODIFICAÇÃO 2: Seção de texto sem box -->
+        <div class="text-section">
+            <h3>My Free Open Source Web Apps</h3>
+            <p>Tools for content creators: none of your data is saved on any server, with constant improvements!</p>
+        </div>
+        
+        <div class="box-container">
+            <!-- MODIFICAÇÃO 3: Web apps com gradientes mais fortes -->
+            <div class="box app-box" onclick="window.open('https://lyricsync10.vercel.app/', '_blank');">
+                <h3><i class="fas fa-file-audio"></i> LyricsSync10</h3>
+                <p>Synchronize your song lyrics with audio and generate SRT files for YouTube videos, editing apps, and lyric visualizers</p>
+            </div>
+            
+            <div class="box app-box" onclick="window.open('https://docx-chapter-splitter.vercel.app/', '_blank');">
+                <h3><i class="fas fa-file-word"></i> DOCX Chapter Splitter</h3>
+                <p>Automatic DOCX Splitter by Chapters for writers and export it in HTML file.</p>
+            </div>
+        </div>
+        
+        <!-- Support Section -->
+        <div class="support">
+            <h2>Support My Projects</h2>
+            <p>Stream my music, buy my books, or donate via GoFundMe or become a Patreon member subscriber!</p>
+            
+            <div class="social-icons">
+                <a href="https://youtube.com/@track_n10?si=X728VaNUd1ehwmdF" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+                <a href="https://music.apple.com/pt/artist/track-n10/1747717612?ls" target="_blank" class="social-icon"><i class="fab fa-apple"></i></a>
+                <a href="https://open.spotify.com/artist/5zh2act5rl2vMBH7UJ8ndy?si=sdUoZ4e8RHO_F9RwZKIq8w" target="_blank" class="social-icon"><i class="fab fa-spotify"></i></a>
+                <a href="https://patreon.com/TRACK_N10?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink" target="_blank" class="social-icon"><i class="fab fa-patreon"></i></a>
+                <a href="https://substack.com/@trackn10?utm_source=share&utm_medium=android&r=5zj4bj" target="_blank" class="social-icon"><i class="fas fa-newspaper"></i></a>
+                <a href="https://track-n10.bandcamp.com/" target="_blank" class="social-icon"><i class="fab fa-bandcamp"></i></a>
+                <a href="https://www.instagram.com/track_n10" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@track_n10?_t=ZM-8xkg80gGGZi&_r=1" target="_blank" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.gofundme.com/f/supporting-an-autistic-artist-music-and-books-that-inspire" target="_blank" class="social-icon"><i class="fas fa-hand-holding-heart"></i></a>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; 2025 TRACK_N10 | Leonardo Sales Santos. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        // Efeito de clique nos boxes
+        document.querySelectorAll('.box').forEach(box => {
+            box.addEventListener('click', function() {
+                this.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            });
+        });
+        
+        // Animação para os ícones sociais
+        document.querySelectorAll('.social-icon').forEach((icon, index) => {
+            icon.style.animationDelay = `${index * 0.1}s`;
+        });
+    </script>
+</body>
+</html>

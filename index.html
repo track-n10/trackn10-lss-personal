@@ -206,15 +206,15 @@
     
     .links{
       display: grid;
-      gap: 14px;
+      gap: 18px;
       margin-top: 12px;
     }
     
     .link{
       display:flex;
       align-items:center;
-      gap:14px;
-      padding:16px;
+      gap:18px;
+      padding:18px;
       border-radius:var(--card-radius);
       background:linear-gradient(180deg,var(--glass),var(--glass-2));
       border:1px solid rgba(255,255,255,0.03);
@@ -558,7 +558,7 @@
     }
     
     .avatar {
-      animation: pulse 4s infinite;
+      animation: float 4s ease-in-out infinite;
     }
   </style>
 </head>
@@ -572,7 +572,7 @@
     <div class="card" role="main">
       <header>
         <div class="avatar">
-          <img loading="lazy" src="https://www.dropbox.com/scl/fi/cux1j2x3cwktomn6qilcf/20250611_114147.webp?rlkey=5xw8ij7ie1jsdlgp5wdzg8qt2&dl=1" alt="Leonardo Sales (TRACK_N10)">
+          <img src="avatarimage.webp" alt="Leonardo Sales (TRACK_N10)">
         </div>
         <div class="hero">
           <div class="handle">TRACK_N10 — Leonardo Sales</div>
@@ -625,6 +625,57 @@
           <span class="meta">Books</span>
         </a>
 
+        <!-- Apps Section Title -->
+        <div class="section-title">
+          <i class="fas fa-code"></i>
+          My Open Source Web Apps for Independent Artists
+        </div>
+        
+        <!-- LyricsSync10 App - Com imagem -->
+        <a class="link" href="https://lyricsync10.vercel.app/" target="_blank" rel="noopener">
+          <span class="icon">
+            <div class="icon-bg" style="--grad1: var(--accent-b); --grad2: var(--accent-c);"></div>
+            <div class="icon-content">
+              <img src="lyricsync10favicon.ico" class="platform-img" alt="LyricsSync10">
+            </div>
+          </span>
+          <div class="link-content">
+            <strong>LyricsSync10</strong>
+            <small>SRT, sync tools & lyric viewers</small>
+          </div>
+          <span class="meta">Web App</span>
+        </a>
+        
+        <!-- DOCX Splitter App - Com imagem -->
+        <a class="link" href="https://docx-chapter-splitter.vercel.app/" target="_blank" rel="noopener">
+          <span class="icon">
+            <div class="icon-bg" style="--grad1: var(--accent-c); --grad2: var(--accent-a);"></div>
+            <div class="icon-content">
+              <img src="docxfavicon.ico" class="platform-img" alt="DOCX Splitter">
+            </div>
+          </span>
+          <div class="link-content">
+            <strong>DOCX Chapter Splitter</strong>
+            <small>Split chapters & export HTML</small>
+          </div>
+          <span class="meta">Web App</span>
+        </a>
+        
+       <!-- LOW FODMAP WEBSITE TEMPLATE-->
+       <a class="link" href="https://lowfodmap-saucetemplate.vercel.app/" target="_blank" rel="noopener">
+         <span class="icon">
+           <div class="icon-bg" style="--grad1: var(--accent-c); --grad2: var(--accent-a);"></div>
+           <div class="icon-content">
+             <img src="lowfodmapwebsitefavicon.ico" class="platform-img" alt="Low Fodmap Website Template">
+           </div>
+         </span> 
+         <div class="link-content">
+           <strong>Low Fodmap Website Template</strong>
+           <small>A website template for low fodmap diet</small>
+         </div>
+         <span class="meta">Web Template</span>
+       </a>
+
         <!-- Support Section Title -->
         <div class="section-title">
           <i class="fas fa-heart"></i>
@@ -661,43 +712,7 @@
           <span class="meta">Support</span>
         </a>
 
-        <!-- Apps Section Title -->
-        <div class="section-title">
-          <i class="fas fa-code"></i>
-          My Open Source Web Apps for Independent Artists
-        </div>
-        
-        <!-- LyricsSync10 App - Com imagem -->
-        <a class="link" href="https://lyricsync10.vercel.app/" target="_blank" rel="noopener">
-          <span class="icon">
-            <div class="icon-bg" style="--grad1: var(--accent-b); --grad2: var(--accent-c);"></div>
-            <div class="icon-content">
-              <img src="lyricsync10favicon.ico" class="platform-img" alt="LyricsSync10">
-            </div>
-          </span>
-          <div class="link-content">
-            <strong>LyricsSync10</strong>
-            <small>SRT, sync tools & lyric viewers</small>
-          </div>
-          <span class="meta">Web App</span>
-        </a>
-        
-        <!-- DOCX Splitter App - Com imagem -->
-        <a class="link" href="https://docx-chapter-splitter.vercel.app/" target="_blank" rel="noopener">
-          <span class="icon">
-            <div class="icon-bg" style="--grad1: var(--accent-c); --grad2: var(--accent-a);"></div>
-            <div class="icon-content">
-              <img src="docxfavicon.ico" class="platform-img" alt="DOCX Splitter">
-            </div>
-          </span>
-          <div class="link-content">
-            <strong>DOCX Chapter Splitter</strong>
-            <small>Split chapters & export HTML</small>
-          </div>
-          <span class="meta">Web App</span>
-        </a>
-      </nav>
-      
+
       <!-- Seção de Redes Sociais com Imagens -->
       <div class="social-section">
         <h3>Connect With Me</h3>
@@ -729,6 +744,9 @@
           <a href="https://www.gofundme.com/f/supporting-an-autistic-artist-music-and-books-that-inspire" target="_blank" class="social-icon">
             <img src="https://www.gofundme.com/favicon.ico" class="social-img" alt="GoFundMe">
           </a>
+          <a href="https://github.com/track-n10" target="_blank" class="social-icon">
+          <img src="https://github.com/favicon.ico" class="social-img" alt="GitHub">
+          </a>  
         </div>
       </div>
 

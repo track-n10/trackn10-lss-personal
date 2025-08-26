@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" href="favicon.ico">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <title>TRACK_N10 — Link in Bio</title>
+  <meta name="description" content="TRACK_N10 — musician, writer & developer. Central hub for music, books, apps, and more." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2d9b6d2c9.js" crossorigin="anonymous"></script>
+  <style>
+    :root{
+      --bg-1: #070719;
+      --bg-2: #0b1020;
+      --glass: rgba(255,255,255,0.06);
+      --glass-2: rgba(255,255,255,0.04);
+      --accent-a: #6f2cff;
+      --accent-b: #00c2ff;
+      --accent-c: #45ffbe;
+      --accent-d: #ff6b6b;
+      --accent-e: #ffa36c;
+      --muted: #bfc6d6;
+      --radius: 16px;
+      --card-radius: 14px;
+      --max: 880px;
+      --glow: 0 0 15px rgba(111, 44, 255, 0.4);
+      --glow-b: 0 0 15px rgba(0, 194, 255, 0.4);
+      --glow-c: 0 0 15px rgba(69, 255, 190, 0.4);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%; margin:0; padding:0;}
+    body{
+      font-family:'Inter',system-ui,Arial; color:#eef2ff; -webkit-font-smoothing:antialiased;
+      background: radial-gradient(800px 600px at 10% 20%, rgba(111,44,255,0.12), transparent),
+                  radial-gradient(600px 500px at 90% 80%, rgba(0,194,255,0.08), transparent),
+                  linear-gradient(180deg,var(--bg-1),var(--bg-2));
+      display: flex;
+      padding: 16px;
+      position: relative;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+    
+    /* Floating elements */
+    .floating-element {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: -1;
+      filter: blur(40px);
+      opacity: 0.5;
+    }
+    
+    .floating-1 {
+      width: 300px;
+      height: 300px;
+      background: var(--accent-a);
+      top: 10%;
+      left: 5%;
+      animation: float 12s ease-in-out infinite;
+    }
+    
+    .floating-2 {
+      width: 250px;
+      height: 250px;
+      background: var(--accent-b);
+      bottom: 15%;
+      right: 5%;
+      animation: float 15s ease-in-out infinite reverse;
+    }
+    
+    .floating-3 {
+      width: 200px;
+      height: 200px;
+      background: var(--accent-c);
+      top: 40%;
+      right: 15%;
+      animation: float 10s ease-in-out infinite;
+    }
+
+    .frame{
+      width:100%;
+      max-width:var(--max);
+      position: relative;
+      z-index: 10;
+      margin: auto;
+    }
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:20px;
+      padding:24px;
+      border:1px solid rgba(255,255,255,0.04);
+      backdrop-filter:blur(12px);
+      box-shadow:0 10px 30px rgba(2,6,23,0.8);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 20% 30%, rgba(111,44,255,0.1) 0%, transparent 40%);
+      z-index: -1;
+      pointer-events: none;
+    }
+    
+    header{
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .avatar{
+      width: 96px;
+      height: 96px;
+      border-radius:50%;
+      overflow:hidden;
+      border:3px solid transparent;
+      background:linear-gradient(135deg,var(--glass),transparent) padding-box, 
+                linear-gradient(90deg,var(--accent-a),var(--accent-b)) border-box;
+      flex-shrink:0;
+      box-shadow: var(--glow);
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    
+    .avatar:hover {
+      transform: scale(1.05);
+      box-shadow: var(--glow), 0 0 30px rgba(111, 44, 255, 0.3);
+    }
+    
+    .avatar img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+    
+    .hero{
+      display:flex;
+      flex-direction:column;
+      gap:6px;
+      min-width: 200px;
+      flex: 1;
+    }
+    
+    .hero .handle{
+      font-family:'Montserrat',sans-serif;
+      font-weight:700;
+      font-size:1.4rem;
+      color:transparent;
+      background:linear-gradient(90deg,var(--accent-a),var(--accent-b));
+      -webkit-background-clip:text;
+      letter-spacing: -0.5px;
+      margin-bottom: 3px;
+    }
+    
+    .hero .role{
+      color:var(--muted);
+      font-size:0.95rem;
+      background: rgba(0, 0, 0, 0.2);
+      padding: 4px 10px;
+      border-radius: 20px;
+      display: inline-block;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      max-width: fit-content;
+    }
+    
+    .bio{
+      margin-top:12px;
+      color:var(--muted);
+      font-size:0.95rem;
+      line-height:1.4;
+      padding: 10px 15px;
+      background: rgba(0, 0, 0, 0.15);
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.03);
+    }
+    
+    .section-title{
+      margin-top:24px;
+      margin-bottom:16px;
+      font-weight:600;
+      font-size:1.05rem;
+      color:var(--accent-c);
+      padding: 6px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .section-title i {
+      font-size: 1.2rem;
+    }
+    
+    .links{
+      display: grid;
+      gap: 18px;
+      margin-top: 12px;
+    }
+    
+    .link{
+      display:flex;
+      align-items:center;
+      gap:18px;
+      padding:18px;
+      border-radius:var(--card-radius);
+      background:linear-gradient(180deg,var(--glass),var(--glass-2));
+      border:1px solid rgba(255,255,255,0.03);
+      cursor:pointer;
+      transition:transform .18s,box-shadow .18s, background .3s;
+      overflow:hidden;
+      position: relative;
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    .link::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+      transform: translateX(-100%);
+      transition: transform 0.6s;
+      z-index: 1;
+    }
+    
+    .link:hover::before {
+      transform: translateX(100%);
+    }
+    
+    .link:hover{
+      transform:translateY(-6px);
+      box-shadow:0 14px 40px rgba(2,6,23,0.8);
+      background:linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.03));
+    }
+    
+    .link .icon{
+      width:70px;
+      height:70px;
+      border-radius:10px;
+      flex-shrink:0;
+      background: rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      position:relative;
+      overflow:hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+    
+    .link:hover .icon {
+      transform: scale(1.1);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    .icon-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, var(--grad1), var(--grad2));
+      opacity: 0.2;
+      z-index: 0;
+    }
+    
+    .icon-content {
+      position: relative;
+      z-index: 2;
+      font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .platform-img {
+      width: 42px;
+      height: 42px;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+    
+    .cover-carousel{
+      position:relative;
+      width:100%;
+      height:100%;
+      z-index: 2;
+    }
+    
+    .cover-carousel img{
+      width:42px;
+      height:60px;
+      object-fit:cover;
+      border-radius:4px;
+      border:1px solid rgba(255,255,255,0.2);
+      box-shadow:0 4px 8px rgba(0,0,0,0.4);
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%,-50%);
+      transition:all 0.6s ease-in-out;
+      opacity:0;
+      z-index:0;
+    }
+    
+    .cover-carousel img.active{
+      opacity:1;
+      z-index:2;
+      transform:translate(-50%,-50%) scale(1) rotate(0deg);
+    }
+    
+    .cover-carousel img.prev{
+      opacity:0.6;
+      z-index:1;
+      transform:translate(calc(-50% - 15px),calc(-50% + 5px)) scale(0.9) rotate(-5deg);
+    }
+    
+    .cover-carousel img.next{
+      opacity:0.6;
+      z-index:1;
+      transform:translate(calc(-50% + 15px),calc(-50% + 5px)) scale(0.9) rotate(5deg);
+    }
+    
+    .link-content {
+      flex-grow: 1;
+      min-width: 0;
+    }
+    
+    .link strong{
+      display:block;
+      font-size:1.05rem;
+      font-weight: 600;
+      margin-bottom: 3px;
+    }
+    
+    .link small{
+      display:block;
+      color:var(--muted);
+      font-size:0.85rem;
+      line-height: 1.4;
+    }
+    
+    .meta{
+      color:var(--accent-c);
+      font-size:0.82rem;
+      font-weight: 600;
+      padding: 4px 8px;
+      border-radius: 8px;
+      background: rgba(69, 255, 190, 0.1);
+      border: 1px solid rgba(69, 255, 190, 0.15);
+      flex-shrink: 0;
+    }
+    
+    .tags{
+      display:flex;
+      gap:6px;
+      margin-top:8px;
+      flex-wrap:wrap;
+    }
+    
+    .tag{
+      background:rgba(255,255,255,0.08);
+      padding:4px 8px;
+      border-radius:6px;
+      font-size:0.75rem;
+      color:var(--accent-c);
+      font-weight:500;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    /* Seção de Redes Sociais com Imagens */
+    .social-section {
+      margin-top: 30px;
+      text-align: center;
+      padding: 25px;
+      border-radius: 20px;
+      background: rgba(30, 30, 46, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+    }
+    
+    .social-section h3 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      font-weight: 600;
+      background: linear-gradient(90deg, var(--accent-c), var(--accent-b));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 15px;
+    }
+    
+    .social-icon {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(30, 30, 46, 0.8);
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+    }
+    
+    .social-icon:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      background: rgba(75, 255, 202, 0.15);
+    }
+    
+    .social-img {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+      filter: brightness(0.9);
+      transition: all 0.3s ease;
+    }
+    
+    .social-icon:hover .social-img {
+      filter: brightness(1.2);
+      transform: scale(1.1);
+    }
+    
+    .footer-text {
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-align: center;
+      padding-top: 10px;
+      margin-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    /* Correções para responsividade */
+    @media (max-width: 700px) {
+      .frame {
+        padding: 0;
+      }
+      
+      .card {
+        padding: 20px 15px;
+      }
+      
+      header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+      }
+      
+      .hero {
+        align-items: center;
+      }
+      
+      .hero .role {
+        margin: 0 auto;
+      }
+      
+      .bio {
+        text-align: center;
+      }
+      
+      .link {
+        flex-wrap: wrap;
+      }
+      
+      .link .icon {
+        width: 60px;
+        height: 60px;
+      }
+      
+      .link-content {
+        flex: 1;
+        min-width: 200px;
+      }
+      
+      .meta {
+        margin-left: auto;
+      }
+      
+      .platform-img {
+        width: 36px;
+        height: 36px;
+      }
+      
+      .social-icon {
+        width: 50px;
+        height: 50px;
+      }
+      
+      .social-img {
+        width: 25px;
+        height: 25px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .hero .handle {
+        font-size: 1.2rem;
+      }
+      
+      .link {
+        padding: 12px;
+      }
+      
+      .section-title {
+        font-size: 0.95rem;
+      }
+      
+      .social-icon {
+        width: 45px;
+        height: 45px;
+      }
+      
+      .social-img {
+        width: 22px;
+        height: 22px;
+      }
+    }
+    
+    /* Animations */
+    @keyframes float {
+      0% { transform: translateY(0) translateX(0); }
+      50% { transform: translateY(-15px) translateX(10px); }
+      100% { transform: translateY(0) translateX(0); }
+    }
+    
+    @keyframes pulse {
+      0% { box-shadow: var(--glow); }
+      50% { box-shadow: 0 0 20px rgba(111, 44, 255, 0.6); }
+      100% { box-shadow: var(--glow); }
+    }
+    
+    .avatar {
+      animation: float 4s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body>
+  <!-- Floating background elements -->
+  <div class="floating-element floating-1"></div>
+  <div class="floating-element floating-2"></div>
+  <div class="floating-element floating-3"></div>
+  
+  <div class="frame">
+    <div class="card" role="main">
+      <header>
+        <div class="avatar">
+          <img src="avatarimage.webp" alt="Leonardo Sales (TRACK_N10)">
+        </div>
+        <div class="hero">
+          <div class="handle">TRACK_N10 — Leonardo Sales</div>
+          <div class="role">Musician · Writer · Web Tools</div>
+          <div class="bio">Electronic music, sci-fi stories, and open-source apps for creators — all free whenever possible.</div>
+        </div>
+      </header>
+
+      <nav class="links">
+        <!-- Music Link -->
+        <a class="link" href="https://linktr.ee/TRACK_N10" target="_blank" rel="noopener">
+          <span class="icon">
+            <div class="cover-carousel">
+              <img src="https://live.staticflickr.com/65535/54716593725_1d27dbb44f_w.jpg" class="active" alt="Album 1">
+              <img src="https://live.staticflickr.com/65535/54716475134_cb00248159_w.jpg" class="next" alt="Album 2">
+              <img src="https://live.staticflickr.com/65535/54716595810_53a7865229_w.jpg" alt="Album 3">
+              <img src="https://live.staticflickr.com/65535/54716249906_5fa1a8ce17_w.jpg" class="prev" alt="Album 4">
+            </div>
+          </span>
+          <div class="link-content">
+            <strong>My Music</strong>
+            <small>4 albums in different genres</small>
+            <div class="tags">
+              <span class="tag">Neoclassical</span>
+              <span class="tag">Happy Hardcore</span>
+              <span class="tag">Nightcore</span>
+              <span class="tag">Techno</span>
+              <span class="tag">IDM</span>
+            </div>
+          </div>
+          <span class="meta">Albums</span>
+        </a>
+
+        <!-- Books Link -->
+        <a class="link" href="https://books2read.com/ap/xrjoDL/Leonardo-Sales-Santos" target="_blank" rel="noopener">
+          <span class="icon">
+            <div class="cover-carousel">
+              <img src="https://live.staticflickr.com/65535/54716871453_d21415ba00_n.jpg" class="active" alt="Ultra Qualia cover">
+              <img src="https://live.staticflickr.com/65535/54716872203_e112deea2a_n.jpg" class="next" alt="Intrusive Thoughts cover">
+            </div>
+          </span>
+          <div class="link-content">
+            <strong>My Books</strong>
+            <small>Ultra Qualia & Intrusive Thoughts</small>
+            <div class="tags">
+              <span class="tag">Sci-Fi</span>
+              <span class="tag">Drama/Horror</span>
+            </div>
+          </div>
+          <span class="meta">Books</span>
+        </a>
+
+        <!-- Apps Section Title -->
+        <div class="section-title">
+          <i class="fas fa-code"></i>
+          My Open Source Web Apps for Independent Artists
+        </div>
+        
+        <!-- LyricsSync10 App - Com imagem -->
+        <a class="link" href="https://lyricsync10.vercel.app/" target="_blank" rel="noopener">
+          <span class="icon">
+            <div class="icon-bg" style="--grad1: var(--accent-b); --grad2: var(--accent-c);"></div>
+            <div class="icon-content">
+              <img src="lyricsync10favicon.ico" class="platform-img" alt="LyricsSync10">
+            </div>
+          </span>
+          <div class="link-content">
+            <strong>LyricsSync10</strong>
+            <small>SRT, sync tools & lyric viewers</small>
+          </div>
+          <span class="meta">Web App</span>
+        </a>
+        
+        <!-- DOCX Splitter App - Com imagem -->
+        <a class="link" href="https://docx-chapter-splitter.vercel.app/" target="_blank" rel="noopener">
+          <span class="icon">
+            <div class="icon-bg" style="--grad1: var(--accent-c); --grad2: var(--accent-a);"></div>
+            <div class="icon-content">
+              <img src="docxfavicon.ico" class="platform-img" alt="DOCX Splitter">
+            </div>
+          </span>
+          <div class="link-content">
+            <strong>DOCX Chapter Splitter</strong>
+            <small>Split chapters & export HTML</small>
+          </div>
+          <span class="meta">Web App</span>
+        </a>
+        
+       <!-- LOW FODMAP WEBSITE TEMPLATE-->
+       <a class="link" href="https://lowfodmap-saucetemplate.vercel.app/" target="_blank" rel="noopener">
+         <span class="icon">
+           <div class="icon-bg" style="--grad1: var(--accent-c); --grad2: var(--accent-a);"></div>
+           <div class="icon-content">
+             <img src="lowfodmapwebsitefavicon.ico" class="platform-img" alt="Low Fodmap Website Template">
+           </div>
+         </span> 
+         <div class="link-content">
+           <strong>Low Fodmap Website Template</strong>
+           <small>A website template for low fodmap diet</small>
+         </div>
+         <span class="meta">Web Template</span>
+       </a>
+
+        <!-- Support Section Title -->
+        <div class="section-title">
+          <i class="fas fa-heart"></i>
+          Support My Projects
+        </div>
+
+        <!-- GoFundMe Link - Com imagem -->
+        <a class="link" href="https://www.gofundme.com/f/supporting-an-autistic-artist-music-and-books-that-inspire" target="_blank" rel="noopener">
+          <span class="icon">
+            <div class="icon-bg" style="--grad1: var(--accent-d); --grad2: var(--accent-e);"></div>
+            <div class="icon-content">
+              <img src="https://www.gofundme.com/favicon.ico" class="platform-img" alt="GoFundMe">
+            </div>
+          </span>
+          <div class="link-content">
+            <strong>Found Me</strong>
+            <small>GoFundMe campaign for my projects</small>
+          </div>
+          <span class="meta">Support</span>
+        </a>
+
+        <!-- Patreon Link - Com imagem -->
+        <a class="link" href="https://patreon.com/TRACK_N10" target="_blank" rel="noopener">
+          <span class="icon">
+            <div class="icon-bg" style="--grad1: var(--accent-a); --grad2: var(--accent-b);"></div>
+            <div class="icon-content">
+              <img src="https://patreon.com/favicon.ico" class="platform-img" alt="Patreon">
+            </div>
+          </span>
+          <div class="link-content">
+            <strong>Patreon</strong>
+            <small>Exclusive content & behind the scenes</small>
+          </div>
+          <span class="meta">Support</span>
+        </a>
+
+
+      <!-- Seção de Redes Sociais com Imagens -->
+      <div class="social-section">
+        <h3>Connect With Me</h3>
+        <div class="social-icons">
+          <a href="https://youtube.com/@track_n10" target="_blank" class="social-icon">
+            <img src="https://www.youtube.com/favicon.ico" class="social-img" alt="YouTube">
+          </a>
+          <a href="https://music.apple.com/pt/artist/track-n10/1747717612?ls" target="_blank" class="social-icon">
+            <img src="https://music.apple.com/favicon.ico" class="social-img" alt="Apple Music">
+          </a>
+          <a href="https://open.spotify.com/artist/5zh2act5rl2vMBH7UJ8ndy" target="_blank" class="social-icon">
+            <img src="https://open.spotify.com/favicon.ico" class="social-img" alt="Spotify">
+          </a>
+          <a href="https://patreon.com/TRACK_N10" target="_blank" class="social-icon">
+            <img src="https://patreon.com/favicon.ico" class="social-img" alt="Patreon">
+          </a>
+          <a href="https://substack.com/@trackn10" target="_blank" class="social-icon">
+            <img src="https://substack.com/favicon.ico" class="social-img" alt="Substack">
+          </a>
+          <a href="https://track-n10.bandcamp.com/" target="_blank" class="social-icon">
+            <img src="bandcampfavicon.ico" class="social-img" alt="Bandcamp">
+          </a>
+          <a href="https://www.instagram.com/track_n10" target="_blank" class="social-icon">
+            <img src="instagramfavicon.ico" class="social-img" alt="Instagram">
+          </a>
+          <a href="https://www.tiktok.com/@track_n10" target="_blank" class="social-icon">
+            <img src="https://www.tiktok.com/favicon.ico" class="social-img" alt="TikTok">
+          </a>
+          <a href="https://www.gofundme.com/f/supporting-an-autistic-artist-music-and-books-that-inspire" target="_blank" class="social-icon">
+            <img src="https://www.gofundme.com/favicon.ico" class="social-img" alt="GoFundMe">
+          </a>
+          <a href="https://github.com/track-n10" target="_blank" class="social-icon">
+          <img src="https://github.com/favicon.ico" class="social-img" alt="GitHub">
+          </a>  
+        </div>
+      </div>
+
+      <div class="footer-text">
+        © 2025 TRACK_N10 | Leonardo Sales Santos. All rights reserved.
+      </div>
+    </div>
+  </div>
+  <script>
+    function initCarousel(selector) {
+      const covers = document.querySelectorAll(selector);
+      if (covers.length === 0) return;
+      
+      let current = 0;
+      
+      // Initialize positions
+      covers.forEach((img, i) => {
+        img.classList.remove('active', 'prev', 'next');
+      });
+      
+      covers[0].classList.add('active');
+      if (covers.length > 1) covers[1].classList.add('next');
+      if (covers.length > 2) covers[covers.length-1].classList.add('prev');
+      
+      setInterval(() => {
+        covers.forEach((img, i) => {
+          img.classList.remove('active', 'prev', 'next');
+        });
+        
+        covers[current].classList.add('prev');
+        current = (current + 1) % covers.length;
+        covers[current].classList.add('active');
+        
+        const nextIndex = (current + 1) % covers.length;
+        covers[nextIndex].classList.add('next');
+        
+        const prevIndex = (current - 1 + covers.length) % covers.length;
+        covers[prevIndex].classList.add('prev');
+        
+      }, 3000);
+    }
+    
+    // Initialize carousels
+    document.addEventListener('DOMContentLoaded', function() {
+      initCarousel('.link:nth-of-type(1) .cover-carousel img');
+      initCarousel('.link:nth-of-type(2) .cover-carousel img');
+      
+      // Add hover effect to all links
+      document.querySelectorAll('.link').forEach(link => {
+        link.addEventListener('mouseenter', function() {
+          this.style.zIndex = 10;
+        });
+        
+        link.addEventListener('mouseleave', function() {
+          this.style.zIndex = 1;
+        });
+      });
+    });
+  </script>
+</body>
+</html>

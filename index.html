@@ -46,7 +46,7 @@
       overflow-x: hidden;
       min-height: 100vh;
     }
-    
+
     /* Floating elements */
     .floating-element {
       position: absolute;
@@ -56,7 +56,7 @@
       filter: blur(40px);
       opacity: 0.5;
     }
-    
+
     .floating-1 {
       width: 300px;
       height: 300px;
@@ -65,7 +65,7 @@
       left: 5%;
       animation: float 12s ease-in-out infinite;
     }
-    
+
     .floating-2 {
       width: 250px;
       height: 250px;
@@ -74,7 +74,7 @@
       right: 5%;
       animation: float 15s ease-in-out infinite reverse;
     }
-    
+
     .floating-3 {
       width: 200px;
       height: 200px;
@@ -101,7 +101,7 @@
       position: relative;
       overflow: hidden;
     }
-    
+
     .card::before {
       content: '';
       position: absolute;
@@ -113,7 +113,7 @@
       z-index: -1;
       pointer-events: none;
     }
-    
+
     header{
       display: flex;
       gap: 18px;
@@ -127,26 +127,26 @@
       border-radius:50%;
       overflow:hidden;
       border:3px solid transparent;
-      background:linear-gradient(135deg,var(--glass),transparent) padding-box, 
+      background:linear-gradient(135deg,var(--glass),transparent) padding-box,
                 linear-gradient(90deg,var(--accent-a),var(--accent-b)) border-box;
       flex-shrink:0;
       box-shadow: var(--glow);
       position: relative;
       transition: all 0.3s ease;
     }
-    
+
     .avatar:hover {
       transform: scale(1.05);
       box-shadow: var(--glow), 0 0 30px rgba(111, 44, 255, 0.3);
     }
-    
+
     .avatar img{
       width:100%;
       height:100%;
       object-fit:cover;
       display:block;
     }
-    
+
     .hero{
       display:flex;
       flex-direction:column;
@@ -154,7 +154,7 @@
       min-width: 200px;
       flex: 1;
     }
-    
+
     .hero .handle{
       font-family:'Montserrat',sans-serif;
       font-weight:700;
@@ -165,7 +165,7 @@
       letter-spacing: -0.5px;
       margin-bottom: 3px;
     }
-    
+
     .hero .role{
       color:var(--muted);
       font-size:0.95rem;
@@ -176,7 +176,7 @@
       border: 1px solid rgba(255, 255, 255, 0.05);
       max-width: fit-content;
     }
-    
+
     .bio{
       margin-top:12px;
       color:var(--muted);
@@ -187,7 +187,7 @@
       border-radius: 14px;
       border: 1px solid rgba(255, 255, 255, 0.03);
     }
-    
+
     .section-title{
       margin-top:24px;
       margin-bottom:16px;
@@ -200,17 +200,17 @@
       align-items: center;
       gap: 10px;
     }
-    
+
     .section-title i {
       font-size: 1.2rem;
     }
-    
+
     .links{
       display: grid;
       gap: 18px;
       margin-top: 12px;
     }
-    
+
     .link{
       display:flex;
       align-items:center;
@@ -226,7 +226,7 @@
       text-decoration: none;
       color: inherit;
     }
-    
+
     .link::before {
       content: '';
       position: absolute;
@@ -239,17 +239,17 @@
       transition: transform 0.6s;
       z-index: 1;
     }
-    
+
     .link:hover::before {
       transform: translateX(100%);
     }
-    
+
     .link:hover{
       transform:translateY(-6px);
       box-shadow:0 14px 40px rgba(2,6,23,0.8);
       background:linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.03));
     }
-    
+
     .link .icon{
       width:70px;
       height:70px;
@@ -265,12 +265,12 @@
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
       transition: all 0.3s ease;
     }
-    
+
     .link:hover .icon {
       transform: scale(1.1);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     }
-    
+
     .icon-bg {
       position: absolute;
       top: 0;
@@ -281,7 +281,7 @@
       opacity: 0.2;
       z-index: 0;
     }
-    
+
     .icon-content {
       position: relative;
       z-index: 2;
@@ -292,21 +292,21 @@
       width: 100%;
       height: 100%;
     }
-    
+
     .platform-img {
       width: 42px;
       height: 42px;
       object-fit: contain;
       border-radius: 8px;
     }
-    
+
     .cover-carousel{
       position:relative;
       width:100%;
       height:100%;
       z-index: 2;
     }
-    
+
     .cover-carousel img{
       width:42px;
       height:60px;
@@ -322,44 +322,44 @@
       opacity:0;
       z-index:0;
     }
-    
+
     .cover-carousel img.active{
       opacity:1;
       z-index:2;
       transform:translate(-50%,-50%) scale(1) rotate(0deg);
     }
-    
+
     .cover-carousel img.prev{
       opacity:0.6;
       z-index:1;
       transform:translate(calc(-50% - 15px),calc(-50% + 5px)) scale(0.9) rotate(-5deg);
     }
-    
+
     .cover-carousel img.next{
       opacity:0.6;
       z-index:1;
       transform:translate(calc(-50% + 15px),calc(-50% + 5px)) scale(0.9) rotate(5deg);
     }
-    
+
     .link-content {
       flex-grow: 1;
       min-width: 0;
     }
-    
+
     .link strong{
       display:block;
       font-size:1.05rem;
       font-weight: 600;
       margin-bottom: 3px;
     }
-    
+
     .link small{
       display:block;
       color:var(--muted);
       font-size:0.85rem;
       line-height: 1.4;
     }
-    
+
     .meta{
       color:var(--accent-c);
       font-size:0.82rem;
@@ -370,14 +370,14 @@
       border: 1px solid rgba(69, 255, 190, 0.15);
       flex-shrink: 0;
     }
-    
+
     .tags{
       display:flex;
       gap:6px;
       margin-top:8px;
       flex-wrap:wrap;
     }
-    
+
     .tag{
       background:rgba(255,255,255,0.08);
       padding:4px 8px;
@@ -387,7 +387,17 @@
       font-weight:500;
       border: 1px solid rgba(255, 255, 255, 0.05);
     }
-    
+
+    .translations{
+      margin-top:8px;
+      color:var(--muted);
+      font-size:0.85rem;
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
+
+
     /* Seção de Redes Sociais com Imagens */
     .social-section {
       margin-top: 30px;
@@ -398,7 +408,7 @@
       border: 1px solid rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(10px);
     }
-    
+
     .social-section h3 {
       font-size: 1.5rem;
       margin-bottom: 20px;
@@ -408,7 +418,7 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-    
+
     .social-icons {
       display: flex;
       justify-content: center;
@@ -416,7 +426,7 @@
       gap: 15px;
       margin-top: 15px;
     }
-    
+
     .social-icon {
       width: 60px;
       height: 60px;
@@ -430,13 +440,13 @@
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
       overflow: hidden;
     }
-    
+
     .social-icon:hover {
       transform: translateY(-5px);
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
       background: rgba(75, 255, 202, 0.15);
     }
-    
+
     .social-img {
       width: 30px;
       height: 30px;
@@ -444,12 +454,12 @@
       filter: brightness(0.9);
       transition: all 0.3s ease;
     }
-    
+
     .social-icon:hover .social-img {
       filter: brightness(1.2);
       transform: scale(1.1);
     }
-    
+
     .footer-text {
       font-size: 0.8rem;
       color: var(--muted);
@@ -458,106 +468,106 @@
       margin-top: 20px;
       border-top: 1px solid rgba(255, 255, 255, 0.05);
     }
-    
+
     /* Correções para responsividade */
     @media (max-width: 700px) {
       .frame {
         padding: 0;
       }
-      
+
       .card {
         padding: 20px 15px;
       }
-      
+
       header {
         flex-direction: column;
         text-align: center;
         gap: 15px;
       }
-      
+
       .hero {
         align-items: center;
       }
-      
+
       .hero .role {
         margin: 0 auto;
       }
-      
+
       .bio {
         text-align: center;
       }
-      
+
       .link {
         flex-wrap: wrap;
       }
-      
+
       .link .icon {
         width: 60px;
         height: 60px;
       }
-      
+
       .link-content {
         flex: 1;
         min-width: 200px;
       }
-      
+
       .meta {
         margin-left: auto;
       }
-      
+
       .platform-img {
         width: 36px;
         height: 36px;
       }
-      
+
       .social-icon {
         width: 50px;
         height: 50px;
       }
-      
+
       .social-img {
         width: 25px;
         height: 25px;
       }
     }
-    
+
     @media (max-width: 480px) {
       .hero .handle {
         font-size: 1.2rem;
       }
-      
+
       .link {
         padding: 12px;
       }
-      
+
       .section-title {
         font-size: 0.95rem;
       }
-      
+
       .social-icon {
         width: 45px;
         height: 45px;
       }
-      
+
       .social-img {
         width: 22px;
         height: 22px;
       }
     }
-    
+
     /* Animations */
     @keyframes float {
       0% { transform: translateY(0) translateX(0); }
       50% { transform: translateY(-15px) translateX(10px); }
       100% { transform: translateY(0) translateX(0); }
     }
-    
+
     @keyframes pulse {
       0% { box-shadow: var(--glow); }
       50% { box-shadow: 0 0 20px rgba(111, 44, 255, 0.6); }
       100% { box-shadow: var(--glow); }
     }
-    
+
     .avatar {
       animation: float 4s ease-in-out infinite;
     }
@@ -568,7 +578,7 @@
   <div class="floating-element floating-1"></div>
   <div class="floating-element floating-2"></div>
   <div class="floating-element floating-3"></div>
-  
+
   <div class="frame">
     <div class="card" role="main">
       <header>
@@ -587,9 +597,9 @@
         <a class="link" href="https://linktr.ee/TRACK_N10" target="_blank" rel="noopener">
           <span class="icon">
             <div class="cover-carousel">
-              <img src="https://live.staticflickr.com/65535/54716593725_1d27dbb44f_w.jpg" class="active" alt="Album 1">
+              <img src="https://live.staticflickr.com/65535/54777349858_d94da383ee_c.jpg" class="active" alt="Album 1">
               <img src="https://live.staticflickr.com/65535/54716475134_cb00248159_w.jpg" class="next" alt="Album 2">
-              <img src="https://live.staticflickr.com/65535/54716595810_53a7865229_w.jpg" alt="Album 3">
+              <img src="https://live.staticflickr.com/65535/54716593725_1d27dbb44f_w.jpg" alt="Album 3">
               <img src="https://live.staticflickr.com/65535/54716249906_5fa1a8ce17_w.jpg" class="prev" alt="Album 4">
             </div>
           </span>
@@ -602,6 +612,7 @@
               <span class="tag">Nightcore</span>
               <span class="tag">Techno</span>
               <span class="tag">IDM</span>
+              <span class="tag">Hyperpop</span>
             </div>
           </div>
           <span class="meta">Albums</span>
@@ -621,7 +632,12 @@
             <div class="tags">
               <span class="tag">Sci-Fi</span>
               <span class="tag">Drama/Horror</span>
+              <span class="tag">🇧🇷 Português</span>
+              <span class="tag">🇪🇸 Español</span>
+              <span class="tag">🇺🇸 English</span>
+              <span class="tag">🇩🇪 Deutsch</span>
             </div>
+
           </div>
           <span class="meta">Books</span>
         </a>
@@ -631,7 +647,7 @@
           <i class="fas fa-code"></i>
           My Open Source Web Apps for Independent Artists
         </div>
-        
+
         <!-- LyricsSync10 App - Com imagem -->
         <a class="link" href="https://lyricsync10.vercel.app/" target="_blank" rel="noopener">
           <span class="icon">
@@ -646,7 +662,7 @@
           </div>
           <span class="meta">Web App</span>
         </a>
-        
+
         <!-- DOCX Splitter App - Com imagem -->
         <a class="link" href="https://docx-chapter-splitter.vercel.app/" target="_blank" rel="noopener">
           <span class="icon">
@@ -661,7 +677,7 @@
           </div>
           <span class="meta">Web App</span>
         </a>
-        
+
        <!-- LOW FODMAP WEBSITE TEMPLATE-->
        <a class="link" href="https://lowfodmap-saucetemplate.vercel.app/" target="_blank" rel="noopener">
          <span class="icon">
@@ -669,7 +685,7 @@
            <div class="icon-content">
              <img src="lowfodmapwebsitefavicon.ico" class="platform-img" alt="Low Fodmap Website Template">
            </div>
-         </span> 
+         </span>
          <div class="link-content">
            <strong>Low Fodmap Website Template</strong>
            <small>A website template for low fodmap diet</small>
@@ -747,7 +763,7 @@
           </a>
           <a href="https://github.com/track-n10" target="_blank" class="social-icon">
           <img src="https://github.com/favicon.ico" class="social-img" alt="GitHub">
-          </a>  
+          </a>
         </div>
       </div>
 
@@ -760,47 +776,47 @@
     function initCarousel(selector) {
       const covers = document.querySelectorAll(selector);
       if (covers.length === 0) return;
-      
+
       let current = 0;
-      
+
       // Initialize positions
       covers.forEach((img, i) => {
         img.classList.remove('active', 'prev', 'next');
       });
-      
+
       covers[0].classList.add('active');
       if (covers.length > 1) covers[1].classList.add('next');
       if (covers.length > 2) covers[covers.length-1].classList.add('prev');
-      
+
       setInterval(() => {
         covers.forEach((img, i) => {
           img.classList.remove('active', 'prev', 'next');
         });
-        
+
         covers[current].classList.add('prev');
         current = (current + 1) % covers.length;
         covers[current].classList.add('active');
-        
+
         const nextIndex = (current + 1) % covers.length;
         covers[nextIndex].classList.add('next');
-        
+
         const prevIndex = (current - 1 + covers.length) % covers.length;
         covers[prevIndex].classList.add('prev');
-        
+
       }, 3000);
     }
-    
+
     // Initialize carousels
     document.addEventListener('DOMContentLoaded', function() {
       initCarousel('.link:nth-of-type(1) .cover-carousel img');
       initCarousel('.link:nth-of-type(2) .cover-carousel img');
-      
+
       // Add hover effect to all links
       document.querySelectorAll('.link').forEach(link => {
         link.addEventListener('mouseenter', function() {
           this.style.zIndex = 10;
         });
-        
+
         link.addEventListener('mouseleave', function() {
           this.style.zIndex = 1;
         });

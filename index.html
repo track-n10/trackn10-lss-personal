@@ -207,15 +207,15 @@
     
     .links{
       display: grid;
-      gap: 14px;
+      gap: 18px;
       margin-top: 12px;
     }
     
     .link{
       display:flex;
       align-items:center;
-      gap:14px;
-      padding:16px;
+      gap:18px;
+      padding:18px;
       border-radius:var(--card-radius);
       background:linear-gradient(180deg,var(--glass),var(--glass-2));
       border:1px solid rgba(255,255,255,0.03);
@@ -559,7 +559,7 @@
     }
     
     .avatar {
-      animation: pulse 4s infinite;
+      animation: float 4s ease-in-out infinite;
     }
   </style>
 </head>
@@ -573,7 +573,7 @@
     <div class="card" role="main">
       <header>
         <div class="avatar">
-          <img loading="lazy" src="https://www.dropbox.com/scl/fi/cux1j2x3cwktomn6qilcf/20250611_114147.webp?rlkey=5xw8ij7ie1jsdlgp5wdzg8qt2&dl=1" alt="Leonardo Sales (TRACK_N10)">
+          <img src="avatarimage.webp" alt="Leonardo Sales (TRACK_N10)">
         </div>
         <div class="hero">
           <div class="handle">TRACK_N10 — Leonardo Sales</div>
@@ -608,7 +608,7 @@
         </a>
 
         <!-- Books Link -->
-        <a class="link" href="https://linktr.ee/leo_salles" target="_blank" rel="noopener">
+        <a class="link" href="https://books2read.com/ap/xrjoDL/Leonardo-Sales-Santos" target="_blank" rel="noopener">
           <span class="icon">
             <div class="cover-carousel">
               <img src="https://live.staticflickr.com/65535/54716871453_d21415ba00_n.jpg" class="active" alt="Ultra Qualia cover">
@@ -624,42 +624,6 @@
             </div>
           </div>
           <span class="meta">Books</span>
-        </a>
-
-        <!-- Support Section Title -->
-        <div class="section-title">
-          <i class="fas fa-heart"></i>
-          Support My Projects
-        </div>
-
-        <!-- GoFundMe Link - Com imagem -->
-        <a class="link" href="https://www.gofundme.com/f/supporting-an-autistic-artist-music-and-books-that-inspire" target="_blank" rel="noopener">
-          <span class="icon">
-            <div class="icon-bg" style="--grad1: var(--accent-d); --grad2: var(--accent-e);"></div>
-            <div class="icon-content">
-              <img src="https://www.gofundme.com/favicon.ico" class="platform-img" alt="GoFundMe">
-            </div>
-          </span>
-          <div class="link-content">
-            <strong>Found Me</strong>
-            <small>GoFundMe campaign for my projects</small>
-          </div>
-          <span class="meta">Support</span>
-        </a>
-
-        <!-- Patreon Link - Com imagem -->
-        <a class="link" href="https://patreon.com/TRACK_N10" target="_blank" rel="noopener">
-          <span class="icon">
-            <div class="icon-bg" style="--grad1: var(--accent-a); --grad2: var(--accent-b);"></div>
-            <div class="icon-content">
-              <img src="https://patreon.com/favicon.ico" class="platform-img" alt="Patreon">
-            </div>
-          </span>
-          <div class="link-content">
-            <strong>Patreon</strong>
-            <small>Exclusive content & behind the scenes</small>
-          </div>
-          <span class="meta">Support</span>
         </a>
 
         <!-- Apps Section Title -->
@@ -697,8 +661,59 @@
           </div>
           <span class="meta">Web App</span>
         </a>
-      </nav>
-      
+        
+       <!-- LOW FODMAP WEBSITE TEMPLATE-->
+       <a class="link" href="https://lowfodmap-saucetemplate.vercel.app/" target="_blank" rel="noopener">
+         <span class="icon">
+           <div class="icon-bg" style="--grad1: var(--accent-c); --grad2: var(--accent-a);"></div>
+           <div class="icon-content">
+             <img src="lowfodmapwebsitefavicon.ico" class="platform-img" alt="Low Fodmap Website Template">
+           </div>
+         </span> 
+         <div class="link-content">
+           <strong>Low Fodmap Website Template</strong>
+           <small>A website template for low fodmap diet</small>
+         </div>
+         <span class="meta">Web Template</span>
+       </a>
+
+        <!-- Support Section Title -->
+        <div class="section-title">
+          <i class="fas fa-heart"></i>
+          Support My Projects
+        </div>
+
+        <!-- GoFundMe Link - Com imagem -->
+        <a class="link" href="https://www.gofundme.com/f/supporting-an-autistic-artist-music-and-books-that-inspire" target="_blank" rel="noopener">
+          <span class="icon">
+            <div class="icon-bg" style="--grad1: var(--accent-d); --grad2: var(--accent-e);"></div>
+            <div class="icon-content">
+              <img src="https://www.gofundme.com/favicon.ico" class="platform-img" alt="GoFundMe">
+            </div>
+          </span>
+          <div class="link-content">
+            <strong>Found Me</strong>
+            <small>GoFundMe campaign for my projects</small>
+          </div>
+          <span class="meta">Support</span>
+        </a>
+
+        <!-- Patreon Link - Com imagem -->
+        <a class="link" href="https://patreon.com/TRACK_N10" target="_blank" rel="noopener">
+          <span class="icon">
+            <div class="icon-bg" style="--grad1: var(--accent-a); --grad2: var(--accent-b);"></div>
+            <div class="icon-content">
+              <img src="https://patreon.com/favicon.ico" class="platform-img" alt="Patreon">
+            </div>
+          </span>
+          <div class="link-content">
+            <strong>Patreon</strong>
+            <small>Exclusive content & behind the scenes</small>
+          </div>
+          <span class="meta">Support</span>
+        </a>
+
+
       <!-- Seção de Redes Sociais com Imagens -->
       <div class="social-section">
         <h3>Connect With Me</h3>
@@ -730,6 +745,9 @@
           <a href="https://www.gofundme.com/f/supporting-an-autistic-artist-music-and-books-that-inspire" target="_blank" class="social-icon">
             <img src="https://www.gofundme.com/favicon.ico" class="social-img" alt="GoFundMe">
           </a>
+          <a href="https://github.com/track-n10" target="_blank" class="social-icon">
+          <img src="https://github.com/favicon.ico" class="social-img" alt="GitHub">
+          </a>  
         </div>
       </div>
 

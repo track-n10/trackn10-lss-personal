@@ -647,6 +647,208 @@
     @media (max-width: 700px) {
       .promo-title { font-size: 1.05rem; }
     }
+
+    /* Books Section - Vertical Layout with Large Carousel */
+    .books-section {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background: linear-gradient(180deg, var(--glass), var(--glass-2));
+      border: 1px solid rgba(255,255,255,0.03);
+      border-radius: var(--card-radius);
+      padding: 0;
+      overflow: hidden;
+      transition: transform .18s, box-shadow .18s, background .3s;
+    }
+
+    .books-section:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 14px 40px rgba(2,6,23,0.8);
+      background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.03));
+    }
+
+    .books-carousel-container {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    .books-carousel {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .books-carousel img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: auto;
+      height: 85%;
+      max-width: 90%;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+      opacity: 0;
+      transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+      z-index: 0;
+    }
+
+    .books-carousel img.active {
+      opacity: 1;
+      z-index: 2;
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .books-info {
+      padding: 20px 24px 24px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .books-info strong {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #eef2ff;
+    }
+
+    .books-info small {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    .books-info .tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-top: 4px;
+    }
+
+    .books-info .meta {
+      align-self: flex-start;
+      margin-top: 8px;
+    }
+
+    @media (max-width: 700px) {
+      .books-carousel-container {
+        aspect-ratio: 4 / 3;
+      }
+
+      .books-info {
+        padding: 16px 18px 20px 18px;
+      }
+
+      .books-info strong {
+        font-size: 1.05rem;
+      }
+    }
+
+    /* Music Section - Vertical Layout with Large Carousel */
+    .music-section {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background: linear-gradient(180deg, var(--glass), var(--glass-2));
+      border: 1px solid rgba(255,255,255,0.03);
+      border-radius: var(--card-radius);
+      padding: 0;
+      overflow: hidden;
+      transition: transform .18s, box-shadow .18s, background .3s;
+    }
+
+    .music-section:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 14px 40px rgba(2,6,23,0.8);
+      background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.03));
+    }
+
+    .music-carousel-container {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    .music-carousel {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .music-carousel img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: auto;
+      height: 85%;
+      max-width: 90%;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+      opacity: 0;
+      transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+      z-index: 0;
+    }
+
+    .music-carousel img.active {
+      opacity: 1;
+      z-index: 2;
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .music-info {
+      padding: 20px 24px 24px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .music-info strong {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #eef2ff;
+    }
+
+    .music-info small {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    .music-info .tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-top: 4px;
+    }
+
+    .music-info .meta {
+      align-self: flex-start;
+      margin-top: 8px;
+    }
+
+    @media (max-width: 700px) {
+      .music-carousel-container {
+        aspect-ratio: 4 / 3;
+      }
+
+      .music-info {
+        padding: 16px 18px 20px 18px;
+      }
+
+      .music-info strong {
+        font-size: 1.05rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -682,17 +884,17 @@
           </div>
           <a class="promo-full-link" href="https://linktr.ee/TRACK_N10" target="_blank" rel="noopener" aria-label="etheraU — Deep Bass House"></a>
         </div>
-        <!-- Music Link -->
-        <a class="link" href="https://linktr.ee/TRACK_N10" target="_blank" rel="noopener">
-          <span class="icon">
-            <div class="cover-carousel">
+        <!-- Music Section - Vertical Layout -->
+        <div class="music-section">
+          <div class="music-carousel-container">
+            <div class="music-carousel">
               <img src="https://live.staticflickr.com/65535/54777349858_d94da383ee_c.jpg" class="active" alt="Album 1">
-              <img src="https://live.staticflickr.com/65535/54716475134_cb00248159_w.jpg" class="next" alt="Album 2">
+              <img src="https://live.staticflickr.com/65535/54716475134_cb00248159_w.jpg" alt="Album 2">
               <img src="https://live.staticflickr.com/65535/54716593725_1d27dbb44f_w.jpg" alt="Album 3">
-              <img src="https://live.staticflickr.com/65535/54716249906_5fa1a8ce17_w.jpg" class="prev" alt="Album 4">
+              <img src="https://live.staticflickr.com/65535/54716249906_5fa1a8ce17_w.jpg" alt="Album 4">
             </div>
-          </span>
-          <div class="link-content">
+          </div>
+          <div class="music-info">
             <strong>My Music</strong>
             <small>4 albums in different genres</small>
             <div class="tags">
@@ -703,10 +905,34 @@
               <span class="tag">IDM</span>
               <span class="tag">Hyperpop</span>
             </div>
+            <span class="meta">Albums</span>
           </div>
-          <span class="meta">Albums</span>
-        </a>
+          <a class="promo-full-link" href="https://linktr.ee/TRACK_N10" target="_blank" rel="noopener" aria-label="My Music - 4 albums in different genres"></a>
+        </div>
 
+        <!-- Books Section - Vertical Layout -->
+        <div class="books-section">
+          <div class="books-carousel-container">
+            <div class="books-carousel">
+              <img src="https://live.staticflickr.com/65535/54716871453_d21415ba00_n.jpg" class="active" alt="Ultra Qualia cover">
+              <img src="https://live.staticflickr.com/65535/54716872203_e112deea2a_n.jpg" alt="Intrusive Thoughts cover">
+            </div>
+          </div>
+          <div class="books-info">
+            <strong>My Books</strong>
+            <small>Ultra Qualia & Intrusive Thoughts</small>
+            <div class="tags">
+              <span class="tag">Sci-Fi</span>
+              <span class="tag">Drama/Horror</span>
+              <span class="tag">🇧🇷 Português</span>
+              <span class="tag">🇪🇸 Español</span>
+              <span class="tag">🇺🇸 English</span>
+              <span class="tag">🇩🇪 Deutsch</span>
+            </div>
+            <span class="meta">Books</span>
+          </div>
+          <a class="promo-full-link" href="https://books2read.com/ap/xrjoDL/Leonardo-Sales-Santos" target="_blank" rel="noopener" aria-label="My Books - Ultra Qualia & Intrusive Thoughts"></a>
+        </div>
 
         <!-- Seção de Redes Sociais com Imagens -->
         <div class="social-section">
@@ -725,7 +951,7 @@
               <img src="https://tidal.com/favicon.ico" class="social-img" alt="Tidal">
             </a>
             <a href="https://music.amazon.com/artists/B0D4MSGV7Y/track_n10" target="_blank" rel="noopener" class="social-icon">
-              <img src="https://amazon.com/favicon.ico" class="social-img" alt="Amazon Music">
+              <img src="https://img.icons8.com/?size=100&id=lxwUaALAeQmr&format=png&color=000000" class="social-img" alt="Amazon Music">
             </a>
             <a href="https://audiomack.com/track-n10" target="_blank" rel="noopener" class="social-icon">
               <img src="https://audiomack.com/favicon.ico" class="social-img" alt="Audiomack">
@@ -752,34 +978,10 @@
               <img src="https://www.gofundme.com/favicon.ico" class="social-img" alt="GoFundMe">
             </a>
             <a href="https://github.com/track-n10" target="_blank" rel="noopener" class="social-icon">
-              <img src="https://github.com/favicon.ico" class="social-img" alt="GitHub">
+              <img src="https://img.icons8.com/?size=100&id=62856&format=png&color=000000" class="social-img" alt="GitHub">
             </a>
           </div>
         </div>
-
-        <!-- Books Link -->
-        <a class="link" href="https://books2read.com/ap/xrjoDL/Leonardo-Sales-Santos" target="_blank" rel="noopener">
-          <span class="icon">
-            <div class="cover-carousel">
-              <img src="https://live.staticflickr.com/65535/54716871453_d21415ba00_n.jpg" class="active" alt="Ultra Qualia cover">
-              <img src="https://live.staticflickr.com/65535/54716872203_e112deea2a_n.jpg" class="next" alt="Intrusive Thoughts cover">
-            </div>
-          </span>
-          <div class="link-content">
-            <strong>My Books</strong>
-            <small>Ultra Qualia & Intrusive Thoughts</small>
-            <div class="tags">
-              <span class="tag">Sci-Fi</span>
-              <span class="tag">Drama/Horror</span>
-              <span class="tag">🇧🇷 Português</span>
-              <span class="tag">🇪🇸 Español</span>
-              <span class="tag">🇺🇸 English</span>
-              <span class="tag">🇩🇪 Deutsch</span>
-            </div>
-
-          </div>
-          <span class="meta">Books</span>
-        </a>
 
         <!-- Apps Section Title -->
         <div class="section-title">
@@ -817,21 +1019,6 @@
           <span class="meta">Web App</span>
         </a>
 
-       <!-- LOW FODMAP WEBSITE TEMPLATE-->
-       <a class="link" href="https://lowfodmap-saucetemplate.vercel.app/" target="_blank" rel="noopener">
-         <span class="icon">
-           <div class="icon-bg" style="--grad1: var(--accent-c); --grad2: var(--accent-a);"></div>
-           <div class="icon-content">
-             <img src="lowfodmapwebsitefavicon.ico" class="platform-img" alt="Low Fodmap Website Template">
-           </div>
-         </span>
-         <div class="link-content">
-           <strong>Low Fodmap Website Template</strong>
-           <small>A website template for low fodmap diet</small>
-         </div>
-         <span class="meta">Web Template</span>
-       </a>
-
         <!-- Support Section Title -->
         <div class="section-title">
           <i class="fas fa-heart"></i>
@@ -868,6 +1055,20 @@
           <span class="meta">Support</span>
         </a>
 
+        <!-- Substack Link - Com imagem -->
+        <a class="link" href="https://substack.com/@trackn10" target="_blank" rel="noopener">
+          <span class="icon">
+            <div class="icon-bg" style="--grad1: var(--accent-c); --grad2: var(--accent-b);"></div>
+            <div class="icon-content">
+              <img src="https://substack.com/favicon.ico" class="platform-img" alt="Substack">
+            </div>
+          </span>
+          <div class="link-content">
+            <strong>Substack</strong>
+            <small>Essays, stories & updates</small>
+          </div>
+          <span class="meta">Support</span>
+        </a>
 
 
 
@@ -877,43 +1078,35 @@
     </div>
   </div>
   <script>
-    function initCarousel(selector) {
-      const covers = document.querySelectorAll(selector);
-      if (covers.length === 0) return;
+    // Simple carousel for music and books sections (fade transition)
+    function initSimpleCarousel(selector, interval = 4000) {
+      const images = document.querySelectorAll(selector);
+      if (images.length === 0) return;
 
       let current = 0;
 
-      // Initialize positions
-      covers.forEach((img, i) => {
-        img.classList.remove('active', 'prev', 'next');
-      });
-
-      covers[0].classList.add('active');
-      if (covers.length > 1) covers[1].classList.add('next');
-      if (covers.length > 2) covers[covers.length-1].classList.add('prev');
+      // Initialize - first image is active
+      images[0].classList.add('active');
 
       setInterval(() => {
-        covers.forEach((img, i) => {
-          img.classList.remove('active', 'prev', 'next');
-        });
+        // Remove active from current
+        images[current].classList.remove('active');
 
-        covers[current].classList.add('prev');
-        current = (current + 1) % covers.length;
-        covers[current].classList.add('active');
+        // Move to next image
+        current = (current + 1) % images.length;
 
-        const nextIndex = (current + 1) % covers.length;
-        covers[nextIndex].classList.add('next');
-
-        const prevIndex = (current - 1 + covers.length) % covers.length;
-        covers[prevIndex].classList.add('prev');
-
-      }, 3000);
+        // Add active to new current
+        images[current].classList.add('active');
+      }, interval);
     }
 
     // Initialize carousels
     document.addEventListener('DOMContentLoaded', function() {
-      initCarousel('.link:nth-of-type(1) .cover-carousel img');
-      initCarousel('.link:nth-of-type(2) .cover-carousel img');
+      // Initialize music carousel (3.5 seconds per album)
+      initSimpleCarousel('.music-carousel img', 3500);
+
+      // Initialize books carousel (4 seconds per book)
+      initSimpleCarousel('.books-carousel img', 4000);
 
       // Add hover effect to all links
       document.querySelectorAll('.link').forEach(link => {

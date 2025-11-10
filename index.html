@@ -11,8 +11,8 @@
   <link rel="manifest" href="/site.webmanifest">
   <link rel="icon" href="favicon.ico">
   <link rel="shortcut icon" href="/favicon.ico">
-  <title>TRACK_N10 — Link in Bio</title>
-  <meta name="description" content="TRACK_N10 — musician, writer & developer. Central hub for music, books, apps, and more." />
+  <title>TRACK_N10 — Leonardo Sales Santos</title>
+  <meta name="description" content="TRACK_N10 a.k.a. Leonardo Sales Santos — musician, writer & web developer. Central hub for music, books, apps, and more." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a2d9b6d2c9.js" crossorigin="anonymous"></script>
   <style>
@@ -849,6 +849,70 @@
         font-size: 1.05rem;
       }
     }
+
+    /* About Me Section */
+    .about-section {
+      margin-top: 30px;
+      padding: 24px;
+      border-radius: 20px;
+      background: linear-gradient(180deg, var(--glass), var(--glass-2));
+      border: 1px solid rgba(255, 255, 255, 0.03);
+      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 10px 30px rgba(2, 6, 23, 0.8);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 20% 30%, rgba(111, 44, 255, 0.1) 0%, transparent 40%);
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .about-section .section-title {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    .about-content {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .about-content p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .about-content strong {
+      color: #eef2ff;
+      font-weight: 600;
+    }
+
+    .about-content em {
+      color: var(--accent-c);
+      font-style: italic;
+    }
+
+    @media (max-width: 700px) {
+      .about-section {
+        padding: 20px 15px;
+      }
+
+      .about-content p {
+        font-size: 0.9rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -864,9 +928,9 @@
           <img src="avatarimage.webp" alt="Leonardo Sales (TRACK_N10)">
         </div>
         <div class="hero">
-          <div class="handle">TRACK_N10 — Leonardo Sales</div>
-          <div class="role">Musician · Writer · Web Tools</div>
-          <div class="bio">Electronic music, sci-fi stories, and open-source apps for creators — all free whenever possible.</div>
+          <div class="handle">TRACK_N10 — Leonardo Sales Santos</div>
+          <div class="role">Musician · Writer · Web Developer</div>
+          <div class="bio">Electronic music, sci-fi stories, and free open-source apps for creators.</div>
         </div>
       </header>
 
@@ -1077,6 +1141,27 @@
         </a>
 
 
+
+      <!-- About Me Section -->
+      <section class="about-section">
+        <h2 class="section-title">
+          <i class="fas fa-user"></i>
+          About Me
+        </h2>
+        <div class="about-content">
+          <p>25y, autistic, writer, and now venturing into the world of DJing and Music Production.</p>
+
+          <p>I'm the author of the sci-fi book <strong>ULTRA QUALIA</strong> and the drama/horror <strong>INTRUSIVE THOUGHTS</strong> (under my name, Leonardo Sales Santos). But everywhere else, I go by <strong>TRACK_N10</strong>—a name inspired by Charli XCX's iconic "Track 10."</p>
+
+          <p>My influences span from 6arelyhuman, 2hollis, Shygirl, and SOPHIE to Sega Bodega, Kim Petras, Nils Frahm, and countless other genres that shape my sound.</p>
+
+          <p>Born in Rio de Janeiro, Brazil, I now live in Porto, Portugal. With a degree in Marketing and two postgrads in Sales and Data Science, I finally decided to face my fears and dive headfirst into music—something I couldn't imagine life without.</p>
+
+          <p>Music also became a way to fund my medication for autism and its comorbidities. If nothing else, being on the spectrum has given me a uniquely heightened sensitivity to art.</p>
+
+          <p><em>Music today. Music now. Music forever.</em></p>
+        </div>
+      </section>
 
       <div class="footer-text">
         © 2025 TRACK_N10 | Leonardo Sales Santos. All rights reserved.

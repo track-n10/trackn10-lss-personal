@@ -639,6 +639,40 @@
       transform: scale(1.06);
     }
 
+    /* Dual book covers for FREE BOOKS promo */
+    .promo-media.dual-covers {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      background: linear-gradient(135deg, rgba(111, 44, 255, 0.2), rgba(0, 194, 255, 0.2));
+      padding: 16px;
+    }
+
+    .promo-media.dual-covers img {
+      width: auto;
+      height: 100%;
+      max-width: 45%;
+      object-fit: contain;
+      border-radius: 6px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      transform: scale(1);
+    }
+
+    .promo-block:hover .promo-media.dual-covers img {
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 500px) {
+      .promo-media.dual-covers {
+        gap: 8px;
+        padding: 12px;
+      }
+      .promo-media.dual-covers img {
+        border-radius: 4px;
+      }
+    }
+
     .promo-overlay {
       position: absolute;
       inset: 0;
@@ -988,19 +1022,34 @@
       </header>
 
       <nav class="links">
-	        <!-- FAMOUS New Single Promo Block -->
-	        <div class="promo-block">
-	          <div class="promo-media">
-	            <img src="https://imagestore.ffm.to/link/d1c1e8698b6b2fd875d12de2a480fd8d.png" alt="FAMOUS cover art">
-	            <div class="promo-overlay">
-	              <div class="promo-text">
-	                <div class="promo-title">FAMOUS — New Single OUT NOW!</div>
-	                <span class="tag">Techno · Hyperpop · Glitch Hop · Dance </span>
-	              </div>
-	            </div>
-	          </div>
-	          <a class="promo-full-link" href="https://ffm.to/presavefamous" target="_blank" rel="noopener" aria-label="FAMOUS — New single, release November 28th. Techno, Hyperpop, Glitch Hop, Dance. Pre-save now."></a>
-	        </div>
+        <!-- FREE Books Promo Block -->
+        <div class="promo-block">
+          <div class="promo-media dual-covers">
+            <img src="https://live.staticflickr.com/65535/54716871453_d21415ba00_n.jpg" alt="Ultra Qualia book cover">
+            <img src="https://live.staticflickr.com/65535/54716872203_e112deea2a_n.jpg" alt="Intrusive Thoughts book cover">
+            <div class="promo-overlay">
+              <div class="promo-text">
+                <div class="promo-title">FREE BOOKS on Smashwords — Until January 1st!</div>
+                <span class="tag">Ultra Qualia & Intrusive Thoughts · Sci-Fi · Drama/Horror · Get them free on Smashwords</span>
+              </div>
+            </div>
+          </div>
+          <a class="promo-full-link" href="https://www.smashwords.com/profile/view/Leonardo_SalesSantos" target="_blank" rel="noopener" aria-label="FREE BOOKS — Ultra Qualia and Intrusive Thoughts are free until January 1st on Smashwords. Sci-Fi, Drama/Horror."></a>
+        </div>
+
+        <!-- FAMOUS New Single Promo Block -->
+        <div class="promo-block">
+          <div class="promo-media">
+            <img src="https://imagestore.ffm.to/link/d1c1e8698b6b2fd875d12de2a480fd8d.png" alt="FAMOUS cover art">
+            <div class="promo-overlay">
+              <div class="promo-text">
+                <div class="promo-title">FAMOUS — New Single OUT NOW!</div>
+                <span class="tag">Techno · Hyperpop · Glitch Hop · Dance</span>
+              </div>
+            </div>
+          </div>
+          <a class="promo-full-link" href="https://ffm.to/presavefamous" target="_blank" rel="noopener" aria-label="FAMOUS — New single, release November 28th. Techno, Hyperpop, Glitch Hop, Dance. Pre-save now."></a>
+        </div>
 
         <!-- LISTEN: ICONIC REMIXES Promo Block -->
         <div class="promo-block">

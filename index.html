@@ -49,17 +49,16 @@
       --glow-b: 0 0 15px rgba(0, 194, 255, 0.4);
       --glow-c: 0 0 15px rgba(69, 255, 190, 0.4);
     }
-    *{box-sizing:border-box}
-    html,body{height:100%; margin:0; padding:0;}
-    body{
-      font-family:'Inter',system-ui,Arial; color:#eef2ff; -webkit-font-smoothing:antialiased;
-      background: #000000;
-      display: flex;
-      padding: 16px;
-      position: relative;
-      overflow-x: hidden;
-      min-height: 100vh;
-    }
+	    *{box-sizing:border-box}
+	    html,body{margin:0; padding:0;}
+	    body{
+	      font-family:'Inter',system-ui,Arial; color:#eef2ff; -webkit-font-smoothing:antialiased;
+	      background: #000000;
+	      padding: 16px;
+	      position: relative;
+	      overflow-x: hidden;
+	      min-height: 100vh;
+	    }
 
     /* Floating elements */
     .floating-element {
@@ -97,6 +96,13 @@
       right: 15%;
       animation: float 10s ease-in-out infinite;
     }
+
+	    /* Reduce background animation on small screens to avoid flicker */
+	    @media (max-width: 700px) {
+	      .floating-element {
+	        animation: none;
+	      }
+	    }
 
     .frame{
       width:100%;

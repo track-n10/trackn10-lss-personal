@@ -727,6 +727,196 @@
       .promo-title { font-size: 1.05rem; }
     }
 
+    /* Promo Carousel - Interactive carousel for music promos */
+    .promo-carousel-wrapper {
+      position: relative;
+      width: 100%;
+      padding: 0 40px;
+      box-sizing: border-box;
+    }
+
+    .promo-carousel-container {
+      position: relative;
+      width: 100%;
+      overflow: visible;
+      border-radius: var(--card-radius);
+    }
+
+    .promo-carousel-track {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+    }
+
+    .promo-carousel-track .promo-block {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                  opacity 0.5s ease,
+                  z-index 0s;
+      pointer-events: none;
+    }
+
+    /* Peek effect - show adjacent slides */
+    .promo-carousel-track .promo-block.prev-slide {
+      opacity: 0.4;
+      transform: translateX(-85%) scale(0.75);
+      z-index: 1;
+      pointer-events: auto;
+      cursor: pointer;
+    }
+
+    .promo-carousel-track .promo-block.active-slide {
+      opacity: 1;
+      transform: translateX(0) scale(1);
+      z-index: 3;
+      pointer-events: auto;
+    }
+
+    .promo-carousel-track .promo-block.next-slide {
+      opacity: 0.4;
+      transform: translateX(85%) scale(0.75);
+      z-index: 1;
+      pointer-events: auto;
+      cursor: pointer;
+    }
+
+    .promo-carousel-track .promo-block.hidden-slide {
+      opacity: 0;
+      transform: translateX(0) scale(0.5);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* Disable default hover transform for carousel items */
+    .promo-carousel-track .promo-block:hover {
+      transform: none;
+    }
+
+    .promo-carousel-track .promo-block.prev-slide:hover {
+      transform: translateX(-85%) scale(0.75);
+    }
+
+    .promo-carousel-track .promo-block.next-slide:hover {
+      transform: translateX(85%) scale(0.75);
+    }
+
+    .promo-carousel-track .promo-block.active-slide:hover {
+      transform: translateX(0) scale(1);
+      box-shadow: 0 14px 40px rgba(2,6,23,0.8);
+      background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.03));
+    }
+
+    /* Navigation Arrows */
+    .promo-carousel-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #fff;
+      font-size: 1.4rem;
+      font-weight: 300;
+      cursor: pointer;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
+      line-height: 1;
+    }
+
+    .promo-carousel-nav:hover {
+      background: rgba(111, 44, 255, 0.7);
+      border-color: rgba(111, 44, 255, 0.5);
+      transform: translateY(-50%) scale(1.1);
+      box-shadow: 0 0 20px rgba(111, 44, 255, 0.4);
+    }
+
+    .promo-carousel-nav:active {
+      transform: translateY(-50%) scale(0.95);
+    }
+
+    .promo-carousel-nav.prev {
+      left: 0;
+    }
+
+    .promo-carousel-nav.next {
+      right: 0;
+    }
+
+    /* Carousel Indicators */
+    .promo-carousel-indicators {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .promo-carousel-indicator {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      padding: 0;
+    }
+
+    .promo-carousel-indicator:hover {
+      background: rgba(255, 255, 255, 0.5);
+    }
+
+    .promo-carousel-indicator.active {
+      background: var(--accent-c);
+      transform: scale(1.2);
+      box-shadow: 0 0 10px rgba(69, 255, 190, 0.4);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 700px) {
+      .promo-carousel-wrapper {
+        padding: 0 30px;
+      }
+
+      .promo-carousel-nav {
+        width: 36px;
+        height: 36px;
+        font-size: 1.2rem;
+      }
+
+      .promo-carousel-track .promo-block.prev-slide {
+        transform: translateX(-90%) scale(0.7);
+        opacity: 0.3;
+      }
+
+      .promo-carousel-track .promo-block.next-slide {
+        transform: translateX(90%) scale(0.7);
+        opacity: 0.3;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .promo-carousel-wrapper {
+        padding: 0 25px;
+      }
+
+      .promo-carousel-nav {
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
+      }
+    }
+
     /* Books Section - Vertical Layout with Large Carousel */
     .books-section {
       position: relative;
@@ -1063,47 +1253,106 @@
           <a class="promo-full-link" href="https://www.smashwords.com/profile/view/Leonardo_SalesSantos" target="_blank" rel="noopener" aria-label="FREE BOOKS — Ultra Qualia and Intrusive Thoughts are free until January 1st on Smashwords. Sci-Fi, Drama/Horror."></a>
         </div>
 
-        <!-- FAMOUS New Single Promo Block -->
-        <div class="promo-block">
-          <div class="promo-media">
-            <img src="https://imagestore.ffm.to/link/d1c1e8698b6b2fd875d12de2a480fd8d.png" alt="FAMOUS cover art">
-            <div class="promo-overlay">
-              <div class="promo-text">
-                <div class="promo-title">FAMOUS — New Single OUT NOW!</div>
-                <span class="tag">Techno · Hyperpop · Glitch Hop · Dance</span>
-              </div>
+        <!-- Books Section - Vertical Layout -->
+        <div class="books-section">
+          <div class="books-carousel-container">
+            <div class="books-carousel">
+              <img src="https://live.staticflickr.com/65535/54716871453_d21415ba00_n.jpg" class="active" alt="Ultra Qualia cover">
+              <img src="https://live.staticflickr.com/65535/54716872203_e112deea2a_n.jpg" alt="Intrusive Thoughts cover">
             </div>
           </div>
-          <a class="promo-full-link" href="https://ffm.to/presavefamous" target="_blank" rel="noopener" aria-label="FAMOUS — New single, release November 28th. Techno, Hyperpop, Glitch Hop, Dance. Pre-save now."></a>
+          <div class="books-info">
+            <strong>My Books</strong>
+            <small>Ultra Qualia & Intrusive Thoughts</small>
+            <div class="tags">
+              <span class="tag">Sci-Fi</span>
+              <span class="tag">Drama/Horror</span>
+              <span class="tag">🇧🇷 Português</span>
+              <span class="tag">🇪🇸 Español</span>
+              <span class="tag">🇺🇸 English</span>
+              <span class="tag">🇩🇪 Deutsch</span>
+              <span class="tag">🇫🇷 Français</span>
+            </div>
+            <span class="meta">Books</span>
+          </div>
+          <a class="promo-full-link" href="https://books2read.com/ap/xrjoDL/Leonardo-Sales-Santos" target="_blank" rel="noopener" aria-label="My Books - Ultra Qualia & Intrusive Thoughts"></a>
         </div>
 
-        <!-- LISTEN: ICONIC REMIXES Promo Block -->
-        <div class="promo-block">
-          <div class="promo-media">
-            <img src="https://imagestore.ffm.to/link/2160b55477facc1552397b477904f476.jpg" alt="LISTEN: ICONIC REMIXES">
-            <div class="promo-overlay">
-              <div class="promo-text">
-                <div class="promo-title">LISTEN: ICONIC REMIXES</div>
-                <span class="tag">My 1st remix and feature! ICONIC - TRACK_N10 REMIX OUT NOW! :333</span>
+        <!-- Music Singles Promo Carousel -->
+        <div class="promo-carousel-wrapper" role="region" aria-label="Music singles carousel">
+          <div class="promo-carousel-container">
+            <div class="promo-carousel-track">
+              <!-- Slide 1: HUMAN AFTER ALL / OVER AGAIN -->
+              <div class="promo-block active-slide" data-slide="0">
+                <div class="promo-media">
+                  <img src="https://i.scdn.co/image/ab67616d0000b2732e968e2acb60eaace93c49c4" alt="HUMAN AFTER ALL / OVER AGAIN cover art">
+                  <div class="promo-overlay">
+                    <div class="promo-text">
+                      <div class="promo-title">Double single: HUMAN AFTER ALL / OVER AGAIN</div>
+                      <span class="tag">Chill House · Progressive House</span>
+                    </div>
+                  </div>
+                </div>
+                <a class="promo-full-link" href="https://tr.ee/oHiP-W7vCN" target="_blank" rel="noopener" aria-label="Double single: HUMAN AFTER ALL / OVER AGAIN — Chill House, Progressive House. Listen now."></a>
+              </div>
+
+              <!-- Slide 2: FAMOUS -->
+              <div class="promo-block next-slide" data-slide="1">
+                <div class="promo-media">
+                  <img src="https://imagestore.ffm.to/link/d1c1e8698b6b2fd875d12de2a480fd8d.png" alt="FAMOUS cover art">
+                  <div class="promo-overlay">
+                    <div class="promo-text">
+                      <div class="promo-title">FAMOUS — New Single OUT NOW!</div>
+                      <span class="tag">Techno · Hyperpop · Glitch Hop · Dance</span>
+                    </div>
+                  </div>
+                </div>
+                <a class="promo-full-link" href="https://ffm.to/presavefamous" target="_blank" rel="noopener" aria-label="FAMOUS — New single, release November 28th. Techno, Hyperpop, Glitch Hop, Dance. Pre-save now."></a>
+              </div>
+
+              <!-- Slide 3: ICONIC REMIXES -->
+              <div class="promo-block hidden-slide" data-slide="2">
+                <div class="promo-media">
+                  <img src="https://imagestore.ffm.to/link/2160b55477facc1552397b477904f476.jpg" alt="LISTEN: ICONIC REMIXES">
+                  <div class="promo-overlay">
+                    <div class="promo-text">
+                      <div class="promo-title">LISTEN: ICONIC REMIXES</div>
+                      <span class="tag">My 1st remix and feature! ICONIC - TRACK_N10 REMIX OUT NOW! :333</span>
+                    </div>
+                  </div>
+                </div>
+                <a class="promo-full-link" href="https://linktr.ee/TRACK_N10" target="_blank" rel="noopener" aria-label="LISTEN: ICONIC REMIXES — My 1st remix and feature! ICONIC - TRACK_N10 REMIX OUT NOW! :333"></a>
+              </div>
+
+              <!-- Slide 4: TRACK_N1∅ -->
+              <div class="promo-block prev-slide" data-slide="3">
+                <div class="promo-media">
+                  <img src="https://live.staticflickr.com/65535/54890855699_bcdb97f7e0_c.jpg" alt="TRACK_N1∅ cover">
+                  <div class="promo-overlay">
+                    <div class="promo-text">
+                      <div class="promo-title">TRACK_N1∅</div>
+                      <span class="tag">Hard Techno, Hard Dance, EDM, Trance</span>
+                    </div>
+                  </div>
+                </div>
+                <a class="promo-full-link" href="https://linktr.ee/TRACK_N10" target="_blank" rel="noopener" aria-label="TRACK_N1∅ — Hard Techno, Hard Dance, EDM, Trance"></a>
               </div>
             </div>
           </div>
-          <a class="promo-full-link" href="https://linktr.ee/TRACK_N10" target="_blank" rel="noopener" aria-label="LISTEN: ICONIC REMIXES — My 1st remix and feature! ICONIC - TRACK_N10 REMIX OUT NOW! :333"></a>
+
+          <!-- Navigation Arrows -->
+          <button class="promo-carousel-nav prev" aria-label="Previous slide">&#8249;</button>
+          <button class="promo-carousel-nav next" aria-label="Next slide">&#8250;</button>
+
+          <!-- Indicators -->
+          <div class="promo-carousel-indicators">
+            <button class="promo-carousel-indicator active" data-slide="0" aria-label="Go to slide 1"></button>
+            <button class="promo-carousel-indicator" data-slide="1" aria-label="Go to slide 2"></button>
+            <button class="promo-carousel-indicator" data-slide="2" aria-label="Go to slide 3"></button>
+            <button class="promo-carousel-indicator" data-slide="3" aria-label="Go to slide 4"></button>
+          </div>
         </div>
 
-        <!-- My Music Promo Block -->
-        <div class="promo-block">
-          <div class="promo-media">
-            <img src="https://live.staticflickr.com/65535/54890855699_bcdb97f7e0_c.jpg" alt="TRACK_N1∅ cover">
-            <div class="promo-overlay">
-              <div class="promo-text">
-                <div class="promo-title">TRACK_N1∅</div>
-                <span class="tag">Hard Techno, Hard Dance, EDM, Trance</span>
-              </div>
-            </div>
-          </div>
-          <a class="promo-full-link" href="https://linktr.ee/TRACK_N10" target="_blank" rel="noopener" aria-label="TRACK_N1∅ — Hard Techno, Hard Dance, EDM, Trance"></a>
-        </div>
         <!-- Music Section - Vertical Layout -->
         <div class="music-section">
           <div class="music-carousel-container">
@@ -1131,31 +1380,6 @@
             <span class="meta">Albums</span>
           </div>
           <a class="promo-full-link" href="https://linktr.ee/TRACK_N10" target="_blank" rel="noopener" aria-label="My Music - 5 albums in different genres"></a>
-        </div>
-
-        <!-- Books Section - Vertical Layout -->
-        <div class="books-section">
-          <div class="books-carousel-container">
-            <div class="books-carousel">
-              <img src="https://live.staticflickr.com/65535/54716871453_d21415ba00_n.jpg" class="active" alt="Ultra Qualia cover">
-              <img src="https://live.staticflickr.com/65535/54716872203_e112deea2a_n.jpg" alt="Intrusive Thoughts cover">
-            </div>
-          </div>
-          <div class="books-info">
-            <strong>My Books</strong>
-            <small>Ultra Qualia & Intrusive Thoughts</small>
-            <div class="tags">
-              <span class="tag">Sci-Fi</span>
-              <span class="tag">Drama/Horror</span>
-              <span class="tag">🇧🇷 Português</span>
-              <span class="tag">🇪🇸 Español</span>
-              <span class="tag">🇺🇸 English</span>
-              <span class="tag">🇩🇪 Deutsch</span>
-              <span class="tag">🇫🇷 Français</span>
-            </div>
-            <span class="meta">Books</span>
-          </div>
-          <a class="promo-full-link" href="https://books2read.com/ap/xrjoDL/Leonardo-Sales-Santos" target="_blank" rel="noopener" aria-label="My Books - Ultra Qualia & Intrusive Thoughts"></a>
         </div>
 
         <!-- My Online Store AllN10 -->
@@ -1431,6 +1655,133 @@
       }, 100);
     });
 
+    // Promo Carousel functionality
+    function initPromoCarousel() {
+      const wrapper = document.querySelector('.promo-carousel-wrapper');
+      if (!wrapper) return;
+
+      const slides = wrapper.querySelectorAll('.promo-carousel-track .promo-block');
+      const indicators = wrapper.querySelectorAll('.promo-carousel-indicator');
+      const prevBtn = wrapper.querySelector('.promo-carousel-nav.prev');
+      const nextBtn = wrapper.querySelector('.promo-carousel-nav.next');
+
+      const totalSlides = slides.length;
+      let currentSlide = 0;
+
+      function updateSlides() {
+        slides.forEach((slide, index) => {
+          // Remove all state classes
+          slide.classList.remove('active-slide', 'prev-slide', 'next-slide', 'hidden-slide');
+
+          if (index === currentSlide) {
+            slide.classList.add('active-slide');
+          } else if (index === (currentSlide - 1 + totalSlides) % totalSlides) {
+            slide.classList.add('prev-slide');
+          } else if (index === (currentSlide + 1) % totalSlides) {
+            slide.classList.add('next-slide');
+          } else {
+            slide.classList.add('hidden-slide');
+          }
+        });
+
+        // Update indicators
+        indicators.forEach((indicator, index) => {
+          indicator.classList.toggle('active', index === currentSlide);
+        });
+      }
+
+      function goToSlide(index) {
+        currentSlide = ((index % totalSlides) + totalSlides) % totalSlides;
+        updateSlides();
+      }
+
+      function nextSlide() {
+        goToSlide(currentSlide + 1);
+      }
+
+      function prevSlide() {
+        goToSlide(currentSlide - 1);
+      }
+
+      // Event listeners for navigation arrows
+      prevBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        prevSlide();
+      });
+
+      nextBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        nextSlide();
+      });
+
+      // Event listeners for indicators
+      indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', function(e) {
+          e.stopPropagation();
+          goToSlide(index);
+        });
+      });
+
+      // Touch/swipe support for mobile
+      let touchStartX = 0;
+      let touchEndX = 0;
+
+      wrapper.addEventListener('touchstart', function(e) {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+
+      wrapper.addEventListener('touchend', function(e) {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+      }, { passive: true });
+
+      function handleSwipe() {
+        const swipeThreshold = 50;
+        const diff = touchStartX - touchEndX;
+
+        if (Math.abs(diff) > swipeThreshold) {
+          if (diff > 0) {
+            nextSlide(); // Swipe left = next
+          } else {
+            prevSlide(); // Swipe right = prev
+          }
+        }
+      }
+
+      // Keyboard navigation when focused
+      wrapper.setAttribute('tabindex', '0');
+      wrapper.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowLeft') {
+          prevSlide();
+        } else if (e.key === 'ArrowRight') {
+          nextSlide();
+        }
+      });
+
+      // Handle click on active slide only
+      slides.forEach((slide) => {
+        slide.addEventListener('click', function(e) {
+          if (!this.classList.contains('active-slide')) {
+            e.preventDefault();
+            e.stopPropagation();
+            const slideIndex = parseInt(this.dataset.slide);
+            goToSlide(slideIndex);
+          } else {
+            // Allow click through to link only for active slide
+            if (!isSelecting && !isLongPress && window.getSelection().toString().length === 0) {
+              const link = this.querySelector('.promo-full-link');
+              if (link && link.href) {
+                window.open(link.href, link.target || '_self');
+              }
+            }
+          }
+        });
+      });
+
+      // Initialize
+      updateSlides();
+    }
+
     // Initialize carousels
     document.addEventListener('DOMContentLoaded', function() {
       // Initialize music carousel (3.5 seconds per album)
@@ -1438,6 +1789,9 @@
 
       // Initialize books carousel (4 seconds per book)
       initSimpleCarousel('.books-carousel img', 4000);
+
+      // Initialize promo carousel
+      initPromoCarousel();
 
       // Add hover effect to all links
       document.querySelectorAll('.link').forEach(link => {
@@ -1451,7 +1805,8 @@
       });
 
       // Handle promo blocks - navigate on click if not selecting text
-      document.querySelectorAll('.promo-block').forEach(block => {
+      // Exclude carousel promo blocks (they have their own click handling)
+      document.querySelectorAll('.promo-block:not(.promo-carousel-track .promo-block)').forEach(block => {
         block.addEventListener('click', function(e) {
           // Don't navigate if user is selecting text or during long-press
           if (!isSelecting && !isLongPress && window.getSelection().toString().length === 0) {

@@ -48,10 +48,10 @@
         .animated-bg {
             background: linear-gradient(-45deg,
                 #000000,
-                #1a0033,
-                #2d0052,
-                #1a0033,
-                #0d001a,
+                #000000,
+                #000000,
+                #000000,
+                #000000,
                 #000000
             );
             background-size: 400% 400%;
@@ -73,11 +73,11 @@
             width: 100%;
             height: 100%;
             background:
-                radial-gradient(ellipse at 10% 80%, rgba(138, 43, 226, 0.4) 0%, transparent 40%),
-                radial-gradient(ellipse at 20% 60%, rgba(147, 51, 234, 0.35) 0%, transparent 45%),
-                radial-gradient(ellipse at 15% 40%, rgba(168, 85, 247, 0.3) 0%, transparent 50%),
-                radial-gradient(ellipse at 25% 20%, rgba(126, 34, 206, 0.25) 0%, transparent 55%),
-                radial-gradient(circle at 90% 50%, rgba(88, 28, 135, 0.15) 0%, transparent 40%);
+                radial-gradient(ellipse at 10% 80%, rgba(98, 0, 190, 0.4) 0%, transparent 40%),
+                radial-gradient(ellipse at 20% 60%, rgba(71, 0, 138, 0.35) 0%, transparent 45%),
+                radial-gradient(ellipse at 15% 40%, rgba(0, 0, 0, 0.3) 0%, transparent 50%),
+                radial-gradient(ellipse at 25% 20%, rgba(40, 0, 76, 0.25) 0%, transparent 55%),
+                radial-gradient(circle at 90% 50%, rgba(16, 0, 28, 0.15) 0%, transparent 40%);
             animation: gradientShift 20s ease infinite;
             opacity: 0.8;
         }
@@ -91,9 +91,9 @@
             width: 100%;
             height: 100%;
             background:
-                radial-gradient(ellipse at 0% 100%, rgba(147, 51, 234, 0.5) 0%, transparent 35%),
-                radial-gradient(ellipse at 10% 90%, rgba(168, 85, 247, 0.4) 0%, transparent 40%),
-                radial-gradient(ellipse at 5% 70%, rgba(126, 34, 206, 0.35) 0%, transparent 45%);
+                radial-gradient(ellipse at 0% 100%, rgba(10, 0, 19, 0.5) 0%, transparent 35%),
+                radial-gradient(ellipse at 10% 90%, rgba(0, 0, 0, 0.4) 0%, transparent 40%),
+                radial-gradient(ellipse at 5% 70%, rgba(10, 0, 19, 0.35) 0%, transparent 45%);
             animation: purpleWave 25s ease infinite;
             opacity: 0.7;
         }
@@ -702,6 +702,23 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 0.75rem;
+            max-height: 60vh;
+            overflow-y: auto;
+            padding-right: 0.5rem;
+        }
+        .bookstore-grid::-webkit-scrollbar {
+            width: 6px;
+        }
+        .bookstore-grid::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 3px;
+        }
+        .bookstore-grid::-webkit-scrollbar-thumb {
+            background: rgba(147, 51, 234, 0.5);
+            border-radius: 3px;
+        }
+        .bookstore-grid::-webkit-scrollbar-thumb:hover {
+            background: rgba(147, 51, 234, 0.7);
         }
         @media (min-width: 768px) {
             .bookstore-grid {
@@ -1267,27 +1284,27 @@
                 </div>
 
                 <!-- Content -->
-                <div class="space-y-4 md:space-y-5 text-neutral-200">
+                <div class="space-y-4 md:space-y-5 text-white">
                     <p class="text-sm md:text-base lg:text-lg leading-relaxed">
-                        <span class="text-purple-300 font-semibold">25y, autistic, writer</span>, and now venturing into the world of
-                        <span class="text-cyan-300 font-semibold">DJing and Music Production</span>.
+                        <strong>25y, autistic, writer</strong>, and now venturing into the world of
+                        <strong>DJing and Music Production</strong>.
                     </p>
 
                     <p class="text-sm md:text-base lg:text-lg leading-relaxed">
-                        I'm the author of the sci-fi book <span class="text-purple-300 font-semibold">ULTRA QUALIA</span> and the drama/horror
-                        <span class="text-pink-300 font-semibold">INTRUSIVE THOUGHTS</span> (under my name, Leonardo Sales Santos).
-                        But everywhere else, I go by <span class="text-cyan-300 font-semibold">TRACK_N10</span>—a name inspired by
-                        Charli XCX's iconic "Track 10."
+                        I'm the author of the sci-fi book <strong><em>ULTRA QUALIA</em></strong> and the drama/horror
+                        <strong><em>INTRUSIVE THOUGHTS</em></strong> (under my name, Leonardo Sales Santos).
+                        But everywhere else, I go by <strong>TRACK_N10</strong>—a name inspired by
+                        Charli XCX's iconic <em>"Track 10."</em>
                     </p>
 
                     <p class="text-sm md:text-base lg:text-lg leading-relaxed">
-                        My influences span from <span class="text-blue-300">6arelyhuman, 2hollis, Shygirl, and SOPHIE</span> to
-                        <span class="text-purple-300">Sega Bodega, Kim Petras, Nils Frahm</span>, and countless other genres that shape my sound.
+                        My influences span from <em>6arelyhuman, 2hollis, Shygirl, and SOPHIE</em> to
+                        <em>Sega Bodega, Kim Petras, Nils Frahm</em>, and countless other genres that shape my sound.
                     </p>
 
                     <p class="text-sm md:text-base lg:text-lg leading-relaxed">
-                        Born in <span class="text-yellow-300 font-semibold">Rio de Janeiro, Brazil</span>, I now live in
-                        <span class="text-blue-300 font-semibold">Porto, Portugal</span>. With a degree in Marketing and two postgrads in
+                        Born in <strong>Rio de Janeiro, Brazil</strong>, I now live in
+                        <strong>Porto, Portugal</strong>. With a degree in Marketing and two postgrads in
                         Sales and Data Science, I finally decided to face my fears and dive headfirst into music—something I couldn't imagine life without.
                     </p>
 
@@ -1669,12 +1686,57 @@
             }
         };
 
-        // Bookstore display info
+        // Bookstore display info with official brand logos
+        // Using Clearbit Logo API (logo.clearbit.com) for reliable, high-quality brand logos
+        // Fallback to Simple Icons for major tech platforms
         const bookstoreInfo = {
+            // Major platforms with official Simple Icons
             amazon: { name: 'Amazon Kindle', icon: 'https://cdn.simpleicons.org/amazon/FF9900' },
             kobo: { name: 'Kobo', icon: 'https://cdn.simpleicons.org/kobo/BF0000' },
-            googleBooks: { name: 'Google Books', icon: 'https://cdn.simpleicons.org/googleplay/EA4335' },
-            applebooks: { name: 'Apple Books', icon: 'https://cdn.simpleicons.org/apple/ffffff' }
+            googleBooks: { name: 'Google Play Books', icon: 'https://cdn.simpleicons.org/googleplay/EA4335' },
+            applebooks: { name: 'Apple Books', icon: 'https://cdn.simpleicons.org/apple/ffffff' },
+            walmart: { name: 'Walmart', icon: 'https://cdn.simpleicons.org/walmart/0071CE' },
+
+            // Bookstores using Clearbit Logo API (fetches actual company logos)
+            bookshop: { name: 'Bookshop.org', icon: 'https://logo.clearbit.com/bookshop.org' },
+            gandhi: { name: 'Gandhi', icon: 'https://logo.clearbit.com/gandhi.com.mx' },
+            foyles: { name: 'Foyles', icon: 'https://logo.clearbit.com/foyles.co.uk' },
+            hugendubel: { name: 'Hugendubel', icon: 'https://logo.clearbit.com/hugendubel.de' },
+            everand: { name: 'Everand', icon: 'https://logo.clearbit.com/everand.com' },
+            blackwells: { name: 'Blackwells', icon: 'https://logo.clearbit.com/blackwells.co.uk' },
+            booktopia: { name: 'Booktopia', icon: 'https://logo.clearbit.com/booktopia.com.au' },
+            waterstones: { name: 'Waterstones', icon: 'https://logo.clearbit.com/waterstones.com' },
+            casadellibro: { name: 'Casa del Libro', icon: 'https://logo.clearbit.com/casadellibro.com' },
+            hatchards: { name: 'Hatchards', icon: 'https://logo.clearbit.com/hatchards.co.uk' },
+            overdrive: { name: 'OverDrive', icon: 'https://logo.clearbit.com/overdrive.com' },
+            buecherde: { name: 'Buecher.de', icon: 'https://logo.clearbit.com/buecher.de' },
+            ebookde: { name: 'Ebook.de', icon: 'https://logo.clearbit.com/ebook.de' },
+            barnesnoble: { name: 'Barnes & Noble', icon: 'https://logo.clearbit.com/barnesandnoble.com' },
+            bolcom: { name: 'Bol.com', icon: 'https://logo.clearbit.com/bol.com' }
+        };
+
+        // Author profile URLs for "ALL" view
+        const authorProfileUrls = {
+            kobo: 'https://www.kobo.com/pt/pt/search?query=leonardo%20sales%20santos&ac=1&acp=leonardo%20sales%20santos&ac.author=leonardo%20sales%20santos&sort=Temperature&fclanguages=all&pagenumber=1&fcmedia=BookSubscription&ssid=AQEug2y6TQDTjgEz9OG4j&sid=44993a60-55d5-4afc-9e5d-b3c77825f3b7',
+            amazon: 'https://www.amazon.com/stores/Leonardo-Sales-Santos/author/B0DJDQG78Z?language=pt&ref=ap_rdr&shoppingPortalEnabled=true&ccs_id=d92e8713-382a-447d-9413-1e05437e889e',
+            applebooks: 'https://books.apple.com/pt/author/leonardo-sales-santos/id1747717934',
+            bookshop: 'https://bookshop.org/beta-search?keywords=Leonardo+Sales+Santos',
+            googleBooks: 'https://play.google.com/store/search?q=leonardo+sales+santos&c=books&hl=pt',
+            gandhi: 'https://www.gandhi.com.mx/Leonardo%20Sales?map=ft',
+            foyles: 'https://www.foyles.co.uk/author/9999664/leonardo-sales-santos',
+            walmart: 'https://www.walmart.com/browse/0?facet=brand:Leonardo+Sales+Santos',
+            hugendubel: 'https://www.hugendubel.de/de/search/advanced?authors=leonardo%20sales%20santos',
+            everand: 'https://pt.everand.com/search?query=Ultra%20Qualia&verbatim=true',
+            blackwells: 'https://blackwells.co.uk/bookshop/search/author/Leonardo%20Sales%20Santos',
+            booktopia: 'https://www.booktopia.com.au/search?author=Leonardo%20Sales%20Santos',
+            waterstones: 'https://www.waterstones.com/author/leonardo-sales-santos/9999664',
+            casadellibro: 'https://www.casadellibro.com/ebook-ultra-qualia-book-1-side-a-ebook/9798231660988/17147600?query=Leonardo%20Sales%20Santos',
+            hatchards: 'https://www.hatchards.co.uk/author/9999664/leonardo-sales-santos',
+            overdrive: 'https://www.overdrive.com/creators/4018838/leonardo-sales-santos',
+            buecherde: 'https://www.buecher.de/ni/search/quick_search/q/cXVlcnk9JTIyTGVvbmFyZG8rU2FsZXMrU2FudG9zJTIyJmZpZWxkPXBlcnNvbmVu/',
+            ebookde: 'https://www.ebook.de/de/search/advanced?authors=Leonardo%20Sales%20Santos',
+            barnesnoble: 'https://www.barnesandnoble.com/s/%22Leonardo%20Sales%20Santos%22?Ntk=P_key_Contributor_List&Ns=P_Sales_Rank&Ntx=mode+matchall',
+            bolcom: 'https://www.bol.com/be/nl/b/leonardo-sales-santos/607873657/?bltgh=uxlUyIfT2MS3DSlTroBExA.4_9.11.ProductParty'
         };
 
         // Language info with flags
@@ -1725,7 +1787,7 @@
                     btn.onclick = (e) => e.preventDefault();
                 }
                 btn.innerHTML = `
-                    <img src="${info.icon}" alt="${info.name}" onerror="this.style.display='none'">
+                    <img src="${info.icon}" alt="${info.name}" onerror="this.src='https://cdn.simpleicons.org/bookstack/ffffff'; this.onerror=null;">
                     <span>${info.name}</span>
                 `;
                 grid.appendChild(btn);
@@ -1792,6 +1854,18 @@
             const langSelector = document.getElementById('language-selector');
             langSelector.innerHTML = '';
 
+            // Add "ALL" option first
+            const allPill = document.createElement('button');
+            allPill.type = 'button';
+            allPill.className = 'lang-pill' + (currentBookLanguage === 'ALL' ? ' active' : '');
+            allPill.onclick = () => selectLanguage('ALL');
+            allPill.innerHTML = `
+                <i class="fas fa-globe" style="font-size: 1rem;"></i>
+                <span>ALL</span>
+            `;
+            langSelector.appendChild(allPill);
+
+            // Add language-specific options
             Object.keys(languageInfo).forEach(lang => {
                 const info = languageInfo[lang];
                 const pill = document.createElement('button');
@@ -1824,29 +1898,57 @@
             if (!book) return;
 
             const grid = document.getElementById('bookstore-grid');
+            const label = document.getElementById('bookstore-label');
             grid.innerHTML = '';
 
-            const bookstoreOrder = ['amazon', 'kobo', 'googleBooks', 'applebooks'];
-            const links = book.links[currentBookLanguage];
+            if (currentBookLanguage === 'ALL') {
+                // Update label for ALL view
+                label.textContent = 'Author Profile - All Platforms';
 
-            bookstoreOrder.forEach(store => {
-                const url = links[store];
-                const info = bookstoreInfo[store];
-                const btn = document.createElement('a');
-                btn.className = 'bookstore-btn' + (url ? '' : ' disabled');
-                btn.href = url || '#';
-                btn.target = '_blank';
-                btn.rel = 'noopener noreferrer';
-                if (!url) {
-                    btn.setAttribute('aria-disabled', 'true');
-                    btn.onclick = (e) => e.preventDefault();
-                }
-                btn.innerHTML = `
-                    <img src="${info.icon}" alt="${info.name}" onerror="this.style.display='none'">
-                    <span>${info.name}</span>
-                `;
-                grid.appendChild(btn);
-            });
+                // Show all author profile links grouped by platform
+                const allStores = Object.keys(authorProfileUrls);
+
+                allStores.forEach(store => {
+                    const url = authorProfileUrls[store];
+                    const info = bookstoreInfo[store];
+                    const btn = document.createElement('a');
+                    btn.className = 'bookstore-btn';
+                    btn.href = url;
+                    btn.target = '_blank';
+                    btn.rel = 'noopener noreferrer';
+                    btn.innerHTML = `
+                        <img src="${info.icon}" alt="${info.name}" onerror="this.src='https://cdn.simpleicons.org/bookstack/ffffff'; this.onerror=null;">
+                        <span>${info.name}</span>
+                    `;
+                    grid.appendChild(btn);
+                });
+            } else {
+                // Update label for language-specific view
+                label.textContent = 'Available At';
+
+                // Show language-specific book links
+                const bookstoreOrder = ['amazon', 'kobo', 'googleBooks', 'applebooks'];
+                const links = book.links[currentBookLanguage];
+
+                bookstoreOrder.forEach(store => {
+                    const url = links[store];
+                    const info = bookstoreInfo[store];
+                    const btn = document.createElement('a');
+                    btn.className = 'bookstore-btn' + (url ? '' : ' disabled');
+                    btn.href = url || '#';
+                    btn.target = '_blank';
+                    btn.rel = 'noopener noreferrer';
+                    if (!url) {
+                        btn.setAttribute('aria-disabled', 'true');
+                        btn.onclick = (e) => e.preventDefault();
+                    }
+                    btn.innerHTML = `
+                        <img src="${info.icon}" alt="${info.name}" onerror="this.src='https://cdn.simpleicons.org/bookstack/ffffff'; this.onerror=null;">
+                        <span>${info.name}</span>
+                    `;
+                    grid.appendChild(btn);
+                });
+            }
         }
 
         function closeBookModal() {
@@ -1945,7 +2047,7 @@
                     <!-- Language pills will be dynamically inserted here -->
                 </div>
 
-                <p class="text-xs text-center text-neutral-400 mb-2 uppercase tracking-wider">Available At</p>
+                <p id="bookstore-label" class="text-xs text-center text-neutral-400 mb-2 uppercase tracking-wider">Available At</p>
                 <div id="bookstore-grid" class="bookstore-grid">
                     <!-- Bookstore buttons will be dynamically inserted here -->
                 </div>

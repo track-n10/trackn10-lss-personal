@@ -189,8 +189,39 @@
         }
 
         .neon-icon {
-            filter: drop-shadow(0 0 12px currentColor) drop-shadow(0 0 20px currentColor);
             opacity: 1;
+        }
+
+        /* Social media icons with vibrant gradients - no neon glow */
+        .social-icon-instagram {
+            background: linear-gradient(135deg, #f59e0b 0%, #f72d92 50%, #f59e0b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+        }
+
+        .social-icon-tiktok {
+            background: linear-gradient(135deg, #00acca 0%, #7d49f8 50%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+        }
+
+        .social-icon-youtube {
+            background: linear-gradient(135deg, #ef4444 0%, #ad0101 50%, #6c0000 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+        }
+        .social-icon-substack {
+            background: linear-gradient(135deg, #f65c03 0%, #f72d92 50%, #f59e0b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
         }
 
         .tab-btn {
@@ -897,6 +928,11 @@
                 </div>
                 <div class="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
+            <div onclick="filterCategory('others')" class="link-item all glass-card link-btn flex items-center p-4 md:p-6 lg:p-8 rounded-2xl group relative overflow-hidden cursor-pointer">
+                <div class="flex-shrink-0 mr-5 md:mr-6 lg:mr-8 w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 flex items-center justify-center text-yellow-400 neon-icon">
+                    <i class="fas fa-laptop-code text-3xl md:text-4xl lg:text-5xl"></i>
+                </div>
+                
 
 
             <!-- ============================================== -->
@@ -1213,11 +1249,14 @@
             <!-- ============================================== -->
             <!-- Category: OTHERS -->
             <!-- ============================================== -->
+             <div class="link-item others w-full flex justify-between items-end pb-2 md:pb-3 hidden-tab">
+                 <p class="text-xs md:text-sm lg:text-base uppercase tracking-widest text-yellow-400 mb-2">Free Web Tools</p>
+            </div>
 
             <!-- LyricSync10 -->
-            <a href="https://track-n10.github.io/lyricsync10" target="_blank" class="link-item all others glass-card link-btn flex items-center p-4 md:p-6 lg:p-8 rounded-2xl group relative overflow-hidden">
+            <a href="https://lyricsync10.vercel.app/" target="_blank" class="link-item all others glass-card link-btn flex items-center p-4 md:p-6 lg:p-8 rounded-2xl group relative overflow-hidden">
                 <div class="flex-shrink-0 mr-5 md:mr-6 lg:mr-8 w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 flex items-center justify-center text-yellow-400 neon-icon">
-                    <i class="fas fa-microphone-lines text-3xl md:text-4xl lg:text-5xl"></i>
+                    <img src="lyricsync10favicon.ico" alt="LyricSync10 Icon" class="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 object-contain">
                 </div>
                 <div class="flex-grow text-left z-10">
                     <h3 class="font-bold text-lg md:text-xl lg:text-2xl text-white group-hover:text-yellow-300 transition-colors tracking-wide">LyricSync10</h3>
@@ -1230,9 +1269,9 @@
             </a>
 
              <!-- DOCX Splitter -->
-             <a href="https://track-n10.github.io/docx-chapter-splitter" target="_blank" class="link-item all others glass-card link-btn flex items-center p-4 md:p-6 lg:p-8 rounded-2xl group relative overflow-hidden">
+             <a href="https://docx-chapter-splitter.vercel.app/" target="_blank" class="link-item all others glass-card link-btn flex items-center p-4 md:p-6 lg:p-8 rounded-2xl group relative overflow-hidden">
                 <div class="flex-shrink-0 mr-5 md:mr-6 lg:mr-8 w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 flex items-center justify-center text-blue-400 neon-icon">
-                    <i class="fas fa-file-code text-3xl md:text-4xl lg:text-5xl"></i>
+                    <img src="docxfavicon.ico" alt="DOCX Splitter Icon" class="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 object-contain">
                 </div>
                 <div class="flex-grow text-left z-10">
                     <h3 class="font-bold text-lg md:text-xl lg:text-2xl text-white group-hover:text-blue-300 transition-colors tracking-wide">DOCX Splitter</h3>
@@ -1243,10 +1282,13 @@
                 </div>
                 <div class="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </a>
+            <div class="link-item others w-full text-center pb-2 md:pb-3 pt-4 md:pt-6 hidden-tab">
+                <p class="text-xs md:text-sm lg:text-base uppercase tracking-widest text-blue-400 mb-2">Social Media</p>
+            </div>
 
             <!-- Instagram -->
             <a href="https://www.instagram.com/track_n10/" target="_blank" class="link-item all others glass-card link-btn flex items-center p-4 md:p-6 lg:p-8 rounded-2xl group relative overflow-hidden">
-                <div class="flex-shrink-0 mr-5 md:mr-6 lg:mr-8 w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 flex items-center justify-center text-pink-400 neon-icon">
+                <div class="flex-shrink-0 mr-5 md:mr-6 lg:mr-8 w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 flex items-center justify-center social-icon-instagram">
                     <i class="fab fa-instagram text-3xl md:text-4xl lg:text-5xl"></i>
                 </div>
                 <div class="flex-grow text-left z-10">
@@ -1261,7 +1303,7 @@
 
             <!-- Tiktok -->
             <a href="https://www.tiktok.com/@track_n10" target="_blank" class="link-item all others glass-card link-btn flex items-center p-4 md:p-6 lg:p-8 rounded-2xl group relative overflow-hidden">
-                <div class="flex-shrink-0 mr-5 md:mr-6 lg:mr-8 w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 flex items-center justify-center text-lime-400 neon-icon">
+                <div class="flex-shrink-0 mr-5 md:mr-6 lg:mr-8 w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 flex items-center justify-center social-icon-tiktok">
                     <i class="fab fa-tiktok text-3xl md:text-4xl lg:text-5xl"></i>
                 </div>
                 <div class="flex-grow text-left z-10">
@@ -1272,6 +1314,34 @@
                     <i class="fas fa-arrow-up-right-from-square text-lg md:text-xl lg:text-2xl"></i>
                 </div>
                 <div class="absolute inset-0 bg-gradient-to-r from-lime-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            </a>
+            <!-- Youtube-->
+             <a href="https://www.youtube.com/@track_n10" target="_blank" class="link-item all others glass-card link-btn flex items-center p-4 md:p-6 lg:p-8 rounded-2xl group relative overflow-hidden">
+                <div class="flex-shrink-0 mr-5 md:mr-6 lg:mr-8 w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 flex items-center justify-center social-icon-youtube">
+                    <i class="fab fa-youtube text-3xl md:text-4xl lg:text-5xl"></i>
+                </div>
+                <div class="flex-grow text-left z-10">
+                    <h3 class="font-bold text-lg md:text-xl lg:text-2xl text-white group-hover:text-red-300 transition-colors tracking-wide">Youtube</h3>
+                    <p class="text-xs md:text-sm lg:text-base text-neutral-400 group-hover:text-neutral-300 transition-colors">@track_n10</p>
+                </div>
+                <div class="text-white/20 group-hover:text-red-400 group-hover:translate-x-1 transition-all">
+                    <i class="fas fa-arrow-up-right-from-square text-lg md:text-xl lg:text-2xl"></i>
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-r from-red-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            </a>
+            <!-- Substack -->
+             <a href="https://trackn10.substack.com/" target="_blank" class="link-item all others glass-card link-btn flex items-center p-4 md:p-6 lg:p-8 rounded-2xl group relative overflow-hidden">
+                <div class="flex-shrink-0 mr-5 md:mr-6 lg:mr-8 w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 flex items-center justify-center social-icon-substack">
+                    <img src="https://cdn.brandfetch.io/id_V6qzrDH/theme/dark/symbol.svg?c=1bxid64Mup7aczewSAYMX&t=1756370390245" alt="Substack" class="w-full h-full object-contain" />
+                </div>
+                <div class="flex-grow text-left z-10">
+                    <h3 class="font-bold text-lg md:text-xl lg:text-2xl text-white group-hover:text-orange-300 transition-colors tracking-wide">Substack</h3>
+                    <p class="text-xs md:text-sm lg:text-base text-neutral-400 group-hover:text-neutral-300 transition-colors">trackn10.substack.com</p>
+                </div>
+                <div class="text-white/20 group-hover:text-orange-400 group-hover:translate-x-1 transition-all">
+                    <i class="fas fa-arrow-up-right-from-square text-lg md:text-xl lg:text-2xl"></i>
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </a>
 
         </div>

@@ -224,6 +224,31 @@
             font-weight: 700;
         }
 
+        /* Contemporary section heading used for FREE WEB TOOLS / SOCIALS */
+        .section-heading {
+            display: inline-block;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            padding: 0.125rem 0.5rem;
+            border-radius: 0.5rem;
+            background: linear-gradient(90deg, #8b5cf6 0%, #ec4899 45%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.08);
+        }
+        .section-heading::after {
+            content: '';
+            display: block;
+            height: 3px;
+            width: 44px;
+            margin-top: 0.45rem;
+            border-radius: 4px;
+            background: linear-gradient(90deg, rgba(139,92,246,0.9), rgba(236,72,153,0.9));
+            opacity: 0.95;
+        }
+
         .tab-btn {
             transition: all 0.3s ease;
             position: relative;
@@ -1246,9 +1271,9 @@
             <!-- ============================================== -->
             <!-- Category: OTHERS -->
             <!-- ============================================== -->
-             <div class="link-item all others w-full flex justify-between items-end pb-2 md:pb-3 hidden-tab">
-                 <p class="text-xs md:text-sm lg:text-base uppercase tracking-widest text-yellow-400 mb-2">FREE WEB TOOLS</p>
-            </div>
+              <div class="link-item all others w-full flex justify-between items-end pb-2 md:pb-3 hidden-tab">
+                  <p class="text-xs md:text-sm lg:text-base uppercase tracking-widest text-yellow-400 mb-2 section-heading">FREE WEB TOOLS</p>
+              </div>
 
             <!-- LyricSync10 -->
             <a href="https://lyricsync10.vercel.app/" target="_blank" class="link-item all others glass-card link-btn flex items-center p-4 md:p-6 lg:p-8 rounded-2xl group relative overflow-hidden">
@@ -1280,7 +1305,7 @@
                 <div class="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </a>
             <div class="link-item all others w-full text-center pb-2 md:pb-3 pt-4 md:pt-6 hidden-tab">
-                <p class="text-xs md:text-sm lg:text-base uppercase tracking-widest text-blue-400 mb-2">SOCIALS</p>
+                <p class="text-xs md:text-sm lg:text-base uppercase tracking-widest text-blue-400 mb-2 section-heading">SOCIALS</p>
             </div>
 
             <!-- Instagram -->

@@ -11,6 +11,7 @@
   <link rel="manifest" href="/site.webmanifest">
   <link rel="icon" href="favicon.ico">
   <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="favicon.ico">
     <title>TRACK_N10 — Leonardo Sales Santos</title>
 
     <!-- Google Tag Manager -->
@@ -1687,36 +1688,104 @@
         };
 
         // Bookstore display info with official brand logos
-        // Using Clearbit Logo API (logo.clearbit.com) for reliable, high-quality brand logos
-        // Fallback to Simple Icons for major tech platforms
+        // ATUALIZE o objeto bookstoreInfo para:
         const bookstoreInfo = {
-            // Major platforms with official Simple Icons
-            amazon: { name: 'Amazon Kindle', icon: 'https://cdn.simpleicons.org/amazon/FF9900' },
-            kobo: { name: 'Kobo', icon: 'https://cdn.simpleicons.org/kobo/BF0000' },
-            googleBooks: { name: 'Google Play Books', icon: 'https://cdn.simpleicons.org/googleplay/EA4335' },
-            applebooks: { name: 'Apple Books', icon: 'https://cdn.simpleicons.org/apple/ffffff' },
-            walmart: { name: 'Walmart', icon: 'https://cdn.simpleicons.org/walmart/0071CE' },
-
-            // Bookstores using Clearbit Logo API (fetches actual company logos)
-            bookshop: { name: 'Bookshop.org', icon: 'https://logo.clearbit.com/bookshop.org' },
-            gandhi: { name: 'Gandhi', icon: 'https://logo.clearbit.com/gandhi.com.mx' },
-            foyles: { name: 'Foyles', icon: 'https://logo.clearbit.com/foyles.co.uk' },
-            hugendubel: { name: 'Hugendubel', icon: 'https://logo.clearbit.com/hugendubel.de' },
-            everand: { name: 'Everand', icon: 'https://logo.clearbit.com/everand.com' },
-            blackwells: { name: 'Blackwells', icon: 'https://logo.clearbit.com/blackwells.co.uk' },
-            booktopia: { name: 'Booktopia', icon: 'https://logo.clearbit.com/booktopia.com.au' },
-            waterstones: { name: 'Waterstones', icon: 'https://logo.clearbit.com/waterstones.com' },
-            casadellibro: { name: 'Casa del Libro', icon: 'https://logo.clearbit.com/casadellibro.com' },
-            hatchards: { name: 'Hatchards', icon: 'https://logo.clearbit.com/hatchards.co.uk' },
-            overdrive: { name: 'OverDrive', icon: 'https://logo.clearbit.com/overdrive.com' },
-            buecherde: { name: 'Buecher.de', icon: 'https://logo.clearbit.com/buecher.de' },
-            ebookde: { name: 'Ebook.de', icon: 'https://logo.clearbit.com/ebook.de' },
-            barnesnoble: { name: 'Barnes & Noble', icon: 'https://logo.clearbit.com/barnesandnoble.com' },
-            bolcom: { name: 'Bol.com', icon: 'https://logo.clearbit.com/bol.com' }
-        };
-
+        // Major platforms with official Simple Icons (preferidos)
+        amazon: { 
+            name: 'Amazon Kindle', 
+            icon: 'https://cdn.simpleicons.org/amazon/FF9900' 
+        },
+        kobo: { 
+            name: 'Kobo', 
+            icon: 'https://cdn.simpleicons.org/kobo/6C0F8A' 
+        },
+        googleBooks: { 
+            name: 'Google Play Books', 
+            icon: 'https://cdn.simpleicons.org/googleplaybooks/4285F4' 
+        },
+        applebooks: { 
+            name: 'Apple Books', 
+            icon: 'https://cdn.simpleicons.org/applebooks/000000' 
+        },
+        walmart: { 
+            name: 'Walmart', 
+            icon: 'https://cdn.simpleicons.org/walmart/0071CE' 
+        },
+        
+        // Brazilian and Portuguese bookstores - usando favicons do Google
+        saraiva: { 
+            name: 'Livraria Saraiva', 
+            icon: 'https://www.google.com/s2/favicons?domain=saraiva.com.br&sz=32' 
+        },
+        fnac: { 
+            name: 'Fnac', 
+            icon: 'https://www.google.com/s2/favicons?domain=fnac.pt&sz=32' 
+        },
+        
+        // International bookstores - usando favicons do Google
+        bookshop: { 
+            name: 'Bookshop.org', 
+            icon: 'https://www.google.com/s2/favicons?domain=bookshop.org&sz=32' 
+        },
+        gandhi: { 
+            name: 'Gandhi', 
+            icon: 'https://www.google.com/s2/favicons?domain=gandhi.com.mx&sz=32' 
+        },
+        foyles: { 
+            name: 'Foyles', 
+            icon: 'https://www.google.com/s2/favicons?domain=foyles.co.uk&sz=32' 
+        },
+        hugendubel: { 
+            name: 'Hugendubel', 
+            icon: 'https://www.google.com/s2/favicons?domain=hugendubel.de&sz=32' 
+        },
+        everand: { 
+            name: 'Everand', 
+            icon: 'https://www.google.com/s2/favicons?domain=everand.com&sz=32' 
+        },
+        blackwells: { 
+            name: 'Blackwells', 
+            icon: 'https://www.google.com/s2/favicons?domain=blackwells.co.uk&sz=32' 
+        },
+        booktopia: { 
+            name: 'Booktopia', 
+            icon: 'https://www.google.com/s2/favicons?domain=booktopia.com.au&sz=32' 
+        },
+        waterstones: { 
+            name: 'Waterstones', 
+            icon: 'https://www.google.com/s2/favicons?domain=waterstones.com&sz=32' 
+        },
+        casadellibro: { 
+            name: 'Casa del Libro', 
+            icon: 'https://www.google.com/s2/favicons?domain=casadellibro.com&sz=32' 
+        },
+        hatchards: { 
+            name: 'Hatchards', 
+            icon: 'https://www.google.com/s2/favicons?domain=hatchards.co.uk&sz=32' 
+        },
+        overdrive: { 
+            name: 'OverDrive', 
+            icon: 'https://www.google.com/s2/favicons?domain=overdrive.com&sz=32' 
+        },
+        buecherde: { 
+            name: 'Buecher.de', 
+            icon: 'https://www.google.com/s2/favicons?domain=buecher.de&sz=32' 
+        },
+        ebookde: { 
+            name: 'Ebook.de', 
+            icon: 'https://www.google.com/s2/favicons?domain=ebook.de&sz=32' 
+        },
+        barnesnoble: { 
+            name: 'Barnes & Noble', 
+            icon: 'https://www.google.com/s2/favicons?domain=barnesandnoble.com&sz=32' 
+        },
+        bolcom: { 
+            name: 'Bol.com', 
+            icon: 'https://www.google.com/s2/favicons?domain=bol.com&sz=32' 
+        }
+    };
         // Author profile URLs for "ALL" view
-        const authorProfileUrls = {
+        const authorProfileUrls = { 
             kobo: 'https://www.kobo.com/pt/pt/search?query=leonardo%20sales%20santos&ac=1&acp=leonardo%20sales%20santos&ac.author=leonardo%20sales%20santos&sort=Temperature&fclanguages=all&pagenumber=1&fcmedia=BookSubscription&ssid=AQEug2y6TQDTjgEz9OG4j&sid=44993a60-55d5-4afc-9e5d-b3c77825f3b7',
             amazon: 'https://www.amazon.com/stores/Leonardo-Sales-Santos/author/B0DJDQG78Z?language=pt&ref=ap_rdr&shoppingPortalEnabled=true&ccs_id=d92e8713-382a-447d-9413-1e05437e889e',
             applebooks: 'https://books.apple.com/pt/author/leonardo-sales-santos/id1747717934',
@@ -1749,8 +1818,8 @@
         };
 
         // Current selected language for book modal
-        let currentBookLanguage = 'PT';
-        let currentBookId = null;
+        let currentBookLanguage;
+        let currentBookId;
 
         // Modal functions
         function openStreamingModal(releaseId) {
@@ -1893,6 +1962,75 @@
             updateBookstoreLinks();
         }
 
+function updateBookstoreLinks() {
+    const book = bookData[currentBookId];
+    if (!book) return;
+
+    const grid = document.getElementById('bookstore-grid');
+    const label = document.getElementById('bookstore-label');
+    grid.innerHTML = '';
+
+    if (currentBookLanguage === 'ALL') {
+        label.textContent = 'Author Profile - All Platforms';
+        const allStores = Object.keys(authorProfileUrls);
+
+        allStores.forEach(store => {
+            const url = authorProfileUrls[store];
+            const info = bookstoreInfo[store];
+            const btn = document.createElement('a');
+            btn.className = 'bookstore-btn';
+            btn.href = url;
+            btn.target = '_blank';
+            btn.rel = 'noopener noreferrer';
+            
+            // Fallback mais específico - primeiro letra do nome
+            const fallbackText = info.name.charAt(0);
+            btn.innerHTML = `
+                <img src="${info.icon}" alt="${info.name}" 
+                     onerror="
+                         this.onerror=null;
+                         this.style.display='none';
+                         this.parentElement.innerHTML='<div class=\\'text-xs font-bold\\'>${fallbackText}</div>';
+                     ">
+                <span>${info.name}</span>
+            `;
+            grid.appendChild(btn);
+        });
+    } else {
+        label.textContent = 'Available At';
+        const bookstoreOrder = ['amazon', 'kobo', 'googleBooks', 'applebooks'];
+        const links = book.links[currentBookLanguage];
+
+        bookstoreOrder.forEach(store => {
+            const url = links[store];
+            const info = bookstoreInfo[store];
+            const btn = document.createElement('a');
+            btn.className = 'bookstore-btn' + (url ? '' : ' disabled');
+            btn.href = url || '#';
+            btn.target = '_blank';
+            btn.rel = 'noopener noreferrer';
+            
+            if (!url) {
+                btn.setAttribute('aria-disabled', 'true');
+                btn.onclick = (e) => e.preventDefault();
+            }
+            
+            // Fallback mais específico
+            const fallbackText = info.name.charAt(0);
+            btn.innerHTML = `
+                <img src="${info.icon}" alt="${info.name}" 
+                     onerror="
+                         this.onerror=null;
+                         this.style.display='none';
+                         this.parentElement.innerHTML='<div class=\\'text-xs font-bold\\'>${fallbackText}</div>';
+                     ">
+                <span>${info.name}</span>
+            `;
+            grid.appendChild(btn);
+        });
+    }
+}
+
         function updateBookstoreLinks() {
             const book = bookData[currentBookId];
             if (!book) return;
@@ -1902,12 +2040,8 @@
             grid.innerHTML = '';
 
             if (currentBookLanguage === 'ALL') {
-                // Update label for ALL view
                 label.textContent = 'Author Profile - All Platforms';
-
-                // Show all author profile links grouped by platform
                 const allStores = Object.keys(authorProfileUrls);
-
                 allStores.forEach(store => {
                     const url = authorProfileUrls[store];
                     const info = bookstoreInfo[store];

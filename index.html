@@ -928,10 +928,7 @@
                 </div>
                 <div class="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
-            <div onclick="filterCategory('others')" class="link-item all glass-card link-btn flex items-center p-4 md:p-6 lg:p-8 rounded-2xl group relative overflow-hidden cursor-pointer">
-                <div class="flex-shrink-0 mr-5 md:mr-6 lg:mr-8 w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 flex items-center justify-center text-yellow-400 neon-icon">
-                    <i class="fas fa-laptop-code text-3xl md:text-4xl lg:text-5xl"></i>
-                </div>
+          
                 
 
 
@@ -1249,8 +1246,8 @@
             <!-- ============================================== -->
             <!-- Category: OTHERS -->
             <!-- ============================================== -->
-             <div class="link-item others w-full flex justify-between items-end pb-2 md:pb-3 hidden-tab">
-                 <p class="text-xs md:text-sm lg:text-base uppercase tracking-widest text-yellow-400 mb-2">Free Web Tools</p>
+             <div class="link-item all others w-full flex justify-between items-end pb-2 md:pb-3 hidden-tab">
+                 <p class="text-xs md:text-sm lg:text-base uppercase tracking-widest text-yellow-400 mb-2">FREE WEB TOOLS</p>
             </div>
 
             <!-- LyricSync10 -->
@@ -1282,8 +1279,8 @@
                 </div>
                 <div class="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </a>
-            <div class="link-item others w-full text-center pb-2 md:pb-3 pt-4 md:pt-6 hidden-tab">
-                <p class="text-xs md:text-sm lg:text-base uppercase tracking-widest text-blue-400 mb-2">Social Media</p>
+            <div class="link-item all others w-full text-center pb-2 md:pb-3 pt-4 md:pt-6 hidden-tab">
+                <p class="text-xs md:text-sm lg:text-base uppercase tracking-widest text-blue-400 mb-2">SOCIALS</p>
             </div>
 
             <!-- Instagram -->
@@ -2222,6 +2219,8 @@ function updateBookstoreLinks() {
                     openBookModal(bookId);
                 });
             });
+            // Initialize filter to show 'all' items on first load
+            filterCategory('all');
         });
     </script>
 

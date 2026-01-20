@@ -2095,7 +2095,7 @@
 
         // Bookstore display info with official brand logos
         // ATUALIZE o objeto bookstoreInfo para:
-        const bookstoreInfo = {
+	        const bookstoreInfo = {
         // Major platforms with official Simple Icons (preferidos)
         amazon: { 
             name: 'Amazon Kindle', 
@@ -2212,7 +2212,7 @@
             name: 'Powells', 
             icon: 'https://www.google.com/s2/favicons?domain=powells.com&sz=32' 
         },
-        laFeltrinelli: { 
+	        lafeltrinelli: { 
             name: 'La Feltrinelli', 
             icon: 'https://www.google.com/s2/favicons?domain=lafeltrinelli.it&sz=32' 
         },
@@ -2233,8 +2233,8 @@
             icon: 'https://www.google.com/s2/favicons?domain=booksamillion.com&sz=32' 
         }
     };
-        // Author profile URLs for "ALL" view
-        const authorProfileUrls = { 
+	        // Author profile URLs for "ALL" view
+	        const authorProfileUrls = { 
             kobo: 'https://www.kobo.com/pt/pt/search?query=leonardo%20sales%20santos&ac=1&acp=leonardo%20sales%20santos&ac.author=leonardo%20sales%20santos&sort=Temperature&fclanguages=all&pagenumber=1&fcmedia=BookSubscription&ssid=AQEug2y6TQDTjgEz9OG4j&sid=44993a60-55d5-4afc-9e5d-b3c77825f3b7',
             amazon: 'https://www.amazon.com/stores/Leonardo-Sales-Santos/author/B0DJDQG78Z?language=pt&ref=ap_rdr&shoppingPortalEnabled=true&ccs_id=d92e8713-382a-447d-9413-1e05437e889e',
             applebooks: 'https://books.apple.com/pt/author/leonardo-sales-santos/id1747717934',
@@ -2263,7 +2263,7 @@
             sanmin: 'https://www.sanmin.com.tw/search?au=Leonardo%20Sales%20Santos',
             dymocks: 'https://www.dymocks.com.au/catalogsearch/result/?q=Leonardo+Sales+Santos',
             powells: 'https://www.powells.com/books/search?query=Leonardo+Sales+Santos&page=1',
-            laFeltrinelli: 'https://www.lafeltrinelli.it/libri-inglese/autori/leonardo-sales-santos',
+	            lafeltrinelli: 'https://www.lafeltrinelli.it/libri-inglese/autori/leonardo-sales-santos',
             indiebookstores: 'https://www.indiebookstores.ca/books/?term=Leonardo+Sales+Santos',
             payhip: 'https://payhip.com/leonardosalessantos',
             thalia: 'https://www.thalia.de/shop/home/mehr-von-suche/ANY/sp/suche.html?mehrVon=leonardo+sales+santos',
@@ -2389,8 +2389,9 @@
             // Add "ALL" option first
             const allPill = document.createElement('button');
             allPill.type = 'button';
+	            allPill.dataset.lang = 'ALL';
             allPill.className = 'lang-pill' + (currentBookLanguage === 'ALL' ? ' active' : '');
-            allPill.onclick = () => selectLanguage('ALL');
+	            allPill.onclick = () => selectLanguage('ALL');
             allPill.innerHTML = `
                 <i class="fas fa-globe" style="font-size: 1rem;"></i>
                 <span>ALL</span>
@@ -2402,6 +2403,7 @@
                 const info = languageInfo[lang];
                 const pill = document.createElement('button');
                 pill.type = 'button';
+	                pill.dataset.lang = lang;
                 pill.className = 'lang-pill' + (lang === currentBookLanguage ? ' active' : '');
                 pill.onclick = () => selectLanguage(lang);
                 pill.innerHTML = `
@@ -2416,85 +2418,15 @@
             currentBookLanguage = lang;
 
             // Update active state on pills
-            document.querySelectorAll('.lang-pill').forEach(pill => {
-                pill.classList.remove('active');
-            });
-            event.target.closest('.lang-pill').classList.add('active');
+	            document.querySelectorAll('.lang-pill').forEach(pill => {
+	                pill.classList.toggle('active', pill.dataset.lang === lang);
+	            });
 
             // Update bookstore links
             updateBookstoreLinks();
         }
 
-function updateBookstoreLinks() {
-    const book = bookData[currentBookId];
-    if (!book) return;
-
-    const grid = document.getElementById('bookstore-grid');
-    const label = document.getElementById('bookstore-label');
-    grid.innerHTML = '';
-
-    if (currentBookLanguage === 'ALL') {
-        label.textContent = 'Author Profile - All Platforms';
-        const allStores = Object.keys(authorProfileUrls);
-
-        allStores.forEach(store => {
-            const url = authorProfileUrls[store];
-            const info = bookstoreInfo[store];
-            const btn = document.createElement('a');
-            btn.className = 'bookstore-btn';
-            btn.href = url;
-            btn.target = '_blank';
-            btn.rel = 'noopener noreferrer';
-            
-            // Fallback mais específico - primeiro letra do nome
-            const fallbackText = info.name.charAt(0);
-            btn.innerHTML = `
-                <img src="${info.icon}" alt="${info.name}" 
-                     onerror="
-                         this.onerror=null;
-                         this.style.display='none';
-                         this.parentElement.innerHTML='<div class=\\'text-xs font-bold\\'>${fallbackText}</div>';
-                     ">
-                <span>${info.name}</span>
-            `;
-            grid.appendChild(btn);
-        });
-    } else {
-        label.textContent = 'Available At';
-        const bookstoreOrder = ['amazon', 'kobo', 'googleBooks', 'applebooks'];
-        const links = book.links[currentBookLanguage];
-
-        bookstoreOrder.forEach(store => {
-            const url = links[store];
-            const info = bookstoreInfo[store];
-            const btn = document.createElement('a');
-            btn.className = 'bookstore-btn' + (url ? '' : ' disabled');
-            btn.href = url || '#';
-            btn.target = '_blank';
-            btn.rel = 'noopener noreferrer';
-            
-            if (!url) {
-                btn.setAttribute('aria-disabled', 'true');
-                btn.onclick = (e) => e.preventDefault();
-            }
-            
-            // Fallback mais específico
-            const fallbackText = info.name.charAt(0);
-            btn.innerHTML = `
-                <img src="${info.icon}" alt="${info.name}" 
-                     onerror="
-                         this.onerror=null;
-                         this.style.display='none';
-                         this.parentElement.innerHTML='<div class=\\'text-xs font-bold\\'>${fallbackText}</div>';
-                     ">
-                <span>${info.name}</span>
-            `;
-            grid.appendChild(btn);
-        });
-    }
-}
-
-        function updateBookstoreLinks() {
+	        function updateBookstoreLinks() {
             const book = bookData[currentBookId];
             if (!book) return;
 
@@ -2502,49 +2434,57 @@ function updateBookstoreLinks() {
             const label = document.getElementById('bookstore-label');
             grid.innerHTML = '';
 
-            if (currentBookLanguage === 'ALL') {
+	            if (currentBookLanguage === 'ALL') {
                 label.textContent = 'Author Profile - All Platforms';
                 const allStores = Object.keys(authorProfileUrls);
-                allStores.forEach(store => {
-                    const url = authorProfileUrls[store];
-                    const info = bookstoreInfo[store];
-                    const btn = document.createElement('a');
-                    btn.className = 'bookstore-btn';
-                    btn.href = url;
-                    btn.target = '_blank';
-                    btn.rel = 'noopener noreferrer';
-                    btn.innerHTML = `
-                        <img src="${info.icon}" alt="${info.name}" onerror="this.src='https://cdn.simpleicons.org/bookstack/ffffff'; this.onerror=null;">
-                        <span>${info.name}</span>
-                    `;
-                    grid.appendChild(btn);
-                });
-            } else {
+	                allStores.forEach(store => {
+	                    try {
+	                        const url = authorProfileUrls[store];
+	                        const info = bookstoreInfo[store] || { name: store, icon: 'https://cdn.simpleicons.org/bookstack/ffffff' };
+	                        const btn = document.createElement('a');
+	                        btn.className = 'bookstore-btn';
+	                        btn.href = url;
+	                        btn.target = '_blank';
+	                        btn.rel = 'noopener noreferrer';
+	                        btn.innerHTML = `
+	                            <img src="${info.icon}" alt="${info.name}" onerror="this.src='https://cdn.simpleicons.org/bookstack/ffffff'; this.onerror=null;">
+	                            <span>${info.name}</span>
+	                        `;
+	                        grid.appendChild(btn);
+	                    } catch (err) {
+	                        console.error('[Book Modal] Failed to render ALL-store button:', store, err);
+	                    }
+	                });
+	            } else {
                 // Update label for language-specific view
                 label.textContent = 'Available At';
 
                 // Show language-specific book links
-                const bookstoreOrder = ['amazon', 'kobo', 'googleBooks', 'applebooks', 'walmart', 'fnac', 'gandhi', 'foyles', 'hugendubel', 'everand', 'blackwells', 'booktopia', 'waterstones', 'casadellibro', 'hatchards', 'overdrive', 'buecherde', 'ebookde', 'barnesnoble', 'bolcom', 'smashwords', 'vivlio', 'fable', 'indigo', 'sanmin', 'dymocks', 'powells', 'lafeltrinelli', 'indiebookstores', 'payhip'];
-                const links = book.links[currentBookLanguage];
+	                const bookstoreOrder = ['amazon', 'kobo', 'googleBooks', 'applebooks', 'walmart', 'fnac', 'gandhi', 'foyles', 'hugendubel', 'everand', 'blackwells', 'booktopia', 'waterstones', 'casadellibro', 'hatchards', 'overdrive', 'buecherde', 'ebookde', 'barnesnoble', 'bolcom', 'smashwords', 'vivlio', 'fable', 'indigo', 'sanmin', 'dymocks', 'powells', 'lafeltrinelli', 'indiebookstores', 'payhip', 'thalia', 'booksamillion'];
+	                const links = (book.links && book.links[currentBookLanguage]) ? book.links[currentBookLanguage] : {};
 
-                bookstoreOrder.forEach(store => {
-                    const url = links[store];
-                    const info = bookstoreInfo[store];
-                    const btn = document.createElement('a');
-                    btn.className = 'bookstore-btn' + (url ? '' : ' disabled');
-                    btn.href = url || '#';
-                    btn.target = '_blank';
-                    btn.rel = 'noopener noreferrer';
-                    if (!url) {
-                        btn.setAttribute('aria-disabled', 'true');
-                        btn.onclick = (e) => e.preventDefault();
-                    }
-                    btn.innerHTML = `
-                        <img src="${info.icon}" alt="${info.name}" onerror="this.src='https://cdn.simpleicons.org/bookstack/ffffff'; this.onerror=null;">
-                        <span>${info.name}</span>
-                    `;
-                    grid.appendChild(btn);
-                });
+	                bookstoreOrder.forEach(store => {
+	                    try {
+	                        const url = links[store];
+	                        const info = bookstoreInfo[store] || { name: store, icon: 'https://cdn.simpleicons.org/bookstack/ffffff' };
+	                        const btn = document.createElement('a');
+	                        btn.className = 'bookstore-btn' + (url ? '' : ' disabled');
+	                        btn.href = url || '#';
+	                        btn.target = '_blank';
+	                        btn.rel = 'noopener noreferrer';
+	                        if (!url) {
+	                            btn.setAttribute('aria-disabled', 'true');
+	                            btn.onclick = (e) => e.preventDefault();
+	                        }
+	                        btn.innerHTML = `
+	                            <img src="${info.icon}" alt="${info.name}" onerror="this.src='https://cdn.simpleicons.org/bookstack/ffffff'; this.onerror=null;">
+	                            <span>${info.name}</span>
+	                        `;
+	                        grid.appendChild(btn);
+	                    } catch (err) {
+	                        console.error('[Book Modal] Failed to render bookstore button:', store, err);
+	                    }
+	                });
             }
         }
 

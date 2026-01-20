@@ -973,8 +973,25 @@
             <!-- CARROSSEL DE SINGLES -->
             <div class="link-item music w-full hidden-tab relative">
                 <div id="singles-carousel" class="flex overflow-x-auto snap-x snap-mandatory gap-4 md:gap-6 lg:gap-8 pb-4 md:pb-6 no-scrollbar">
-                    
-                    <!-- Single Slide 1: PURE EDM TRANCE :333 -->
+
+                    <!-- Single Slide 1: CLUBBY FREESTYLE -->
+                    <div data-release-id="clubby-freestyle" class="flex-none w-64 md:w-80 lg:w-96 snap-center relative aspect-square rounded-2xl overflow-hidden glass-card group/slide cursor-pointer border border-white/10 hover:border-cyan-500/50 transition-all">
+                        <img src="https://live.staticflickr.com/65535/55051104210_1a237cfc58_b.jpg" alt="CLUBBY FREESTYLE Cover" class="w-full h-full object-cover opacity-80 group-hover/slide:opacity-100 transition-opacity duration-500">
+
+                        <!-- Overlay com Informações -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent flex flex-col justify-end p-4 md:p-5 lg:p-6">
+                            <h3 class="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 md:mb-3 leading-tight">CLUBBY FREESTYLE</h3>
+                            <div class="flex flex-wrap gap-1 md:gap-1.5">
+                                <span class="text-[9px] md:text-[10px] lg:text-xs px-2 md:px-2.5 py-0.5 md:py-1 bg-cyan-900/40 border border-cyan-500/20 rounded-full text-cyan-200 backdrop-blur-md">Single</span>
+                                <span class="text-[9px] md:text-[10px] lg:text-xs px-2 md:px-2.5 py-0.5 md:py-1 bg-white/5 border border-white/10 rounded-full text-neutral-300">Hardcore Techno</span>
+                                <span class="text-[9px] md:text-[10px] lg:text-xs px-2 md:px-2.5 py-0.5 md:py-1 bg-white/5 border border-white/10 rounded-full text-neutral-300">Hard Dance</span>
+                                <span class="text-[9px] md:text-[10px] lg:text-xs px-2 md:px-2.5 py-0.5 md:py-1 bg-white/5 border border-white/10 rounded-full text-neutral-300">Electronic</span>
+                                <span class="text-[9px] md:text-[10px] lg:text-xs px-2 md:px-2.5 py-0.5 md:py-1 bg-white/5 border border-white/10 rounded-full text-neutral-300">Trance</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Single Slide 2: PURE EDM TRANCE :333 -->
                     <div data-release-id="pure-edm-trance" class="flex-none w-64 md:w-80 lg:w-96 snap-center relative aspect-square rounded-2xl overflow-hidden glass-card group/slide cursor-pointer border border-white/10 hover:border-cyan-500/50 transition-all">
                         <img src="https://live.staticflickr.com/65535/55025911263_b9ec9315af_c.jpg" alt="PURE EDM TRANCE :333 Cover" class="w-full h-full object-cover opacity-80 group-hover/slide:opacity-100 transition-opacity duration-500">
 
@@ -990,7 +1007,7 @@
                         </div>
                     </div>
 
-                    <!-- Single Slide 2: HUMAN AFTER ALL/OVER AGAIN -->
+                    <!-- Single Slide 3: HUMAN AFTER ALL/OVER AGAIN -->
                     <div data-release-id="human-after-all" class="flex-none w-64 md:w-80 lg:w-96 snap-center relative aspect-square rounded-2xl overflow-hidden glass-card group/slide cursor-pointer border border-white/10 hover:border-emerald-500/50 transition-all">
                         <img src="https://live.staticflickr.com/65535/55025983784_c0d245234d_c.jpg" alt="HUMAN AFTER ALL/OVER AGAIN Cover" class="w-full h-full object-cover opacity-80 group-hover/slide:opacity-100 transition-opacity duration-500">
 
@@ -1005,7 +1022,7 @@
                         </div>
                     </div>
 
-                    <!-- Single Slide 3: ICONIC (TRACK_N10 Remix) -->
+                    <!-- Single Slide 4: ICONIC (TRACK_N10 Remix) -->
                     <div data-release-id="iconic-remix" class="flex-none w-64 md:w-80 lg:w-96 snap-center relative aspect-square rounded-2xl overflow-hidden glass-card group/slide cursor-pointer border border-white/10 hover:border-purple-500/50 transition-all">
                         <img src="https://live.staticflickr.com/65535/55025731251_d696d20924_c.jpg" alt="ICONIC Remix Cover" class="w-full h-full object-cover opacity-80 group-hover/slide:opacity-100 transition-opacity duration-500">
 
@@ -1021,7 +1038,7 @@
                         </div>
                     </div>
 
-                    <!-- Single Slide 4: FAMOUS -->
+                    <!-- Single Slide 5: FAMOUS -->
                     <div data-release-id="famous" class="flex-none w-64 md:w-80 lg:w-96 snap-center relative aspect-square rounded-2xl overflow-hidden glass-card group/slide cursor-pointer border border-white/10 hover:border-orange-500/50 transition-all">
                         <img src="https://live.staticflickr.com/65535/55025983769_9ae54324af_c.jpg" alt="FAMOUS Cover" class="w-full h-full object-cover opacity-80 group-hover/slide:opacity-100 transition-opacity duration-500">
 
@@ -1507,6 +1524,26 @@
         // Streaming platform data for each release
         const releaseData = {
             // SINGLES
+            'clubby-freestyle': {
+                title: 'CLUBBY FREESTYLE',
+                type: 'Single',
+                cover: 'https://live.staticflickr.com/65535/55051104210_1a237cfc58_b.jpg',
+                links: {
+                    spotify: '',
+                    apple: '',
+                    tidal: '',
+                    youtube: '',
+                    soundcloud: '',
+                    amazon: '',
+                    pandora: '',
+                    beatport: '',
+                    bandcamp: 'https://track-n10.bandcamp.com/track/clubby-freestyle',
+                    netease: '',
+                    deezer: '',
+                    audiomack: '',
+                    boomplay: ''
+                }
+            },
             'pure-edm-trance': {
                 title: 'PURE EDM TRANCE :333',
                 type: 'Single',

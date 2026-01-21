@@ -865,6 +865,46 @@
                 width: 120px;
                 height: 170px;
             }
+
+            /* Mobile book cards: vertical layout with centered cover */
+            .link-item.books.book-card {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .link-item.books.book-card > .flex-shrink-0 {
+                margin-right: 0;
+                margin-bottom: 1rem;
+                order: 1; /* Cover between title and description */
+            }
+            .link-item.books.book-card > .flex-shrink-0 img {
+                width: 140px !important;
+                height: 210px !important;
+            }
+            .link-item.books.book-card > .flex-grow {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                order: 2;
+            }
+            .link-item.books.book-card > .flex-grow h3 {
+                order: -1; /* Title at top */
+            }
+            .link-item.books.book-card > .flex-grow p:first-of-type {
+                order: -1; /* Subtitle/genre below title */
+            }
+            .link-item.books.book-card > .flex-grow p:last-of-type {
+                order: 2; /* Description below cover */
+            }
+            .link-item.books.book-card > .flex-grow .flex.flex-wrap {
+                order: 3; /* Format badges at bottom */
+                justify-content: center;
+            }
+            /* Hide arrow on mobile vertical layout */
+            .link-item.books.book-card > .text-white\/20 {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -1217,27 +1257,7 @@
             <!-- Category: BOOKS SPECIFIC ITEMS (Show only in Books Tab) -->
             <!-- ============================================== -->
 
-            <!-- Translation Notice -->
-            <div class="link-item books w-full hidden-tab">
-                <div class="glass-card rounded-2xl p-4 md:p-5 lg:p-6 border border-purple-500/20 bg-gradient-to-r from-purple-500/10 to-transparent">
-                    <div class="flex items-start gap-3 md:gap-4">
-                        <div class="flex-shrink-0 text-purple-400 mt-0.5">
-                            <i class="fas fa-language text-xl md:text-2xl lg:text-3xl"></i>
-                        </div>
-                        <div class="flex-grow">
-                            <h4 class="font-bold text-sm md:text-base lg:text-lg text-purple-300 mb-1 md:mb-2">Multiple Language Editions Available</h4>
-                            <p class="text-xs md:text-sm lg:text-base text-neutral-300 leading-relaxed">
-                                All books are available in multiple languages. Click on any book to see available translations in
-                                <span class="text-purple-200 font-medium">Portuguese BR</span>,
-                                <span class="text-purple-200 font-medium">Spanish ES</span>,
-                                <span class="text-purple-200 font-medium">English US</span>,
-                                <span class="text-purple-200 font-medium">German DE</span>, and
-                                <span class="text-purple-200 font-medium">French FR</span>.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+           
 
             <div class="link-item books w-full text-center pb-2 md:pb-3 pt-4 md:pt-6 hidden-tab">
                  <p class="text-xs md:text-sm lg:text-base uppercase tracking-widest text-purple-400 mb-2">Published Works</p>
@@ -1257,6 +1277,17 @@
                         <span class="text-[9px] md:text-[10px] lg:text-xs px-2 md:px-2.5 py-0.5 md:py-1 bg-white/10 border border-purple-400/30 rounded-full text-purple-200 flex items-center gap-1"><i class="fas fa-book-open text-xs"></i> PAPERBACK</span>
                         <span class="text-[9px] md:text-[10px] lg:text-xs px-2 md:px-2.5 py-0.5 md:py-1 bg-white/10 border border-purple-400/30 rounded-full text-purple-200 flex items-center gap-1"><i class="fas fa-headphones text-xs"></i> AUDIOBOOK</span>
                     </div>
+                    <div class="flex flex-wrap gap-2 mt-2">
+                        <span class="text-[9px] md:text-[10px] lg:text-xs px-2 md:px-2.5 py-0.5 md:py-1 bg-white/5 border border-cyan-400/30 rounded-full text-cyan-200 flex items-center gap-1"><i class="fas fa-globe text-xs"></i> PT</span>
+                        <span class="text-[9px] md:text-[10px] lg:text-xs px-2 md:px-2.5 py-0.5 md:py-1 bg-white/5 border border-cyan-400/30 rounded-full text-cyan-200 flex items-center gap-1"><i class="fas fa-globe text-xs"></i> EN</span>
+                        <span class="text-[9px] md:text-[10px] lg:text-xs px-2 md:px-2.5 py-0.5 md:py-1 bg-white/5 border border-cyan-400/30 rounded-full text-cyan-200 flex items-center gap-1"><i class="fas fa-globe text-xs"></i> DE</span>
+                        <span class="text-[9px] md:text-[10px] lg:text-xs px-2 md:px-2.5 py-0.5 md:py-1 bg-white/5 border border-cyan-400/30 rounded-full text-cyan-200 flex items-center gap-1"><i class="fas fa-globe text-xs"></i> ES</span>
+                        <span class="text-[9px] md:text-[10px] lg:text-xs px-2 md:px-2.5 py-0.5 md:py-1 bg-white/5 border border-cyan-400/30 rounded-full text-cyan-200 flex items-center gap-1"><i class="fas fa-globe text-xs"></i> FR</span>
+                        <span class="text-[9px] md:text-[10px] lg:text-xs px-2 md:px-2.5 py-0.5 md:py-1 bg-white/5 border border-yellow-400/30 rounded-full text-yellow-200 flex items-center gap-1"><i class="fas fa-clock text-xs"></i> IT soon</span>
+                    </div>
+                    <button type="button" onclick="event.stopPropagation(); openBookModal('ultra-qualia')" class="mt-3 px-4 py-2 bg-purple-600 hover:bg-purple-500 text-white text-xs md:text-sm font-medium rounded-lg transition-colors flex items-center gap-2">
+                        <i class="fas fa-store"></i> See bookstores
+                    </button>
                 </div>
                 <div class="text-white/20 group-hover:text-purple-400 group-hover:translate-x-1 transition-all">
                     <i class="fas fa-arrow-right text-lg md:text-xl lg:text-2xl"></i>
@@ -1277,6 +1308,17 @@
                         <span class="text-[9px] md:text-[10px] lg:text-xs px-2 md:px-2.5 py-0.5 md:py-1 bg-white/10 border border-purple-400/30 rounded-full text-purple-200 flex items-center gap-1"><i class="fas fa-book-open text-xs"></i> PAPERBACK</span>
                         <span class="text-[9px] md:text-[10px] lg:text-xs px-2 md:px-2.5 py-0.5 md:py-1 bg-white/10 border border-purple-400/30 rounded-full text-purple-200 flex items-center gap-1"><i class="fas fa-headphones text-xs"></i> AUDIOBOOK</span>
                     </div>
+                    <div class="flex flex-wrap gap-2 mt-2">
+                        <span class="text-[9px] md:text-[10px] lg:text-xs px-2 md:px-2.5 py-0.5 md:py-1 bg-white/5 border border-cyan-400/30 rounded-full text-cyan-200 flex items-center gap-1"><i class="fas fa-globe text-xs"></i> PT</span>
+                        <span class="text-[9px] md:text-[10px] lg:text-xs px-2 md:px-2.5 py-0.5 md:py-1 bg-white/5 border border-cyan-400/30 rounded-full text-cyan-200 flex items-center gap-1"><i class="fas fa-globe text-xs"></i> EN</span>
+                        <span class="text-[9px] md:text-[10px] lg:text-xs px-2 md:px-2.5 py-0.5 md:py-1 bg-white/5 border border-cyan-400/30 rounded-full text-cyan-200 flex items-center gap-1"><i class="fas fa-globe text-xs"></i> DE</span>
+                        <span class="text-[9px] md:text-[10px] lg:text-xs px-2 md:px-2.5 py-0.5 md:py-1 bg-white/5 border border-cyan-400/30 rounded-full text-cyan-200 flex items-center gap-1"><i class="fas fa-globe text-xs"></i> FR</span>
+                        <span class="text-[9px] md:text-[10px] lg:text-xs px-2 md:px-2.5 py-0.5 md:py-1 bg-white/5 border border-cyan-400/30 rounded-full text-cyan-200 flex items-center gap-1"><i class="fas fa-globe text-xs"></i> IT</span>
+                        <span class="text-[9px] md:text-[10px] lg:text-xs px-2 md:px-2.5 py-0.5 md:py-1 bg-white/5 border border-yellow-400/30 rounded-full text-yellow-200 flex items-center gap-1"><i class="fas fa-clock text-xs"></i> ES soon</span>
+                    </div>
+                    <button type="button" onclick="event.stopPropagation(); openBookModal('intrusive-thoughts')" class="mt-3 px-4 py-2 bg-purple-600 hover:bg-purple-500 text-white text-xs md:text-sm font-medium rounded-lg transition-colors flex items-center gap-2">
+                        <i class="fas fa-store"></i> See bookstores
+                    </button>
                 </div>
                 <div class="text-white/20 group-hover:text-purple-400 group-hover:translate-x-1 transition-all">
                     <i class="fas fa-arrow-right text-lg md:text-xl lg:text-2xl"></i>

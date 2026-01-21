@@ -700,6 +700,14 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 0.75rem;
             margin-bottom: 1rem;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        .book-overview p {
+            margin-bottom: 0.75rem;
+        }
+        .book-overview p:last-child {
+            margin-bottom: 0;
         }
         @media (min-width: 768px) {
             .book-overview {
@@ -1811,7 +1819,7 @@
             'ultra-qualia': {
                 title: 'Ultra Qualia',
                 tags: ['Sci-Fi', 'Suspense', 'LGBT+', 'Series'],
-                overview: 'In 2040, a new reality shakes society with the Reborn: individuals who return to life after death. At the center of this story, we follow Gia, a transgender woman who, after taking her own life and being reborn, encounters mysterious memories of a police officer.',
+                overview: 'In 2040, a new reality shakes society with the Reborn: individuals who return to life after death.\n\nAt the center of this story, we follow Gia, a transexual woman who, after taking her own life and being reborn, encounters mysterious memories of a police officer.\n\nUpon returning to the city, she crosses paths with an old friend Levi and police officer Renata, who reveal the shocking truth: Gia was reborn after her intentional overdose.\n\nA member of the Homeless Workers\' Movement, she faces government conspiracies and illegal experiments, allying herself with Levi, Renata, and other reborn individuals.\n\nFacing challenges in a divided society, the trio fights for answers on the brink of civil war. As they delve into new and unknown memories, the boundaries between reality and illusion fade, challenging them to question not only their identities but also the essence of the reality they live in.\n\nThe first book in the series is divided into 7 parts:\n\nDo the Dead Dream?\nDark Paradise\nLeave the World Behind\nDéjà Vu?\nThe Clones\nNothing Lasts Forever?\nMachines Made to Dream\n\n"ULTRA QUALIA - Book 1" is a science fiction work that delves deeply into philosophical and existential themes, set in a dystopian future marked by advanced technology and complex social issues.',
                 cover: 'https://live.staticflickr.com/65535/54716872203_e112deea2a_b.jpg',
                 links: {
                     PT: {
@@ -1996,7 +2004,7 @@
             'intrusive-thoughts': {
                 title: 'Intrusive Thoughts',
                 tags: ['Drama', 'Psychological Horror', 'Short Book', 'LGBT+'],
-                overview: 'What if you couldn\'t distinguish your internal demons from reality? Charlie, a 21-year-old autistic artist, lives crushed between his mother Kimberly\'s expectations and a secret relationship with Frédéric, the only one who seems to understand him. But when the intrusive thoughts that have always haunted him begin to take physical form, Charlie can no longer distinguish what is real.',
+                overview: 'What if you couldn\'t distinguish your internal demons from reality?\n\nCharlie, a 21-year-old autistic artist, lives crushed between his mother Kimberly\'s expectations and a secret relationship with Frédéric, the only one who seems to understand him. But when the intrusive thoughts that have always haunted him begin to take physical form, Charlie can no longer distinguish what is real. Charlie is on the verge of collapse—but no one sees it.\n\nIn the midst of the silent chaos of his routine, between unheard screams and solitary dances in his room, he tries to maintain some form of control while everything around him falls apart. The relationship with his mother is a minefield of judgments and suffocating silences. His boyfriend, who was once his only point of light, now seems too distant.\n\nTrapped between the desire to be accepted and the unbearable weight of being different, Charlie sinks into intrusive thoughts, distorted memories, and broken realities. The line between what is internal and what is external becomes blurred, and he no longer knows if he is trying to escape, fight, or simply survive.\n\nThis tale is a raw and intimate immersion into the mind of a neurodivergent young man grappling with the emotional wreckage of rejection, loneliness, and identity. A narrative as fragmented as his own consciousness, where nothing is certain, and everything—even love—can be a trigger.',
                 cover: 'https://live.staticflickr.com/65535/54716871453_d21415ba00_b.jpg',
                 links: {
                     PT: {
@@ -2444,7 +2452,7 @@
             cover.src = book.cover;
             cover.alt = book.title + ' Cover';
             title.textContent = book.title;
-            overview.textContent = book.overview;
+            overview.innerHTML = book.overview.split('\n\n').map(p => `<p>${p.replace(/\n/g, '<br>')}</p>`).join('');
 
             // Build tags
             tagsContainer.innerHTML = '';
@@ -2666,7 +2674,7 @@
                 </div>
             </div>
             <div class="modal-body">
-                <p id="book-modal-overview" class="book-overview"></p>
+                <div id="book-modal-overview" class="book-overview"></div>
 
                 <p class="text-xs text-center text-neutral-400 mb-2 uppercase tracking-wider">Select Language</p>
                 <div id="language-selector" class="language-selector">
@@ -2680,7 +2688,6 @@
             </div>
         </div>
     </div>
-<script src='https://cdn.jotfor.ms/agent/embedjs/019bdd4d39227f2b8cc418f6ccd83abab7bb/embed.js'>
-</script>
+
 </body>
 </html>

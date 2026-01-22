@@ -217,6 +217,7 @@
         }
         .cta-btn.secondary {
             background: rgba(255, 255, 255, 0.08);
+            
         }
         .cta-btn:hover {
             transform: translateY(-2px);
@@ -1057,91 +1058,51 @@
                     Explore the newest singles, albums, and sci-fi books. Tap a cover to open every platform and store instantly.
                 </p>
 
-                <div class="hero-actions">
-                    <button onclick="filterCategory('music')" class="cta-btn primary">
+                <!-- MENU (TABS) -->
+            <div class="flex flex-wrap justify-center gap-2 md:gap-3 mb-8 md:mb-12 w-full sticky top-4 z-50 p-2 md:p-3 rounded-2xl backdrop-blur-md bg-black/20 border border-white/5">
+                    <!-- Botão principal -->
+                    <button onclick="filterCategory('all')" class="cta-btn primary">
+                        <i class="fas fa-house"></i>
+                        Home
+                    </button>
+                    <button onclick="filterCategory('music')" class="cta-btn secondary">
                         <i class="fas fa-headphones"></i>
-                        Listen to music
+                        Listen to my music
                     </button>
                     <button onclick="filterCategory('books')" class="cta-btn secondary">
                         <i class="fas fa-book-open"></i>
-                        Discover books
+                        Read my books
                     </button>
                     <button onclick="filterCategory('others')" class="cta-btn secondary">
                         <i class="fas fa-link"></i>
                         Extra links
                     </button>
-                </div>
             </div>
-        </div>
-
-        <!-- MENU (TABS) -->
-        <div class="flex flex-wrap justify-center gap-2 md:gap-3 mb-8 md:mb-12 w-full sticky top-4 z-50 p-2 md:p-3 rounded-2xl backdrop-blur-md bg-black/20 border border-white/5">
-            <button onclick="filterCategory('all')" class="tab-btn active rounded-xl px-4 md:px-6 py-2 md:py-3 text-xs md:text-sm font-medium uppercase tracking-wider flex items-center gap-2 text-neutral-200" id="btn-all">
-                All
-            </button>
-            <button onclick="filterCategory('music')" class="tab-btn rounded-xl px-4 md:px-6 py-2 md:py-3 text-xs md:text-sm font-medium uppercase tracking-wider flex items-center gap-2 text-neutral-400 hover:text-white" id="btn-music">
-                Music
-            </button>
-            <button onclick="filterCategory('books')" class="tab-btn rounded-xl px-4 md:px-6 py-2 md:py-3 text-xs md:text-sm font-medium uppercase tracking-wider flex items-center gap-2 text-neutral-400 hover:text-white" id="btn-books">
-                Books
-            </button>
-            <button onclick="filterCategory('others')" class="tab-btn rounded-xl px-4 md:px-6 py-2 md:py-3 text-xs md:text-sm font-medium uppercase tracking-wider flex items-center gap-2 text-neutral-400 hover:text-white" id="btn-others">
-                Others
-            </button>
-        </div>
-
-        <!-- Links Container -->
-        <div class="w-full space-y-4 md:space-y-6 px-2 md:px-4" id="links-container">
-
-            <!-- Category: ALL ONLY (Navigation Cards) -->
-            <div onclick="filterCategory('music')" class="link-item all glass-card link-btn flex items-center p-4 md:p-6 lg:p-8 rounded-2xl group relative overflow-hidden cursor-pointer">
-                <div class="flex-shrink-0 mr-5 md:mr-6 lg:mr-8 w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 flex items-center justify-center text-cyan-400 neon-icon">
-                    <i class="fas fa-compact-disc text-3xl md:text-4xl lg:text-5xl"></i>
-                </div>
-                <div class="flex-grow text-left z-10">
-                    <h3 class="font-bold text-lg md:text-xl lg:text-2xl text-white group-hover:text-cyan-300 transition-colors tracking-wide">My Music</h3>
-                    <p class="text-xs md:text-sm lg:text-base text-neutral-400 group-hover:text-neutral-300 transition-colors">Explore my albums & singles</p>
-                </div>
-                <div class="text-white/20 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all">
-                    <i class="fas fa-arrow-right text-lg md:text-xl lg:text-2xl"></i>
-                </div>
-                <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            </div>
-
-            <div onclick="filterCategory('books')" class="link-item all glass-card link-btn flex items-center p-4 md:p-6 lg:p-8 rounded-2xl group relative overflow-hidden cursor-pointer">
-                <div class="flex-shrink-0 mr-5 md:mr-6 lg:mr-8 w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 flex items-center justify-center text-purple-400 neon-icon">
-                    <i class="fas fa-book-journal-whills text-3xl md:text-4xl lg:text-5xl"></i>
-                </div>
-                <div class="flex-grow text-left z-10">
-                    <h3 class="font-bold text-lg md:text-xl lg:text-2xl text-white group-hover:text-purple-300 transition-colors tracking-wide">My Books</h3>
-                    <p class="text-xs md:text-sm lg:text-base text-neutral-400 group-hover:text-neutral-300 transition-colors">Explore my stories</p>
-                </div>
-                <div class="text-white/20 group-hover:text-purple-400 group-hover:translate-x-1 transition-all">
-                    <i class="fas fa-arrow-right text-lg md:text-xl lg:text-2xl"></i>
-                </div>
-                <div class="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            </div>
+        
 
             <div class="link-item all w-full text-center pb-2 md:pb-3 pt-2">
                 <p class="text-xs md:text-sm lg:text-base uppercase tracking-widest text-purple-300 mb-3">Featured now</p>
-                <div class="featured-grid">
-                    <div data-release-id="clubby-freestyle" class="featured-card cursor-pointer">
-                        <img src="https://live.staticflickr.com/65535/55051104210_1a237cfc58_b.jpg" alt="CLUBBY FREESTYLE Cover">
-                        <div class="featured-card-content">
-                            <h3>CLUBBY FREESTYLE</h3>
-                            <p>Tap to stream</p>
-                        </div>
-                    </div>
-                    <div data-book-id="ultra-qualia" onclick="openBookModal('ultra-qualia')" class="featured-card cursor-pointer">
-                        <img src="https://live.staticflickr.com/65535/54716872203_e112deea2a_b.jpg" alt="Ultra Qualia Cover">
-                        <div class="featured-card-content">
-                            <h3>Ultra Qualia</h3>
-                            <p>Tap to read</p>
+                <div class="w-full flex justify-center">
+                    <div data-release-id="clubby-freestyle" class="flex-none w-64 md:w-80 lg:w-96 snap-center relative aspect-square rounded-2xl overflow-hidden glass-card group/slide cursor-pointer border border-white/10 hover:border-cyan-500/50 transition-all">
+                        <img src="https://live.staticflickr.com/65535/55051104210_1a237cfc58_b.jpg" alt="CLUBBY FREESTYLE Cover" class="w-full h-full object-cover opacity-80 group-hover/slide:opacity-100 transition-opacity duration-500">
+                        <!-- Overlay com Informações -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent flex flex-col justify-end p-4 md:p-5 lg:p-6">
+                            <h3 class="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 md:mb-3 leading-tight">CLUBBY FREESTYLE</h3>
+                            <div class="flex flex-wrap gap-1 md:gap-1.5">
+                                <span class="text-[9px] md:text-[10px] lg:text-xs px-2 md:px-2.5 py-0.5 md:py-1 bg-cyan-900/40 border border-cyan-500/20 rounded-full text-cyan-200 backdrop-blur-md">Single</span>
+                                <span class="text-[9px] md:text-[10px] lg:text-xs px-2 md:px-2.5 py-0.5 md:py-1 bg-white/5 border border-white/10 rounded-full text-neutral-300">Hardcore Techno</span>
+                                <span class="text-[9px] md:text-[10px] lg:text-xs px-2 md:px-2.5 py-0.5 md:py-1 bg-white/5 border border-white/10 rounded-full text-neutral-300">Hard Dance</span>
+                                <span class="text-[9px] md:text-[10px] lg:text-xs px-2 md:px-2.5 py-0.5 md:py-1 bg-white/5 border border-white/10 rounded-full text-neutral-300">Electronic</span>
+                                <span class="text-[9px] md:text-[10px] lg:text-xs px-2 md:px-2.5 py-0.5 md:py-1 bg-white/5 border border-white/10 rounded-full text-neutral-300">Trance</span>
+                            </div>
+                            <button class="mt-4 md:mt-5 px-4 py-2 bg-cyan-600/80 hover:bg-cyan-600/100 text-white text-sm md:text-base font-medium rounded-full backdrop-blur-sm border border-cyan-500/30 hover:border-cyan-400 transition-all">
+                                Tap to stream
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
-          
+          </div>
                 
 
 
@@ -1699,6 +1660,19 @@
                     btn.classList.remove('active');
                     btn.classList.add('text-neutral-400');
                     btn.classList.remove('text-neutral-200');
+                }
+            });
+
+            // Toggle primary/secondary styling on CTA buttons
+            const ctaButtons = document.querySelectorAll('.cta-btn');
+            const categoryMap = { 'all': 0, 'music': 1, 'books': 2, 'others': 3 };
+            ctaButtons.forEach((btn, index) => {
+                if (index === categoryMap[category]) {
+                    btn.classList.remove('secondary');
+                    btn.classList.add('primary');
+                } else {
+                    btn.classList.remove('primary');
+                    btn.classList.add('secondary');
                 }
             });
 

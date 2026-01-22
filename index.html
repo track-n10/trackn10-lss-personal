@@ -8,9 +8,9 @@
 
     <!-- Pinterest Verification -->
   <meta name="p:domain_verify" content="07dc88a203f7071c9876203eb016d642"/>
-  <link rel="manifest" href="/site.webmanifest">
+  <link rel="manifest" href="site.webmanifest">
   <link rel="icon" href="favicon.ico">
-  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="shortcut icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="favicon.ico">
     <title>TRACK_N10 — Leonardo Sales Santos</title>
 
@@ -186,6 +186,107 @@
             box-shadow: 0 15px 40px -10px rgba(139, 92, 246, 0.4),
                         0 0 30px rgba(59, 130, 246, 0.2),
                         inset 0 0 20px rgba(255, 255, 255, 0.05);
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.7rem 1.4rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .cta-btn.primary {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.7), rgba(59, 130, 246, 0.7));
+            border-color: rgba(139, 92, 246, 0.6);
+            box-shadow: 0 10px 25px rgba(139, 92, 246, 0.3);
+        }
+        .cta-btn.secondary {
+            background: rgba(255, 255, 255, 0.08);
+        }
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(59, 130, 246, 0.25);
+        }
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+        }
+        .featured-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(255, 255, 255, 0.03);
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .featured-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+            opacity: 0.85;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        .featured-card:hover img {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+        .featured-card:hover {
+            border-color: rgba(139, 92, 246, 0.5);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+            transform: translateY(-4px);
+        }
+        .featured-card-content {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 1rem;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.8) 100%);
+        }
+        .featured-card-content h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: white;
+        }
+        .featured-card-content p {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.7);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-top: 0.25rem;
+        }
+
+        .section-hint {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.35rem 0.75rem;
+            border-radius: 9999px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: rgba(255, 255, 255, 0.65);
         }
 
         .neon-icon {
@@ -951,6 +1052,25 @@
                         Writer
                     </div>
                 </div>
+
+                <p class="text-sm md:text-base text-neutral-300 max-w-xl mt-4 leading-relaxed">
+                    Explore the newest singles, albums, and sci-fi books. Tap a cover to open every platform and store instantly.
+                </p>
+
+                <div class="hero-actions">
+                    <button onclick="filterCategory('music')" class="cta-btn primary">
+                        <i class="fas fa-headphones"></i>
+                        Listen to music
+                    </button>
+                    <button onclick="filterCategory('books')" class="cta-btn secondary">
+                        <i class="fas fa-book-open"></i>
+                        Discover books
+                    </button>
+                    <button onclick="filterCategory('others')" class="cta-btn secondary">
+                        <i class="fas fa-link"></i>
+                        Extra links
+                    </button>
+                </div>
             </div>
         </div>
 
@@ -1001,6 +1121,26 @@
                 </div>
                 <div class="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
+
+            <div class="link-item all w-full text-center pb-2 md:pb-3 pt-2">
+                <p class="text-xs md:text-sm lg:text-base uppercase tracking-widest text-purple-300 mb-3">Featured now</p>
+                <div class="featured-grid">
+                    <div data-release-id="clubby-freestyle" class="featured-card cursor-pointer">
+                        <img src="https://live.staticflickr.com/65535/55051104210_1a237cfc58_b.jpg" alt="CLUBBY FREESTYLE Cover">
+                        <div class="featured-card-content">
+                            <h3>CLUBBY FREESTYLE</h3>
+                            <p>Tap to stream</p>
+                        </div>
+                    </div>
+                    <div data-book-id="ultra-qualia" onclick="openBookModal('ultra-qualia')" class="featured-card cursor-pointer">
+                        <img src="https://live.staticflickr.com/65535/54716872203_e112deea2a_b.jpg" alt="Ultra Qualia Cover">
+                        <div class="featured-card-content">
+                            <h3>Ultra Qualia</h3>
+                            <p>Tap to read</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
           
                 
 
@@ -1008,6 +1148,10 @@
             <!-- ============================================== -->
             <!-- Category: MUSIC SPECIFIC ITEMS (Show only in Music Tab) -->
             <!-- ============================================== -->
+
+            <div class="link-item music w-full flex justify-center pb-4 hidden-tab">
+                <span class="section-hint"><i class="fas fa-mouse-pointer"></i> Tap a cover to open all platforms</span>
+            </div>
 
             <!-- Header para a seção LATEST SINGLES RELEASES -->
             <div class="link-item music w-full flex justify-between items-end pb-2 md:pb-3 hidden-tab">
@@ -1278,6 +1422,9 @@
             <!-- Category: BOOKS SPECIFIC ITEMS (Show only in Books Tab) -->
             <!-- ============================================== -->
 
+            <div class="link-item books w-full flex justify-center pb-2 hidden-tab">
+                <span class="section-hint"><i class="fas fa-mouse-pointer"></i> Tap a cover to choose the bookstore</span>
+            </div>
            
 
             <div class="link-item books w-full text-center pb-2 md:pb-3 pt-4 md:pt-6 hidden-tab">

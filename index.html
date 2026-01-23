@@ -1078,7 +1078,6 @@
                         Extra links
                     </button>
             </div>
-        
 
             <div class="link-item all w-full text-center pb-2 md:pb-3 pt-2">
                 <p class="text-xs md:text-sm lg:text-base uppercase tracking-widest text-purple-300 mb-3">Featured now</p>
@@ -1087,7 +1086,7 @@
                         <img src="https://live.staticflickr.com/65535/55051104210_1a237cfc58_b.jpg" alt="CLUBBY FREESTYLE Cover" class="w-full h-full object-cover opacity-80 group-hover/slide:opacity-100 transition-opacity duration-500">
                         <!-- Overlay com Informações -->
                         <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent flex flex-col justify-end p-4 md:p-5 lg:p-6">
-                            <h3 class="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 md:mb-3 leading-tight">CLUBBY FREESTYLE</h3>
+                            <h2 class="text-xl md:text-1xl lg:text-2xl font-bold text-white mb-2 md:mb-3 leading-tight">CLUBBY FREESTYLE</h2>
                             <div class="flex flex-wrap gap-1 md:gap-1.5">
                                 <span class="text-[9px] md:text-[10px] lg:text-xs px-2 md:px-2.5 py-0.5 md:py-1 bg-cyan-900/40 border border-cyan-500/20 rounded-full text-cyan-200 backdrop-blur-md">Single</span>
                                 <span class="text-[9px] md:text-[10px] lg:text-xs px-2 md:px-2.5 py-0.5 md:py-1 bg-white/5 border border-white/10 rounded-full text-neutral-300">Hardcore Techno</span>
@@ -1095,17 +1094,34 @@
                                 <span class="text-[9px] md:text-[10px] lg:text-xs px-2 md:px-2.5 py-0.5 md:py-1 bg-white/5 border border-white/10 rounded-full text-neutral-300">Electronic</span>
                                 <span class="text-[9px] md:text-[10px] lg:text-xs px-2 md:px-2.5 py-0.5 md:py-1 bg-white/5 border border-white/10 rounded-full text-neutral-300">Trance</span>
                             </div>
-                            <button class="mt-4 md:mt-5 px-4 py-2 bg-cyan-600/80 hover:bg-cyan-600/100 text-white text-sm md:text-base font-medium rounded-full backdrop-blur-sm border border-cyan-500/30 hover:border-cyan-400 transition-all">
-                                Tap to stream
+                            <button type="button" class="mt-4 md:mt-5 px-4 py-2 bg-cyan-600/80 hover:bg-cyan-600/100 text-white text-sm md:text-base font-medium rounded-full backdrop-blur-sm border border-cyan-500/30 hover:border-cyan-400 transition-all" onclick="event.stopPropagation(); openStreamingModal('clubby-freestyle')">
+                                <i class="fas fa-play"></i> Tap to stream
                             </button>
+                                </div>
+                            
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-          </div>
-                
-
-
+                        <div class="flex flex-col items-center justify-center gap-3 md:gap-4 mt-4 md:mt-5">    
+                            <!-- Embedded Tidal Audio Player -->
+                            <div class="mt-3 md:mt-4 w-full" onclick="event.stopPropagation();">
+                                <div class="relative w-full rounded-lg overflow-hidden bg-black/40 backdrop-blur-md border border-white/10">
+                                    <iframe
+                                        src="https://embed.tidal.com/tracks/490055419"
+                                        class="w-full h-[80px] md:h-[100px] lg:h-[120px]"
+                                        allow="encrypted-media; fullscreen; clipboard-write https://embed.tidal.com; web-share"
+                                        sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox"
+                                        style="color-scheme: light dark"
+                                        title="CLUBBY FREESTYLE - TIDAL Player"
+                                        frameborder="0">
+                                    </iframe>
+                                </div>
+                            </div>    
+                        </div>    
+                    </div>    
+                </div>    
+            </div>    
+          
+        
             <!-- ============================================== -->
             <!-- Category: MUSIC SPECIFIC ITEMS (Show only in Music Tab) -->
             <!-- ============================================== -->
@@ -1718,19 +1734,21 @@
                 type: 'Single',
                 cover: 'https://live.staticflickr.com/65535/55051104210_1a237cfc58_b.jpg',
                 links: {
-                    spotify: '',
-                    apple: '',
-                    tidal: '',
-                    youtube: '',
+                    spotify: 'https://open.spotify.com/track/4qEPVlsHoFVuRtfiU7kBc6',
+                    apple: 'https://music.apple.com/pt/song/clubby-freestyle/1869566198',
+                    tidal: 'https://listen.tidal.com/track/490055419',
+                    youtube: 'https://music.youtube.com/playlist?list=OLAK5uy_lw1F1kwsBbyzB4wep4pCKSRUoO34HxbZg&si=R0wQesNJW3nwUuOX',
                     soundcloud: '',
-                    amazon: '',
+                    amazon: 'https://music.amazon.com/albums/B0GH3KV6SX?marketplaceId=A3K6Y4MI8GDYMT&musicTerritory=PT&ref=dm_sh_mmmsSClspnp01zgzZARxKH1Hb&trackAsin=B0GH3BJH8R',
                     pandora: '',
                     beatport: '',
                     bandcamp: 'https://track-n10.bandcamp.com/track/clubby-freestyle',
                     netease: '',
-                    deezer: '',
+                    deezer: 'https://www.deezer.com/track/3777119802',
                     audiomack: '',
-                    boomplay: ''
+                    boomplay: 'https://www.boomplay.com/songs/233299607?from=artists&srModel=COPYLINK&srList=WEB&share_content=music&share_channel=copylink&share_platform=web',
+                    anghami: 'https://play.anghami.com/song/1252696509',
+                    flo: 'https://www.music-flo.com/detail/album/448959745/albumtrack'
                 }
             },
             'pure-edm-trance': {
@@ -1950,7 +1968,9 @@
             netease: { name: '网易云音乐', icon: 'https://cdn.simpleicons.org/neteasecloudmusic/C20C0C' },
             deezer: { name: 'Deezer', icon: 'https://vectorseek.com/wp-content/uploads/2023/11/Deezer-Icon-Logo-Vector.svg-.png' },
             audiomack: { name: 'Audiomack', icon: 'https://cdn.simpleicons.org/audiomack/FFA200' },
-            boomplay: { name: 'Boomplay', icon: 'https://vectorseek.com/wp-content/uploads/2023/11/Boomplay-Icon-Logo-Vector.svg-.png' }
+            boomplay: { name: 'Boomplay', icon: 'https://vectorseek.com/wp-content/uploads/2023/11/Boomplay-Icon-Logo-Vector.svg-.png' },
+            anghami: { name: 'Anghami', icon: 'https://s3-symbol-logo.tradingview.com/anghami--600.png' },
+            flo: { name: 'FLO', icon: 'https://images.seeklogo.com/logo-png/61/2/music-flo-logo-png_seeklogo-614188.png' }
         };
 
         // Book data for each book
@@ -2536,7 +2556,7 @@
 
             // Build platform buttons
             grid.innerHTML = '';
-            const platformOrder = ['spotify', 'apple', 'tidal', 'youtube', 'soundcloud', 'amazon', 'pandora', 'beatport', 'bandcamp', 'netease', 'deezer', 'audiomack', 'boomplay'];
+            const platformOrder = ['spotify', 'apple', 'tidal', 'youtube', 'soundcloud', 'amazon', 'pandora', 'beatport', 'bandcamp', 'netease', 'deezer', 'audiomack', 'boomplay', 'anghami', 'flo'];
 
             platformOrder.forEach(platform => {
                 const url = release.links[platform];

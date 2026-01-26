@@ -1097,29 +1097,10 @@
                             <button type="button" class="mt-4 md:mt-5 px-4 py-2 bg-cyan-600/80 hover:bg-cyan-600/100 text-white text-sm md:text-base font-medium rounded-full backdrop-blur-sm border border-cyan-500/30 hover:border-cyan-400 transition-all" onclick="event.stopPropagation(); openStreamingModal('clubby-freestyle')">
                                 <i class="fas fa-play"></i> Tap to stream
                             </button>
-                                </div>
-                            
-                            </div>
                         </div>
-                        <div class="flex flex-col items-center justify-center gap-3 md:gap-4 mt-4 md:mt-5">    
-                            <!-- Embedded Tidal Audio Player -->
-                            <div class="mt-3 md:mt-4 w-full" onclick="event.stopPropagation();">
-                                <div class="relative w-full rounded-lg overflow-hidden bg-black/40 backdrop-blur-md border border-white/10">
-                                    <iframe
-                                        src="https://embed.tidal.com/tracks/490055419"
-                                        class="w-full h-[80px] md:h-[100px] lg:h-[120px]"
-                                        allow="encrypted-media; fullscreen; clipboard-write https://embed.tidal.com; web-share"
-                                        sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox"
-                                        style="color-scheme: light dark"
-                                        title="CLUBBY FREESTYLE - TIDAL Player"
-                                        frameborder="0">
-                                    </iframe>
-                                </div>
-                            </div>    
-                        </div>    
-                    </div>    
-                </div>    
-            </div>    
+                    </div>
+                </div>
+            </div>
           
         
             <!-- ============================================== -->
@@ -1494,12 +1475,12 @@
             <!-- ============================================== -->
             <!-- Category: OTHERS -->
             <!-- ============================================== -->
-              <div class="link-item all others w-full flex justify-between items-end pb-2 md:pb-3 hidden-tab">
+              <div class="link-item others w-full flex justify-between items-end pb-2 md:pb-3 hidden-tab">
                   <p class="text-xs md:text-sm lg:text-base uppercase tracking-widest text-yellow-400 mb-2 section-heading">FREE WEB TOOLS</p>
               </div>
 
             <!-- LyricSync10 -->
-            <a href="https://lyricsync10.vercel.app/" target="_blank" class="link-item all others glass-card link-btn flex items-center p-4 md:p-6 lg:p-8 rounded-2xl group relative overflow-hidden">
+            <a href="https://lyricsync10.vercel.app/" target="_blank" class="link-item others glass-card link-btn flex items-center p-4 md:p-6 lg:p-8 rounded-2xl group relative overflow-hidden">
                 <div class="flex-shrink-0 mr-5 md:mr-6 lg:mr-8 w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 flex items-center justify-center text-yellow-400 neon-icon">
                     <img src="lyricsync10favicon.ico" alt="LyricSync10 Icon" class="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 object-contain">
                 </div>
@@ -1514,7 +1495,7 @@
             </a>
 
              <!-- DOCX Splitter -->
-             <a href="https://docx-chapter-splitter.vercel.app/" target="_blank" class="link-item all others glass-card link-btn flex items-center p-4 md:p-6 lg:p-8 rounded-2xl group relative overflow-hidden">
+             <a href="https://docx-chapter-splitter.vercel.app/" target="_blank" class="link-item others glass-card link-btn flex items-center p-4 md:p-6 lg:p-8 rounded-2xl group relative overflow-hidden">
                 <div class="flex-shrink-0 mr-5 md:mr-6 lg:mr-8 w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 flex items-center justify-center text-blue-400 neon-icon">
                     <img src="docxfavicon.ico" alt="DOCX Splitter Icon" class="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 object-contain">
                 </div>
@@ -1527,67 +1508,54 @@
                 </div>
                 <div class="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </a>
-            <div class="link-item all others w-full text-center pb-2 md:pb-3 pt-4 md:pt-6 hidden-tab">
+
+            <!-- SOCIALS SECTION HEADER -->
+            <div class="link-item all others w-full text-center pb-2 md:pb-3 pt-8 md:pt-10 lg:pt-12 hidden-tab">
                 <p class="text-xs md:text-sm lg:text-base uppercase tracking-widest text-blue-400 mb-2 section-heading">SOCIALS</p>
             </div>
 
-            <!-- Instagram -->
-            <a href="https://www.instagram.com/track_n10/" target="_blank" class="link-item all others glass-card link-btn flex items-center p-4 md:p-6 lg:p-8 rounded-2xl group relative overflow-hidden">
-                <div class="flex-shrink-0 mr-5 md:mr-6 lg:mr-8 w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 flex items-center justify-center social-icon-instagram">
-                    <i class="fab fa-instagram text-3xl md:text-4xl lg:text-5xl"></i>
-                </div>
-                <div class="flex-grow text-left z-10">
-                    <h3 class="font-bold text-lg md:text-xl lg:text-2xl text-white group-hover:text-pink-300 transition-colors tracking-wide">Instagram</h3>
-                    <p class="text-xs md:text-sm lg:text-base text-neutral-400 group-hover:text-neutral-300 transition-colors">@track_n10</p>
-                </div>
-                <div class="text-white/20 group-hover:text-pink-400 group-hover:translate-x-1 transition-all">
-                    <i class="fas fa-arrow-up-right-from-square text-lg md:text-xl lg:text-2xl"></i>
-                </div>
-                <div class="absolute inset-0 bg-gradient-to-r from-pink-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            </a>
+            <!-- SOCIALS GRID CONTAINER -->
+            <div class="link-item all others w-full grid grid-cols-2 gap-3 md:gap-4 lg:gap-5">
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/track_n10/" target="_blank" class="glass-card link-btn flex flex-col items-center justify-center p-3 md:p-4 lg:p-5 rounded-2xl group relative overflow-hidden">
+                    <div class="flex items-center justify-center social-icon-instagram mb-2 md:mb-3">
+                        <i class="fab fa-instagram text-2xl md:text-3xl lg:text-4xl"></i>
+                    </div>
+                    <h3 class="font-bold text-sm md:text-base lg:text-lg text-white group-hover:text-pink-300 transition-colors text-center">Instagram</h3>
+                    <p class="text-[10px] md:text-xs lg:text-sm text-neutral-400 group-hover:text-neutral-300 transition-colors text-center">@track_n10</p>
+                    <div class="absolute inset-0 bg-gradient-to-r from-pink-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                </a>
 
-            <!-- Tiktok -->
-            <a href="https://www.tiktok.com/@track_n10" target="_blank" class="link-item all others glass-card link-btn flex items-center p-4 md:p-6 lg:p-8 rounded-2xl group relative overflow-hidden">
-                <div class="flex-shrink-0 mr-5 md:mr-6 lg:mr-8 w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 flex items-center justify-center social-icon-tiktok">
-                    <i class="fab fa-tiktok text-3xl md:text-4xl lg:text-5xl"></i>
-                </div>
-                <div class="flex-grow text-left z-10">
-                    <h3 class="font-bold text-lg md:text-xl lg:text-2xl text-white group-hover:text-lime-300 transition-colors tracking-wide">Tiktok</h3>
-                    <p class="text-xs md:text-sm lg:text-base text-neutral-400 group-hover:text-neutral-300 transition-colors">@track_n10</p>
-                </div>
-                <div class="text-white/20 group-hover:text-lime-400 group-hover:translate-x-1 transition-all">
-                    <i class="fas fa-arrow-up-right-from-square text-lg md:text-xl lg:text-2xl"></i>
-                </div>
-                <div class="absolute inset-0 bg-gradient-to-r from-lime-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            </a>
-            <!-- Youtube-->
-             <a href="https://www.youtube.com/@track_n10" target="_blank" class="link-item all others glass-card link-btn flex items-center p-4 md:p-6 lg:p-8 rounded-2xl group relative overflow-hidden">
-                <div class="flex-shrink-0 mr-5 md:mr-6 lg:mr-8 w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 flex items-center justify-center social-icon-youtube">
-                    <i class="fab fa-youtube text-3xl md:text-4xl lg:text-5xl"></i>
-                </div>
-                <div class="flex-grow text-left z-10">
-                    <h3 class="font-bold text-lg md:text-xl lg:text-2xl text-white group-hover:text-red-300 transition-colors tracking-wide">Youtube</h3>
-                    <p class="text-xs md:text-sm lg:text-base text-neutral-400 group-hover:text-neutral-300 transition-colors">@track_n10</p>
-                </div>
-                <div class="text-white/20 group-hover:text-red-400 group-hover:translate-x-1 transition-all">
-                    <i class="fas fa-arrow-up-right-from-square text-lg md:text-xl lg:text-2xl"></i>
-                </div>
-                <div class="absolute inset-0 bg-gradient-to-r from-red-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            </a>
-            <!-- Substack -->
-             <a href="https://trackn10.substack.com/" target="_blank" class="link-item all others glass-card link-btn flex items-center p-4 md:p-6 lg:p-8 rounded-2xl group relative overflow-hidden">
-                <div class="flex-shrink-0 mr-5 md:mr-6 lg:mr-8 w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 flex items-center justify-center social-icon-substack">
-                    <img src="https://cdn.brandfetch.io/id_V6qzrDH/theme/dark/symbol.svg?c=1bxid64Mup7aczewSAYMX&t=1756370390245" alt="Substack" class="w-full h-full object-contain" />
-                </div>
-                <div class="flex-grow text-left z-10">
-                    <h3 class="font-bold text-lg md:text-xl lg:text-2xl text-white group-hover:text-orange-300 transition-colors tracking-wide">Substack</h3>
-                    <p class="text-xs md:text-sm lg:text-base text-neutral-400 group-hover:text-neutral-300 transition-colors">trackn10.substack.com</p>
-                </div>
-                <div class="text-white/20 group-hover:text-orange-400 group-hover:translate-x-1 transition-all">
-                    <i class="fas fa-arrow-up-right-from-square text-lg md:text-xl lg:text-2xl"></i>
-                </div>
-                <div class="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            </a>
+                <!-- TikTok -->
+                <a href="https://www.tiktok.com/@track_n10" target="_blank" class="glass-card link-btn flex flex-col items-center justify-center p-3 md:p-4 lg:p-5 rounded-2xl group relative overflow-hidden">
+                    <div class="flex items-center justify-center social-icon-tiktok mb-2 md:mb-3">
+                        <i class="fab fa-tiktok text-2xl md:text-3xl lg:text-4xl"></i>
+                    </div>
+                    <h3 class="font-bold text-sm md:text-base lg:text-lg text-white group-hover:text-lime-300 transition-colors text-center">TikTok</h3>
+                    <p class="text-[10px] md:text-xs lg:text-sm text-neutral-400 group-hover:text-neutral-300 transition-colors text-center">@track_n10</p>
+                    <div class="absolute inset-0 bg-gradient-to-r from-lime-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                </a>
+
+                <!-- YouTube -->
+                <a href="https://www.youtube.com/@track_n10" target="_blank" class="glass-card link-btn flex flex-col items-center justify-center p-3 md:p-4 lg:p-5 rounded-2xl group relative overflow-hidden">
+                    <div class="flex items-center justify-center social-icon-youtube mb-2 md:mb-3">
+                        <i class="fab fa-youtube text-2xl md:text-3xl lg:text-4xl"></i>
+                    </div>
+                    <h3 class="font-bold text-sm md:text-base lg:text-lg text-white group-hover:text-red-300 transition-colors text-center">YouTube</h3>
+                    <p class="text-[10px] md:text-xs lg:text-sm text-neutral-400 group-hover:text-neutral-300 transition-colors text-center">@track_n10</p>
+                    <div class="absolute inset-0 bg-gradient-to-r from-red-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                </a>
+
+                <!-- Substack -->
+                <a href="https://trackn10.substack.com/" target="_blank" class="glass-card link-btn flex flex-col items-center justify-center p-3 md:p-4 lg:p-5 rounded-2xl group relative overflow-hidden">
+                    <div class="flex items-center justify-center social-icon-substack mb-2 md:mb-3 w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10">
+                        <img src="https://cdn.brandfetch.io/id_V6qzrDH/theme/dark/symbol.svg?c=1bxid64Mup7aczewSAYMX&t=1756370390245" alt="Substack" class="w-full h-full object-contain" />
+                    </div>
+                    <h3 class="font-bold text-sm md:text-base lg:text-lg text-white group-hover:text-orange-300 transition-colors text-center">Substack</h3>
+                    <p class="text-[10px] md:text-xs lg:text-sm text-neutral-400 group-hover:text-neutral-300 transition-colors text-center">trackn10</p>
+                    <div class="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                </a>
+            </div>
 
         </div>
 
@@ -1738,7 +1706,7 @@
                     apple: 'https://music.apple.com/pt/song/clubby-freestyle/1869566198',
                     tidal: 'https://listen.tidal.com/track/490055419',
                     youtube: 'https://music.youtube.com/playlist?list=OLAK5uy_lw1F1kwsBbyzB4wep4pCKSRUoO34HxbZg&si=R0wQesNJW3nwUuOX',
-                    soundcloud: '',
+                    soundcloud: 'https://soundcloud.com/track_n10-music/clubby-freestyle?si=507e76c3c39140b3b0d484781f4ce3c8&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing',
                     amazon: 'https://music.amazon.com/albums/B0GH3KV6SX?marketplaceId=A3K6Y4MI8GDYMT&musicTerritory=PT&ref=dm_sh_mmmsSClspnp01zgzZARxKH1Hb&trackAsin=B0GH3BJH8R',
                     pandora: 'https://www.pandora.com/TR:189163661',
                     beatport: 'https://www.beatport.com/pt/release/clubby-freestyle/5835003',
@@ -1838,7 +1806,7 @@
                 links: {
                     spotify: 'https://open.spotify.com/track/1qMvbWJJZ5u1z1z1z1z1z1',
                     apple: 'https://music.apple.com/us/album/u-und-ich-cross-my-heart-hope-to-die/1787130856?i=1787130857',
-                    tidal: 'https://tidal.com/browse/track/401685160',
+                    tidal: 'https://listen.tidal.com/track/466036527',
                     youtube: 'https://music.youtube.com/watch?v=o7qJ_r8Qjj4',
                     soundcloud: 'https://soundcloud.com/trackn10/u-und-ich-cross-my-heart-hope-to-die',
                     amazon: 'https://music.amazon.com/albums/B0DT7XGMX3',
@@ -1859,7 +1827,7 @@
                 links: {
                     spotify: 'https://open.spotify.com/album/2xyYHD1PJ6oSYJXxLMHfIu',
                     apple: 'https://music.apple.com/us/album/track-n1%E2%88%85/1808270310',
-                    tidal: 'https://tidal.com/browse/album/422339108',
+                    tidal: 'https://listen.tidal.com/album/469752502',
                     youtube: 'https://music.youtube.com/playlist?list=OLAK5uy_nL1q2vOZY8jHqXjHqXjHqXjHqXjHqXjHq',
                     soundcloud: 'https://soundcloud.com/trackn10/sets/track_n10-album',
                     amazon: 'https://music.amazon.com/albums/B0F3M22S4P',
@@ -1879,7 +1847,7 @@
                 links: {
                     spotify: 'https://open.spotify.com/album/5cj6hXpDXkqqIDbsLT7Z6X',
                     apple: 'https://music.apple.com/us/album/neon-dreams/1787130709',
-                    tidal: 'https://tidal.com/browse/album/401685028',
+                    tidal: 'https://listen.tidal.com/album/451880816',
                     youtube: 'https://music.youtube.com/playlist?list=OLAK5uy_kN1N1N1N1N1N1N1N1N1N1N1N1N1N1N1N1',
                     soundcloud: 'https://soundcloud.com/trackn10/sets/neon-dreams',
                     amazon: 'https://music.amazon.com/albums/B0DT7WQXJ3',
@@ -1899,7 +1867,7 @@
                 links: {
                     spotify: 'https://open.spotify.com/album/1YZ4E7S9D3Fq3q3q3q3q3q',
                     apple: 'https://music.apple.com/us/album/lost-hopes-dreams-side-a/1787130763',
-                    tidal: 'https://tidal.com/browse/album/401685078',
+                    tidal: 'https://listen.tidal.com/album/441481367',
                     youtube: 'https://music.youtube.com/playlist?list=OLAK5uy_mM2M2M2M2M2M2M2M2M2M2M2M2M2M2M2M2',
                     soundcloud: 'https://soundcloud.com/trackn10/sets/lost-hopes-dreams-side-a',
                     amazon: 'https://music.amazon.com/albums/B0DT7WZ1R7',
@@ -1939,7 +1907,7 @@
                 links: {
                     spotify: 'https://open.spotify.com/album/3XYZ4E7S9D3Fq3q3q3q3q3',
                     apple: 'https://music.apple.com/us/album/discon10-rmx/1795674212',
-                    tidal: 'https://tidal.com/browse/album/410086374',
+                    tidal: 'https://listen.tidal.com/album/433235310',
                     youtube: 'https://music.youtube.com/playlist?list=OLAK5uy_oO4O4O4O4O4O4O4O4O4O4O4O4O4O4O4O4',
                     soundcloud: 'https://soundcloud.com/trackn10/sets/discon10-rmx',
                     amazon: 'https://music.amazon.com/albums/B0DWJQZ5G9',
@@ -2547,12 +2515,37 @@
             const title = document.getElementById('modal-title');
             const type = document.getElementById('modal-type');
             const grid = document.getElementById('platform-grid');
+            const tidalContainer = document.getElementById('tidal-player-container');
+            const tidalIframe = document.getElementById('tidal-player-iframe');
 
             // Set content
             cover.src = release.cover;
             cover.alt = release.title + ' Cover';
             title.textContent = release.title;
             type.textContent = release.type;
+
+            // Handle Tidal embedded player
+            const tidalUrl = release.links.tidal;
+            if (tidalUrl) {
+                // Extract track/album ID from Tidal URL and build embed URL
+                const tidalMatch = tidalUrl.match(/(?:track|album)\/(\d+)/);
+                if (tidalMatch) {
+                    const tidalId = tidalMatch[1];
+                    const isAlbum = tidalUrl.includes('/album/');
+                    const embedUrl = isAlbum
+                        ? `https://embed.tidal.com/albums/${tidalId}`
+                        : `https://embed.tidal.com/tracks/${tidalId}`;
+                    tidalIframe.src = embedUrl;
+                    tidalIframe.title = `${release.title} - TIDAL Player`;
+                    tidalContainer.classList.remove('hidden');
+                } else {
+                    tidalContainer.classList.add('hidden');
+                    tidalIframe.src = '';
+                }
+            } else {
+                tidalContainer.classList.add('hidden');
+                tidalIframe.src = '';
+            }
 
             // Build platform buttons
             grid.innerHTML = '';
@@ -2588,8 +2581,11 @@
 
         function closeStreamingModal() {
             const modal = document.getElementById('streaming-modal');
+            const tidalIframe = document.getElementById('tidal-player-iframe');
             modal.classList.remove('active');
             document.body.style.overflow = '';
+            // Clear Tidal iframe to stop playback when modal closes
+            tidalIframe.src = '';
         }
 
         // Book Modal functions
@@ -2812,6 +2808,21 @@
                 <p id="modal-type" class="modal-subtitle"></p>
             </div>
             <div class="modal-body">
+                <!-- Embedded Tidal Audio Player (dynamically shown/hidden) -->
+                <div id="tidal-player-container" class="mb-4 md:mb-6 w-full hidden" onclick="event.stopPropagation();">
+                    <div class="relative w-full rounded-lg bg-black/40 backdrop-blur-md border border-white/10">
+                        <iframe
+                            id="tidal-player-iframe"
+                            src=""
+                            class="w-full h-[120px] md:h-[120px] lg:h-[120px]"
+                            allow="encrypted-media; fullscreen; clipboard-write https://embed.tidal.com; web-share"
+                            sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox"
+                            style="color-scheme: light dark; border-radius: 0.5rem;"
+                            title="TIDAL Player"
+                            frameborder="0">
+                        </iframe>
+                    </div>
+                </div>
                 <div id="platform-grid" class="platform-grid">
                     <!-- Platform buttons will be dynamically inserted here -->
                 </div>

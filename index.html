@@ -233,6 +233,31 @@
             box-shadow: 0 14px 32px rgba(249, 115, 22, 0.45);
         }
 
+        .vynil-carousel {
+            display: flex;
+            gap: 1rem;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            padding-bottom: 0.25rem;
+        }
+        .vynil-carousel::-webkit-scrollbar {
+            height: 6px;
+        }
+        .vynil-carousel::-webkit-scrollbar-thumb {
+            background: rgba(249, 115, 22, 0.5);
+            border-radius: 9999px;
+        }
+        .vynil-slide {
+            min-width: 100%;
+            scroll-snap-align: center;
+        }
+        @media (min-width: 768px) {
+            .vynil-slide {
+                min-width: calc(50% - 0.5rem);
+            }
+        }
+
         .featured-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -1154,7 +1179,7 @@
 
             <!-- Smashwords Free Ebook Promotion -->
             <div class="link-item all books glass-card flex flex-col items-center p-4 md:p-6 lg:p-8 rounded-2xl relative overflow-hidden hidden-tab">
-                <p class="text-xs md:text-sm lg:text-base uppercase tracking-widest text-purple-300 mb-3 md:mb-4 section-heading text-center leading-relaxed">
+                <p class="text-xs md:text-sm lg:text-base uppercase tracking-widest text-white mb-3 md:mb-4 section-heading text-center leading-relaxed">
                     FREE EBOOK: USE THE COUPON CODE - <span class="text-white font-bold">YNBST</span> - UNTIL 2026/02/14
                 </p>
                 <div class="flex flex-col items-center">
@@ -1664,15 +1689,30 @@
             </div>
 
             <!-- Category: VYNILS/CD -->
-            <div class="link-item vynils glass-card flex flex-col items-center p-3 md:p-4 lg:p-5 rounded-2xl relative overflow-hidden hidden-tab">
-                <img src="track-n10-vynil-cd.jpg" alt="TRACK_N10 12 inch Vynil and CD" class="w-full max-w-sm rounded-xl border border-white/10 mb-3 md:mb-4">
-                <p class="text-xs md:text-sm lg:text-sm uppercase tracking-widest text-white mb-3 section-heading text-center">
-                    TRACK_N10: 12" Vynil and CD
-                </p>
-                <a href="https://elasticstage.com/track-n10/releases/track-n10-album" target="_blank" rel="noopener noreferrer" class="cta-btn vynil">
-                    <img src="https://www.google.com/s2/favicons?domain=elasticstage.com&sz=64" alt="ElasticStage Icon" class="w-4 h-4 md:w-5 md:h-5 object-contain">
-                    Order on ElasticStage.com
-                </a>
+            <div class="link-item vynils w-full hidden-tab">
+                <div class="vynil-carousel">
+                    <div class="vynil-slide glass-card flex flex-col items-center p-3 md:p-4 lg:p-5 rounded-2xl relative overflow-hidden">
+                        <img src="track-n10-vynil-cd.jpg" alt="TRACK_N10 12 inch Vynil and CD" class="w-full max-w-sm rounded-xl border border-white/10 mb-3 md:mb-4 object-contain">
+                        <p class="text-xs md:text-sm lg:text-sm uppercase tracking-widest text-white mb-3 section-heading text-center">
+                            TRACK_N10: 12" Vynil and CD
+                        </p>
+                        <a href="https://elasticstage.com/track-n10/releases/track-n10-album" target="_blank" rel="noopener noreferrer" class="cta-btn vynil">
+                            <img src="https://www.google.com/s2/favicons?domain=elasticstage.com&sz=64" alt="ElasticStage Icon" class="w-4 h-4 md:w-5 md:h-5 object-contain">
+                            Order on ElasticStage.com
+                        </a>
+                    </div>
+
+                    <div class="vynil-slide glass-card flex flex-col items-center p-3 md:p-4 lg:p-5 rounded-2xl relative overflow-hidden">
+                        <img src="neon-dreams-album.webp" alt="NEON DREAMS 12 inch Vynil and CD" class="w-full max-w-sm rounded-xl border border-white/10 mb-3 md:mb-4 object-contain">
+                        <p class="text-xs md:text-sm lg:text-sm uppercase tracking-widest text-white mb-3 section-heading text-center">
+                            NEON DREAMS: 12" Vynil and CD
+                        </p>
+                        <a href="https://elasticstage.com/track-n10/releases/neon-dreams-album" target="_blank" rel="noopener noreferrer" class="cta-btn vynil">
+                            <img src="https://www.google.com/s2/favicons?domain=elasticstage.com&sz=64" alt="ElasticStage Icon" class="w-4 h-4 md:w-5 md:h-5 object-contain">
+                            Order on ElasticStage.com
+                        </a>
+                    </div>
+                </div>
             </div>
 
             <!-- ============================================== -->

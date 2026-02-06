@@ -1110,6 +1110,10 @@
                         <i class="fas fa-book-open"></i>
                         My books
                     </button>
+                    <button onclick="filterCategory('vynils')" class="cta-btn secondary">
+                        <i class="fas fa-record-vinyl"></i>
+                        Vynils/CD
+                    </button>
                     <button onclick="filterCategory('others')" class="cta-btn secondary">
                         <i class="fas fa-link"></i>
                         Extra links
@@ -1650,6 +1654,18 @@
                 <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
             </div>
 
+            <!-- Category: VYNILS/CD -->
+            <div class="link-item vynils glass-card flex flex-col items-center p-4 md:p-6 lg:p-8 rounded-2xl relative overflow-hidden hidden-tab">
+                <img src="track-n10-vynil-cd.jpg" alt="TRACK_N10 12 inch Vynil and CD" class="w-full max-w-md rounded-xl border border-white/10 mb-4 md:mb-5">
+                <p class="text-xs md:text-sm lg:text-base uppercase tracking-widest text-cyan-300 mb-4 section-heading text-center">
+                    TRACK_N10: 12" Vynil and CD
+                </p>
+                <a href="https://elasticstage.com/track-n10/releases/track-n10-album" target="_blank" rel="noopener noreferrer" class="cta-btn primary">
+                    <i class="fas fa-compact-disc"></i>
+                    Order on ElasticStage.com
+                </a>
+            </div>
+
             <!-- ============================================== -->
             <!-- Category: OTHERS -->
             <!-- ============================================== -->
@@ -1827,7 +1843,7 @@
 
             // Toggle primary/secondary styling on CTA buttons
             const ctaButtons = document.querySelectorAll('.cta-btn');
-            const categoryMap = { 'all': 0, 'music': 1, 'books': 2, 'others': 3 };
+            const categoryMap = { 'all': 0, 'music': 1, 'books': 2, 'vynils': 3, 'others': 4 };
             ctaButtons.forEach((btn, index) => {
                 if (index === categoryMap[category]) {
                     btn.classList.remove('secondary');

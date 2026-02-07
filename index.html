@@ -2943,6 +2943,49 @@
             }
         };
 
+        const intrusiveGedankenFormatLinks = {
+            ebook: {
+                amazon: 'https://books2read.com/u/3RO1Rp?store=amazon&format=EBOOK',
+                applebooks: 'https://books2read.com/u/3RO1Rp?store=apple&format=EBOOK',
+                barnesnoble: 'https://books2read.com/u/3RO1Rp?store=bn&format=EBOOK',
+                bolcom: 'https://books2read.com/u/3RO1Rp?store=bol&format=EBOOK',
+                buecherde: 'https://books2read.com/u/3RO1Rp?store=buecher-de&format=EBOOK',
+                casadellibro: 'https://books2read.com/u/3RO1Rp?store=casadellibro&format=EBOOK',
+                ebookde: 'https://books2read.com/u/3RO1Rp?store=ebook-de&format=EBOOK',
+                fable: 'https://books2read.com/u/3RO1Rp?store=fable&format=EBOOK',
+                fnac: 'https://books2read.com/u/3RO1Rp?store=fnac&format=EBOOK',
+                googleBooks: 'https://books2read.com/u/3RO1Rp?store=google&format=EBOOK',
+                hugendubel: 'https://books2read.com/u/3RO1Rp?store=hugendubel&format=EBOOK',
+                indigo: 'https://books2read.com/u/3RO1Rp?store=indigo&format=EBOOK',
+                kobo: 'https://books2read.com/u/3RO1Rp?store=kobo&format=EBOOK',
+                overdrive: 'https://books2read.com/u/3RO1Rp?store=overdrive&format=EBOOK',
+                palacemarketplace: 'https://books2read.com/u/3RO1Rp?store=palace-marketplace&format=EBOOK',
+                scribd: 'https://books2read.com/u/3RO1Rp?store=scribd&format=EBOOK',
+                smashwords: 'https://books2read.com/u/3RO1Rp?store=smashwords&format=EBOOK',
+                thalia: 'https://books2read.com/u/3RO1Rp?store=thalia&format=EBOOK',
+                vivlio: 'https://books2read.com/u/3RO1Rp?store=vivlio&format=EBOOK',
+                walmart: 'https://books2read.com/u/3RO1Rp?store=walmart&format=EBOOK'
+            },
+            paperback: {
+                amazon: 'https://books2read.com/u/3RO1Rp?store=amazon-paperback&format=PAPERBACK',
+                angusrobertson: 'https://books2read.com/u/3RO1Rp?store=angus-robertson-paperback&format=PAPERBACK',
+                booksamillion: 'https://books2read.com/u/3RO1Rp?store=bam-paperback&format=PAPERBACK',
+                barnesnoble: 'https://books2read.com/u/3RO1Rp?store=bn-paperback&format=PAPERBACK',
+                bookshop: 'https://books2read.com/u/3RO1Rp?store=bookshopdotorg-paperback&format=PAPERBACK',
+                booktopia: 'https://books2read.com/u/3RO1Rp?store=booktopia-paperback&format=PAPERBACK',
+                powells: 'https://books2read.com/u/3RO1Rp?store=powells-paperback&format=PAPERBACK',
+                waterstones: 'https://books2read.com/u/3RO1Rp?store=waterstones-paperback&format=PAPERBACK'
+            },
+            audiobook: {
+                barnesnoble: 'https://books2read.com/u/3RO1Rp?store=bn-audio&format=AUDIOBOOK',
+                googleBooks: 'https://books2read.com/u/3RO1Rp?store=google-audio&format=AUDIOBOOK',
+                kobo: 'https://books2read.com/u/3RO1Rp?store=kobo-audio&format=AUDIOBOOK',
+                overdrive: 'https://books2read.com/u/3RO1Rp?store=overdrive-audio&format=AUDIOBOOK',
+                scribd: 'https://books2read.com/u/3RO1Rp?store=scribd-audio&format=AUDIOBOOK'
+            }
+        };
+
+
         // Language info with flags
         const languageInfo = {
             PT: { name: 'PT', flag: 'https://flagcdn.com/w40/br.png' },
@@ -3160,6 +3203,33 @@
 
                 sections.forEach(section => {
                     const links = ultraQualiaSideAFormatLinks[section.key];
+                    const wrapper = document.createElement('div');
+                    const heading = document.createElement('p');
+                    heading.className = 'bookstore-format-title';
+                    heading.textContent = section.title;
+                    wrapper.appendChild(heading);
+
+                    const formatGrid = document.createElement('div');
+                    formatGrid.className = 'bookstore-format-grid';
+                    Object.entries(links).forEach(([store, url]) => formatGrid.appendChild(createStoreButton(store, url, true)));
+                    wrapper.appendChild(formatGrid);
+                    grid.appendChild(wrapper);
+                });
+                return;
+            }
+
+            if (currentBookId === 'intrusive-thoughts' && currentBookLanguage === 'DE') {
+                label.textContent = 'Available by format';
+                grid.classList.add('bookstore-sections');
+
+                const sections = [
+                    { key: 'ebook', title: 'Available in Ebook:' },
+                    { key: 'paperback', title: 'Available in Paperback:' },
+                    { key: 'audiobook', title: 'Available in Audiobook:' }
+                ];
+
+                sections.forEach(section => {
+                    const links = intrusiveGedankenFormatLinks[section.key];
                     const wrapper = document.createElement('div');
                     const heading = document.createElement('p');
                     heading.className = 'bookstore-format-title';

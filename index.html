@@ -1021,6 +1021,59 @@
                 height: 28px;
             }
         }
+
+        .bookstore-sections {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            max-height: 60vh;
+            overflow-y: auto;
+            padding-right: 0.5rem;
+        }
+        .bookstore-format-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 0.6rem;
+        }
+        .bookstore-format-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 0.65rem;
+        }
+        .bookstore-icon-btn {
+            aspect-ratio: 1 / 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.6rem;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 0.9rem;
+            transition: all 0.25s ease;
+        }
+        .bookstore-icon-btn:hover {
+            transform: translateY(-2px);
+            background: rgba(147, 51, 234, 0.22);
+            border-color: rgba(147, 51, 234, 0.55);
+            box-shadow: 0 8px 20px rgba(147, 51, 234, 0.25);
+        }
+        .bookstore-icon-btn img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            border-radius: 0.5rem;
+        }
+        @media (max-width: 767px) {
+            .bookstore-format-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+            .bookstore-icon-btn img {
+                width: 34px;
+                height: 34px;
+            }
+        }
+
         .book-card {
             cursor: pointer;
             transition: transform 0.3s ease;
@@ -2771,7 +2824,32 @@
         booksamillion: { 
             name: 'Booksamillion', 
             icon: 'https://www.google.com/s2/favicons?domain=booksamillion.com&sz=32' 
-        }
+        },
+
+        angusrobertson: {
+            name: 'Angus & Robertson',
+            icon: 'https://www.google.com/s2/favicons?domain=angusrobertson.com.au&sz=32'
+        },
+        bbfs: {
+            name: 'Baker & Taylor Blio',
+            icon: 'https://www.google.com/s2/favicons?domain=blio.com&sz=32'
+        },
+        hoopla: {
+            name: 'Hoopla',
+            icon: 'https://www.google.com/s2/favicons?domain=hoopladigital.com&sz=32'
+        },
+        palacemarketplace: {
+            name: 'Palace Marketplace',
+            icon: 'https://www.google.com/s2/favicons?domain=thepalaceproject.org&sz=32'
+        },
+        scribd: {
+            name: 'Scribd / Everand',
+            icon: 'https://www.google.com/s2/favicons?domain=everand.com&sz=32'
+        },
+        shoplocal: {
+            name: 'Shop Local Canada',
+            icon: 'https://www.google.com/s2/favicons?domain=shoplocalcanada.ca&sz=32'
+        },
     };
 	        // Author profile URLs for "ALL" view
 	        const authorProfileUrls = { 
@@ -2809,6 +2887,104 @@
             thalia: 'https://www.thalia.de/shop/home/mehr-von-suche/ANY/sp/suche.html?mehrVon=leonardo+sales+santos',
             booksamillion: 'https://www.booksamillion.com/search2?id=9664179902116&query=Leonardo+Sales+Santos&filters[authors]=Leonardo+Sales+Santos'
         };
+
+        const ultraQualiaSideAFormatLinks = {
+            ebook: {
+                amazon: 'https://books2read.com/u/3RMLeD?store=amazon&format=EBOOK',
+                angusrobertson: 'https://books2read.com/u/3RMLeD?store=angus-robertson&format=EBOOK',
+                applebooks: 'https://books2read.com/u/3RMLeD?store=apple&format=EBOOK',
+                bbfs: 'https://books2read.com/u/3RMLeD?store=bbfs&format=EBOOK',
+                barnesnoble: 'https://books2read.com/u/3RMLeD?store=bn&format=EBOOK',
+                bolcom: 'https://books2read.com/u/3RMLeD?store=bol&format=EBOOK',
+                buecherde: 'https://books2read.com/u/3RMLeD?store=buecher-de&format=EBOOK',
+                casadellibro: 'https://books2read.com/u/3RMLeD?store=casadellibro&format=EBOOK',
+                ebookde: 'https://books2read.com/u/3RMLeD?store=ebook-de&format=EBOOK',
+                fable: 'https://books2read.com/u/3RMLeD?store=fable&format=EBOOK',
+                fnac: 'https://books2read.com/u/3RMLeD?store=fnac&format=EBOOK',
+                gandhi: 'https://books2read.com/u/3RMLeD?store=gandhi&format=EBOOK',
+                googleBooks: 'https://books2read.com/u/3RMLeD?store=google&format=EBOOK',
+                hoopla: 'https://books2read.com/u/3RMLeD?store=hoopla&format=EBOOK',
+                hugendubel: 'https://books2read.com/u/3RMLeD?store=hugendubel&format=EBOOK',
+                indigo: 'https://books2read.com/u/3RMLeD?store=indigo&format=EBOOK',
+                kobo: 'https://books2read.com/u/3RMLeD?store=kobo&format=EBOOK',
+                lafeltrinelli: 'https://books2read.com/u/3RMLeD?store=lafeltrinelli&format=EBOOK',
+                overdrive: 'https://books2read.com/u/3RMLeD?store=overdrive&format=EBOOK',
+                palacemarketplace: 'https://books2read.com/u/3RMLeD?store=palace-marketplace&format=EBOOK',
+                payhip: 'https://books2read.com/u/3RMLeD?store=payhip&format=EBOOK',
+                scribd: 'https://books2read.com/u/3RMLeD?store=scribd&format=EBOOK',
+                smashwords: 'https://books2read.com/u/3RMLeD?store=smashwords&format=EBOOK',
+                thalia: 'https://books2read.com/u/3RMLeD?store=thalia&format=EBOOK',
+                vivlio: 'https://books2read.com/u/3RMLeD?store=vivlio&format=EBOOK',
+                walmart: 'https://books2read.com/u/3RMLeD?store=walmart&format=EBOOK'
+            },
+            paperback: {
+                amazon: 'https://books2read.com/u/3RMLeD?store=amazon-paperback&format=PAPERBACK',
+                angusrobertson: 'https://books2read.com/u/3RMLeD?store=angus-robertson-paperback&format=PAPERBACK',
+                booksamillion: 'https://books2read.com/u/3RMLeD?store=bam-paperback&format=PAPERBACK',
+                blackwells: 'https://books2read.com/u/3RMLeD?store=blackwells-paperback&format=PAPERBACK',
+                barnesnoble: 'https://books2read.com/u/3RMLeD?store=bn-paperback&format=PAPERBACK',
+                bookshop: 'https://books2read.com/u/3RMLeD?store=bookshopdotorg-paperback&format=PAPERBACK',
+                booktopia: 'https://books2read.com/u/3RMLeD?store=booktopia-paperback&format=PAPERBACK',
+                foyles: 'https://books2read.com/u/3RMLeD?store=foyles-paperback&format=PAPERBACK',
+                hugendubel: 'https://books2read.com/u/3RMLeD?store=hugendubel-paperback&format=PAPERBACK',
+                powells: 'https://books2read.com/u/3RMLeD?store=powells-paperback&format=PAPERBACK',
+                shoplocal: 'https://books2read.com/u/3RMLeD?store=shoplocal-ca-paperback&format=PAPERBACK',
+                thalia: 'https://books2read.com/u/3RMLeD?store=thalia-paperback&format=PAPERBACK',
+                waterstones: 'https://books2read.com/u/3RMLeD?store=waterstones-paperback&format=PAPERBACK'
+            },
+            audiobook: {
+                barnesnoble: 'https://books2read.com/u/3RMLeD?store=bn-audio&format=AUDIOBOOK',
+                booktopia: 'https://books2read.com/u/3RMLeD?store=booktopia-audio&format=AUDIOBOOK',
+                googleBooks: 'https://books2read.com/u/3RMLeD?store=google-audio&format=AUDIOBOOK',
+                kobo: 'https://books2read.com/u/3RMLeD?store=kobo-audio&format=AUDIOBOOK',
+                overdrive: 'https://books2read.com/u/3RMLeD?store=overdrive-audio&format=AUDIOBOOK',
+                scribd: 'https://books2read.com/u/3RMLeD?store=scribd-audio&format=AUDIOBOOK',
+                spotify: 'https://books2read.com/u/3RMLeD?store=spotify-audiobook&format=AUDIOBOOK'
+            }
+        };
+
+        const intrusiveGedankenFormatLinks = {
+            ebook: {
+                amazon: 'https://books2read.com/u/3RO1Rp?store=amazon&format=EBOOK',
+                applebooks: 'https://books2read.com/u/3RO1Rp?store=apple&format=EBOOK',
+                barnesnoble: 'https://books2read.com/u/3RO1Rp?store=bn&format=EBOOK',
+                bolcom: 'https://books2read.com/u/3RO1Rp?store=bol&format=EBOOK',
+                buecherde: 'https://books2read.com/u/3RO1Rp?store=buecher-de&format=EBOOK',
+                casadellibro: 'https://books2read.com/u/3RO1Rp?store=casadellibro&format=EBOOK',
+                ebookde: 'https://books2read.com/u/3RO1Rp?store=ebook-de&format=EBOOK',
+                fable: 'https://books2read.com/u/3RO1Rp?store=fable&format=EBOOK',
+                fnac: 'https://books2read.com/u/3RO1Rp?store=fnac&format=EBOOK',
+                googleBooks: 'https://books2read.com/u/3RO1Rp?store=google&format=EBOOK',
+                hugendubel: 'https://books2read.com/u/3RO1Rp?store=hugendubel&format=EBOOK',
+                indigo: 'https://books2read.com/u/3RO1Rp?store=indigo&format=EBOOK',
+                kobo: 'https://books2read.com/u/3RO1Rp?store=kobo&format=EBOOK',
+                overdrive: 'https://books2read.com/u/3RO1Rp?store=overdrive&format=EBOOK',
+                palacemarketplace: 'https://books2read.com/u/3RO1Rp?store=palace-marketplace&format=EBOOK',
+                scribd: 'https://books2read.com/u/3RO1Rp?store=scribd&format=EBOOK',
+                smashwords: 'https://books2read.com/u/3RO1Rp?store=smashwords&format=EBOOK',
+                thalia: 'https://books2read.com/u/3RO1Rp?store=thalia&format=EBOOK',
+                vivlio: 'https://books2read.com/u/3RO1Rp?store=vivlio&format=EBOOK',
+                walmart: 'https://books2read.com/u/3RO1Rp?store=walmart&format=EBOOK'
+            },
+            paperback: {
+                amazon: 'https://books2read.com/u/3RO1Rp?store=amazon-paperback&format=PAPERBACK',
+                angusrobertson: 'https://books2read.com/u/3RO1Rp?store=angus-robertson-paperback&format=PAPERBACK',
+                booksamillion: 'https://books2read.com/u/3RO1Rp?store=bam-paperback&format=PAPERBACK',
+                barnesnoble: 'https://books2read.com/u/3RO1Rp?store=bn-paperback&format=PAPERBACK',
+                bookshop: 'https://books2read.com/u/3RO1Rp?store=bookshopdotorg-paperback&format=PAPERBACK',
+                booktopia: 'https://books2read.com/u/3RO1Rp?store=booktopia-paperback&format=PAPERBACK',
+                powells: 'https://books2read.com/u/3RO1Rp?store=powells-paperback&format=PAPERBACK',
+                waterstones: 'https://books2read.com/u/3RO1Rp?store=waterstones-paperback&format=PAPERBACK'
+            },
+            audiobook: {
+                barnesnoble: 'https://books2read.com/u/3RO1Rp?store=bn-audio&format=AUDIOBOOK',
+                googleBooks: 'https://books2read.com/u/3RO1Rp?store=google-audio&format=AUDIOBOOK',
+                kobo: 'https://books2read.com/u/3RO1Rp?store=kobo-audio&format=AUDIOBOOK',
+                overdrive: 'https://books2read.com/u/3RO1Rp?store=overdrive-audio&format=AUDIOBOOK',
+                scribd: 'https://books2read.com/u/3RO1Rp?store=scribd-audio&format=AUDIOBOOK'
+            }
+        };
+
 
         // Language info with flags
         const languageInfo = {
@@ -2988,59 +3164,91 @@
             const grid = document.getElementById('bookstore-grid');
             const label = document.getElementById('bookstore-label');
             grid.innerHTML = '';
+            grid.classList.remove('bookstore-sections');
 
-	            if (currentBookLanguage === 'ALL') {
+            const createStoreButton = (store, url, compact = false) => {
+                const info = bookstoreInfo[store] || { name: store, icon: 'https://cdn.simpleicons.org/bookstack/ffffff' };
+                const btn = document.createElement('a');
+                btn.className = compact ? 'bookstore-icon-btn' : ('bookstore-btn' + (url ? '' : ' disabled'));
+                btn.href = url || '#';
+                btn.target = '_blank';
+                btn.rel = 'noopener noreferrer';
+                btn.title = info.name;
+                if (!url) {
+                    btn.setAttribute('aria-disabled', 'true');
+                    btn.onclick = (e) => e.preventDefault();
+                }
+                btn.innerHTML = compact
+                    ? `<img src="${info.icon}" alt="${info.name}" onerror="this.src='https://cdn.simpleicons.org/bookstack/ffffff'; this.onerror=null;">`
+                    : `<img src="${info.icon}" alt="${info.name}" onerror="this.src='https://cdn.simpleicons.org/bookstack/ffffff'; this.onerror=null;"><span>${info.name}</span>`;
+                return btn;
+            };
+
+            if (currentBookLanguage === 'ALL') {
                 label.textContent = 'Author Profile - All Platforms';
                 const allStores = Object.keys(authorProfileUrls);
-	                allStores.forEach(store => {
-	                    try {
-	                        const url = authorProfileUrls[store];
-	                        const info = bookstoreInfo[store] || { name: store, icon: 'https://cdn.simpleicons.org/bookstack/ffffff' };
-	                        const btn = document.createElement('a');
-	                        btn.className = 'bookstore-btn';
-	                        btn.href = url;
-	                        btn.target = '_blank';
-	                        btn.rel = 'noopener noreferrer';
-	                        btn.innerHTML = `
-	                            <img src="${info.icon}" alt="${info.name}" onerror="this.src='https://cdn.simpleicons.org/bookstack/ffffff'; this.onerror=null;">
-	                            <span>${info.name}</span>
-	                        `;
-	                        grid.appendChild(btn);
-	                    } catch (err) {
-	                        console.error('[Book Modal] Failed to render ALL-store button:', store, err);
-	                    }
-	                });
-	            } else {
-                // Update label for language-specific view
-                label.textContent = 'Available At';
-
-                // Show language-specific book links
-	                const bookstoreOrder = ['amazon', 'kobo', 'googleBooks', 'applebooks', 'walmart', 'fnac', 'gandhi', 'foyles', 'hugendubel', 'everand', 'blackwells', 'booktopia', 'waterstones', 'casadellibro', 'hatchards', 'overdrive', 'buecherde', 'ebookde', 'barnesnoble', 'bolcom', 'smashwords', 'vivlio', 'fable', 'indigo', 'sanmin', 'dymocks', 'powells', 'lafeltrinelli', 'indiebookstores', 'payhip', 'thalia', 'booksamillion'];
-	                const links = (book.links && book.links[currentBookLanguage]) ? book.links[currentBookLanguage] : {};
-
-	                bookstoreOrder.forEach(store => {
-	                    try {
-	                        const url = links[store];
-	                        const info = bookstoreInfo[store] || { name: store, icon: 'https://cdn.simpleicons.org/bookstack/ffffff' };
-	                        const btn = document.createElement('a');
-	                        btn.className = 'bookstore-btn' + (url ? '' : ' disabled');
-	                        btn.href = url || '#';
-	                        btn.target = '_blank';
-	                        btn.rel = 'noopener noreferrer';
-	                        if (!url) {
-	                            btn.setAttribute('aria-disabled', 'true');
-	                            btn.onclick = (e) => e.preventDefault();
-	                        }
-	                        btn.innerHTML = `
-	                            <img src="${info.icon}" alt="${info.name}" onerror="this.src='https://cdn.simpleicons.org/bookstack/ffffff'; this.onerror=null;">
-	                            <span>${info.name}</span>
-	                        `;
-	                        grid.appendChild(btn);
-	                    } catch (err) {
-	                        console.error('[Book Modal] Failed to render bookstore button:', store, err);
-	                    }
-	                });
+                allStores.forEach(store => grid.appendChild(createStoreButton(store, authorProfileUrls[store])));
+                return;
             }
+
+            if (currentBookId === 'ultra-qualia' && currentBookLanguage === 'EN') {
+                label.textContent = 'Available by format';
+                grid.classList.add('bookstore-sections');
+
+                const sections = [
+                    { key: 'ebook', title: 'Available in Ebook:' },
+                    { key: 'paperback', title: 'Available in Paperback:' },
+                    { key: 'audiobook', title: 'Available in Audiobook:' }
+                ];
+
+                sections.forEach(section => {
+                    const links = ultraQualiaSideAFormatLinks[section.key];
+                    const wrapper = document.createElement('div');
+                    const heading = document.createElement('p');
+                    heading.className = 'bookstore-format-title';
+                    heading.textContent = section.title;
+                    wrapper.appendChild(heading);
+
+                    const formatGrid = document.createElement('div');
+                    formatGrid.className = 'bookstore-format-grid';
+                    Object.entries(links).forEach(([store, url]) => formatGrid.appendChild(createStoreButton(store, url, true)));
+                    wrapper.appendChild(formatGrid);
+                    grid.appendChild(wrapper);
+                });
+                return;
+            }
+
+            if (currentBookId === 'intrusive-thoughts' && currentBookLanguage === 'DE') {
+                label.textContent = 'Available by format';
+                grid.classList.add('bookstore-sections');
+
+                const sections = [
+                    { key: 'ebook', title: 'Available in Ebook:' },
+                    { key: 'paperback', title: 'Available in Paperback:' },
+                    { key: 'audiobook', title: 'Available in Audiobook:' }
+                ];
+
+                sections.forEach(section => {
+                    const links = intrusiveGedankenFormatLinks[section.key];
+                    const wrapper = document.createElement('div');
+                    const heading = document.createElement('p');
+                    heading.className = 'bookstore-format-title';
+                    heading.textContent = section.title;
+                    wrapper.appendChild(heading);
+
+                    const formatGrid = document.createElement('div');
+                    formatGrid.className = 'bookstore-format-grid';
+                    Object.entries(links).forEach(([store, url]) => formatGrid.appendChild(createStoreButton(store, url, true)));
+                    wrapper.appendChild(formatGrid);
+                    grid.appendChild(wrapper);
+                });
+                return;
+            }
+
+            label.textContent = 'Available At';
+            const bookstoreOrder = ['amazon', 'kobo', 'googleBooks', 'applebooks', 'walmart', 'fnac', 'gandhi', 'foyles', 'hugendubel', 'everand', 'blackwells', 'booktopia', 'waterstones', 'casadellibro', 'hatchards', 'overdrive', 'buecherde', 'ebookde', 'barnesnoble', 'bolcom', 'smashwords', 'vivlio', 'fable', 'indigo', 'sanmin', 'dymocks', 'powells', 'lafeltrinelli', 'indiebookstores', 'payhip', 'thalia', 'booksamillion'];
+            const links = (book.links && book.links[currentBookLanguage]) ? book.links[currentBookLanguage] : {};
+            bookstoreOrder.forEach(store => grid.appendChild(createStoreButton(store, links[store])));
         }
 
         function closeBookModal() {

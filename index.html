@@ -2959,6 +2959,54 @@
             }
         };
 
+        const intrusiveThoughtsFormatLinks = {
+            ebook: {
+                amazon: 'https://a.co/d/06OX4Djf',
+                applebooks: 'https://books.apple.com/us/book/intrusive-thoughts/id6748541026',
+                googleBooks: 'https://play.google.com/store/books/details?id=fG6hEQAAQBAJ',
+                smashwords: 'https://www.smashwords.com/books/view/1808306',
+                ebookde: 'https://www.ebook.de/de/product/51293184/leonardo_sales_santos_intrusive_thoughts.html',
+                gandhi: 'https://www.gandhi.com.mx/intrusive-thoughts-9798231859535/p',
+                buecherde: 'https://www.buecher.de/shop/home/artikeldetails/A1076194332',
+                hugendubel: 'https://www.hugendubel.de/de/ebook_epub/leonardo_sales_santos-intrusive_thoughts-51293184-produkt-details.html',
+                booktopia: 'https://www.booktopia.com.au/intrusive-thoughts-leonardo-sales-santos/ebook/9798231859535.html',
+                vivlio: 'https://shop.vivlio.com/product/9798231859535_9798231859535_10020/intrusive-thoughts?listName=top-ventes-de-lauteur&listId=446',
+                fable: 'https://fable.co/book/intrusive-thoughts-by-leonardo-sales-santos-9798231859535',
+                indigo: 'https://www.indigo.ca/en-ca/intrusive-thoughts/637ee95c-ed5f-3f06-aa79-734b9712d7f0.html',
+                kobo: 'https://www.kobo.com/pt/en/ebook/intrusive-thoughts-3',
+                overdrive: 'https://www.overdrive.com/media/12088345/intrusive-thoughts',
+                barnesnoble: 'https://www.barnesandnoble.com/w/intrusive-thoughts-leonardo-sales-santos/1147816172?ean=2940181552258',
+                bolcom: 'https://www.bol.com/be/nl/p/intrusive-thoughts/9300000235977803/?bltgh=7f519eec-f4cc-44b9-bb8b-1bdd124c6756.BuyBlock_distinctive-feature.0.FeatureListItem',
+                hoopla: 'https://www.hoopladigital.com/title/18678018'
+            },
+            paperback: {
+                amazon: 'https://a.co/d/0dCPcaJe',
+                ebookde: 'https://www.ebook.de/de/product/51299527/leonardo_sales_santos_intrusive_thoughts.html',
+                walmart: 'https://www.walmart.com/ip/Intrusive-Thoughts-Paperback-9798231880010/17267963390?classType=REGULAR&sid=156308ef-9946-44a3-b4de-bb6d9a46b33e',
+                buecherde: 'https://www.buecher.de/shop/home/artikeldetails/A1076200239',
+                booksamillion: 'https://www.booksamillion.com/p/Intrusive-Thoughts/Leonardo-Sales-Santos/9798231880010',
+                foyles: 'https://www.foyles.co.uk/book/intrusive-thoughts/leonardo-sales-santos/9798231880010',
+                hugendubel: 'https://www.hugendubel.de/de/buch_kartoniert/leonardo_sales_santos-intrusive_thoughts-51299527-produkt-details.html',
+                blackwells: 'https://blackwells.co.uk/bookshop/product/Intrusive-Thoughts-by-Leonardo-Sales-Santos/9798231880010',
+                powells: 'https://www.powells.com/book/intrusive-thoughts-9798231880010?condition=New',
+                dymocks: 'https://www.dymocks.com.au/intrusive-thoughts-by-leonardo-sales-santos-9798231880010',
+                sanmin: 'https://www.sanmin.com.tw/product/index/014633209',
+                barnesnoble: 'https://www.barnesandnoble.com/w/intrusive-thoughts-leonardo-sales-santos/1147816172?ean=9798231880010',
+                bolcom: 'https://www.bol.com/be/nl/p/intrusive-thoughts/9300000236037433/?referrer=socialshare_pdp_www',
+                waterstones: 'https://www.waterstones.com/book/intrusive-thoughts/leonardo-sales-santos/9798231880010',
+                hatchards: 'https://www.hatchards.co.uk/book/intrusive-thoughts/leonardo-sales-santos/9798231880010'
+            },
+            audiobook: {
+                scribd: 'https://pt.everand.com/audiobook/970635342/Intrusive-Thoughts',
+                booktopia: 'https://www.booktopia.com.au/intrusive-thoughts-leonardo-sales-santos/audiobook/9798260839232.html',
+                kobo: 'https://www.kobo.com/pt/en/audiobook/intrusive-thoughts-4',
+                overdrive: 'https://www.overdrive.com/media/12707557/intrusive-thoughts',
+                barnesnoble: 'https://www.barnesandnoble.com/w/intrusive-thoughts-leonardo-sales-santos/1147816172?ean=2940201284985',
+                googleBooks: 'https://play.google.com/store/audiobooks/details?id=AQAAAEDqA0ZDvM',
+                spotifybooks: 'https://open.spotify.com/show/6YjyuXfksIewnv73KqKvNu'
+            }
+        };
+
         const intrusiveGedankenFormatLinks = {
             ebook: {
                 amazon: 'https://books2read.com/u/3RO1Rp?store=amazon&format=EBOOK',
@@ -3302,6 +3350,11 @@
 
             if (currentBookId === 'ultra-qualia' && currentBookLanguage === 'IT') {
                 renderFormatSections(ultraQualiaItalianFormatLinks);
+                return;
+            }
+
+            if (currentBookId === 'intrusive-thoughts' && currentBookLanguage === 'EN') {
+                renderFormatSections(intrusiveThoughtsFormatLinks);
                 return;
             }
 

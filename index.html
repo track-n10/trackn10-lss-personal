@@ -2963,7 +2963,7 @@
             ebook: {
                 amazon: 'https://books2read.com/u/3RO1Rp?store=amazon&format=EBOOK',
                 applebooks: 'https://books2read.com/u/3RO1Rp?store=apple&format=EBOOK',
-                barnesnoble: 'https://books2read.com/u/3RO1Rp?store=bn&format=EBOOK',
+                barnesnoble: 'https://www.barnesandnoble.com/w/intrusive-gedanken-leonardo-sales-santos/1148117277?ean=2940182441070',
                 bolcom: 'https://books2read.com/u/3RO1Rp?store=bol&format=EBOOK',
                 buecherde: 'https://books2read.com/u/3RO1Rp?store=buecher-de&format=EBOOK',
                 casadellibro: 'https://books2read.com/u/3RO1Rp?store=casadellibro&format=EBOOK',
@@ -2980,12 +2980,16 @@
                 thalia: 'https://books2read.com/u/3RO1Rp?store=thalia&format=EBOOK',
                 vivlio: 'https://books2read.com/u/3RO1Rp?store=vivlio&format=EBOOK',
                 bookshop: 'https://bookshop.org/p/books/intrusive-gedanken-leonardo-sales-santos/677937cbd1536413?ean=9798231471386&digital=t',
+                smashwords: 'https://books2read.com/u/3RO1Rp?store=smashwords&format=EBOOK',
+                thalia: 'https://books2read.com/u/3RO1Rp?store=thalia&format=EBOOK',
+                vivlio: 'https://books2read.com/u/3RO1Rp?store=vivlio&format=EBOOK',
+                walmart: 'https://books2read.com/u/3RO1Rp?store=walmart&format=EBOOK'
             },
             paperback: {
                 amazon: 'https://books2read.com/u/3RO1Rp?store=amazon-paperback&format=PAPERBACK',
                 angusrobertson: 'https://books2read.com/u/3RO1Rp?store=angus-robertson-paperback&format=PAPERBACK',
                 booksamillion: 'https://books2read.com/u/3RO1Rp?store=bam-paperback&format=PAPERBACK',
-                barnesnoble: 'https://books2read.com/u/3RO1Rp?store=bn-paperback&format=PAPERBACK',
+                barnesnoble: 'https://www.barnesandnoble.com/w/intrusive-gedanken-leonardo-sales-santos/1148117277?ean=9798232966171',
                 bookshop: 'https://books2read.com/u/3RO1Rp?store=bookshopdotorg-paperback&format=PAPERBACK',
                 booktopia: 'https://books2read.com/u/3RO1Rp?store=booktopia-paperback&format=PAPERBACK',
                 powells: 'https://books2read.com/u/3RO1Rp?store=powells-paperback&format=PAPERBACK',
@@ -2993,13 +2997,14 @@
                 foyles: 'https://www.foyles.co.uk/book/intrusive-gedanken/leonardo-sales-santos/9798232966171',
                 hatchards: 'https://www.hatchards.co.uk/book/intrusive-gedanken/leonardo-sales-santos/9798232966171',
                 walmart: 'https://www.walmart.com/ip/Intrusive-Gedanken-Paperback-9798232966171/17760674590?classType=REGULAR',
+                waterstones: 'https://books2read.com/u/3RO1Rp?store=waterstones-paperback&format=PAPERBACK'
             },
             audiobook: {
-                barnesnoble: 'https://books2read.com/u/3RO1Rp?store=bn-audio&format=AUDIOBOOK',
+                barnesnoble: 'https://www.barnesandnoble.com/w/intrusive-gedanken-leonardo-sales-santos/1148117277?ean=2940201158705',
                 googleBooks: 'https://books2read.com/u/3RO1Rp?store=google-audio&format=AUDIOBOOK',
                 kobo: 'https://books2read.com/u/3RO1Rp?store=kobo-audio&format=AUDIOBOOK',
                 overdrive: 'https://books2read.com/u/3RO1Rp?store=overdrive-audio&format=AUDIOBOOK',
-                scribd: 'https://books2read.com/u/3RO1Rp?store=scribd-audio&format=AUDIOBOOK'
+                scribd: 'https://pt.everand.com/audiobook/970634074/Intrusive-Gedanken'
             }
         };
 
@@ -3009,7 +3014,6 @@
                 amazon: '',
                 angusrobertson: '',
                 applebooks: 'https://books.apple.com/us/book/ultra-qualia-libro-1-lato-a/id6758781837',
-                bbfs: '',
                 barnesnoble: 'https://www.barnesandnoble.com/w/ultra-qualia-leonardo-sales-santos/1149395747?ean=2940196474767',
                 bolcom: '',
                 buecherde: '',
@@ -3027,11 +3031,9 @@
                 overdrive: '',
                 palacemarketplace: '',
                 payhip: '',
-                scribd: '',
                 smashwords: 'https://www.smashwords.com/books/view/1961531',
                 thalia: 'https://www.thalia.de/shop/home/artikeldetails/A1078179560',
                 vivlio: 'https://shop.vivlio.com/product/9798233302282_9798233302282_10020/ultra-qualia-libro-1-lato-a',
-                walmart: '',
                 everand: 'https://pt.everand.com/book/993002551/Ultra-Qualia-Libro-1-Lato-A-Ultra-Qualia-1'
             },
             paperback: {
@@ -3045,9 +3047,10 @@
                 foyles: '',
                 hugendubel: '',
                 powells: '',
-                shoplocal: '',
                 thalia: '',
-                waterstones: ''
+                waterstones: '',
+                indiebookstores: '',
+                walmart: ''
             },
             audiobook: {
                 barnesnoble: '',
@@ -3056,7 +3059,7 @@
                 kobo: '',
                 overdrive: '',
                 scribd: '',
-                spotify: ''
+                spotifybooks: ''
             }
         };
 
@@ -3244,7 +3247,7 @@
             const createStoreButton = (store, url, compact = false) => {
                 const info = bookstoreInfo[store] || { name: store, icon: 'https://cdn.simpleicons.org/bookstack/ffffff' };
                 const btn = document.createElement('a');
-                btn.className = compact ? 'bookstore-icon-btn' : ('bookstore-btn' + (url ? '' : ' disabled'));
+                btn.className = compact ? ('bookstore-icon-btn' + (url ? '' : ' disabled')) : ('bookstore-btn' + (url ? '' : ' disabled'));
                 btn.href = url || '#';
                 btn.target = '_blank';
                 btn.rel = 'noopener noreferrer';
@@ -3266,7 +3269,7 @@
                 return;
             }
 
-            if (currentBookId === 'ultra-qualia' && currentBookLanguage === 'EN') {
+            const renderFormatSections = (formatLinks) => {
                 label.textContent = 'Available by format';
                 grid.classList.add('bookstore-sections');
 
@@ -3277,7 +3280,7 @@
                 ];
 
                 sections.forEach(section => {
-                    const links = ultraQualiaSideAFormatLinks[section.key];
+                    const links = formatLinks[section.key];
                     const wrapper = document.createElement('div');
                     const heading = document.createElement('p');
                     heading.className = 'bookstore-format-title';
@@ -3290,33 +3293,20 @@
                     wrapper.appendChild(formatGrid);
                     grid.appendChild(wrapper);
                 });
+            };
+
+            if (currentBookId === 'ultra-qualia' && currentBookLanguage === 'EN') {
+                renderFormatSections(ultraQualiaSideAFormatLinks);
+                return;
+            }
+
+            if (currentBookId === 'ultra-qualia' && currentBookLanguage === 'IT') {
+                renderFormatSections(ultraQualiaItalianFormatLinks);
                 return;
             }
 
             if (currentBookId === 'intrusive-thoughts' && currentBookLanguage === 'DE') {
-                label.textContent = 'Available by format';
-                grid.classList.add('bookstore-sections');
-
-                const sections = [
-                    { key: 'ebook', title: 'Available in Ebook:' },
-                    { key: 'paperback', title: 'Available in Paperback:' },
-                    { key: 'audiobook', title: 'Available in Audiobook:' }
-                ];
-
-                sections.forEach(section => {
-                    const links = intrusiveGedankenFormatLinks[section.key];
-                    const wrapper = document.createElement('div');
-                    const heading = document.createElement('p');
-                    heading.className = 'bookstore-format-title';
-                    heading.textContent = section.title;
-                    wrapper.appendChild(heading);
-
-                    const formatGrid = document.createElement('div');
-                    formatGrid.className = 'bookstore-format-grid';
-                    Object.entries(links).forEach(([store, url]) => formatGrid.appendChild(createStoreButton(store, url, true)));
-                    wrapper.appendChild(formatGrid);
-                    grid.appendChild(wrapper);
-                });
+                renderFormatSections(intrusiveGedankenFormatLinks);
                 return;
             }
 

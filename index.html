@@ -3027,6 +3027,69 @@
             }
         };
 
+        const pensamentosIntrusivosFormatLinks = {
+            ebook: {
+                amazon: 'https://a.co/d/0d1tHkw9',
+                applebooks: 'https://books.apple.com/pt/book/pensamentos-intrusivos/id6751006054',
+                googleBooks: 'https://play.google.com/store/books/details?id=lxhaEQAAQBAJ',
+                smashwords: 'https://www.smashwords.com/books/view/1832396',
+                ebookde: 'https://www.ebook.de/de/product/51546366/leonardo_sales_santos_pensamentos_intrusivos.html',
+                gandhi: '',
+                buecherde: 'https://www.buecher.de/shop/home/artikeldetails/A1076539543',
+                hugendubel: 'https://www.hugendubel.de/de/ebook_epub/leonardo_sales_santos-pensamentos_intrusivos-51546366-produkt-details.html',
+                booktopia: '',
+                vivlio: 'https://shop.vivlio.com/product/9798231264360_9798231264360_10020/pensamentos-intrusivos',
+                fable: 'https://fable.co/book/x-9798231264360',
+                fnac: 'https://www.fnac.com/livre-numerique/a21939695/Leonardo-Sales-Santos-Pensamentos-Intrusivos#FORMAT=ebook%20(ePub)',
+                indigo: '',
+                kobo: 'https://www.kobo.com/pt/pt/ebook/pensamentos-intrusivos-1',
+                overdrive: 'https://www.overdrive.com/media/12217681/pensamentos-intrusivos',
+                barnesnoble: 'https://www.barnesandnoble.com/w/pensamentos-intrusivos-leonardo-sales-santos/1148042794?ean=2940182610810',
+                bolcom: 'https://www.bol.com/be/nl/p/pensamentos-intrusivos/9300000238090115/?cid=1770761169233-2855087658833&bltgh=a78d1c96-266e-40d5-b4b2-d6a76ab3b78e.ProductList_Middle.0.ProductTitle',
+                hoopla: '',
+                casadellibro: 'https://www.casadellibro.com/ebook-pensamentos-intrusivos-ebook/9798231264360/17216056',
+                lafeltrinelli: '',
+                bookshop: '',
+                payhip: '',
+                thalia: 'https://www.thalia.de/shop/home/artikeldetails/A1076539543',
+                angusrobertson: '',
+                everand: 'https://pt.everand.com/book/893317235/Pensamentos-Intrusivos'
+            },
+            paperback: {
+                amazon: 'https://a.co/d/0aTPQwRI',
+                ebookde: 'https://www.ebook.de/de/product/51580190/leonardo_sales_santos_pensamentos_intrusivos.html',
+                walmart: 'https://www.walmart.com/ip/Pensamentos-Intrusivos-Paperback-9786501626796/17529224216?classType=REGULAR&sid=7666a072-5c9a-48a3-a6ca-1023c700976d',
+                buecherde: 'https://www.buecher.de/shop/home/artikeldetails/A1076589213',
+                booksamillion: 'https://www.booksamillion.com/p/Pensamentos-Intrusivos/Leonardo-Sales-Santos/9786501626796',
+                foyles: 'https://www.foyles.co.uk/book/pensamentos-intrusivos/leonardo-sales-santos/9786501626796',
+                hugendubel: 'https://www.hugendubel.de/de/buch_kartoniert/leonardo_sales_santos-pensamentos_intrusivos-51580190-produkt-details.html',
+                blackwells: 'https://blackwells.co.uk/bookshop/product/Pensamentos-Intrusivos-by-Leonardo-Sales-Santos/9786501626796',
+                powells: 'https://www.powells.com/book/pensamentos-intrusivos-9786501626796?condition=New',
+                dymocks: 'https://www.dymocks.com.au/pensamentos-intrusivos-by-leonardo-sales-santos-9786501626796',
+                sanmin: '',
+                barnesnoble: 'https://www.barnesandnoble.com/w/pensamentos-intrusivos-leonardo-sales-santos/1148042794?ean=9786501626796',
+                bolcom: 'https://www.bol.com/be/nl/p/pensamentos-intrusivos/9300000238214557/?cid=1769904518651-7374496437345&bltgh=82d8ccf5-763d-4ca0-9d20-524ce96a5ae1.ProductList_Middle.1.ProductTitle',
+                waterstones: 'https://www.waterstones.com/book/pensamentos-intrusivos/leonardo-sales-santos/9786501626796',
+                hatchards: 'https://www.hatchards.co.uk/book/pensamentos-intrusivos/leonardo-sales-santos/9786501626796',
+                fnac: '',
+                indiebookstores: 'https://www.indiebookstores.ca/book/9786501626796/',
+                bookshop: 'https://bookshop.org/p/books/pensamentos-intrusivos-leonardo-sales-santos/4bda9055dbc5c285?ean=9786501626796&next=t',
+                bbfs: 'https://www.brownsbfs.co.uk/Product/Santos-Leonardo-Sales/Pensamentos-Intrusivos/9786501626796',
+                thalia: 'https://www.thalia.de/shop/home/artikeldetails/A1076589213',
+                angusrobertson: 'https://www.angusrobertson.com.au/books/pensamentos-intrusivos-leonardo-sales-santos/p/9786501626796',
+                lafeltrinelli: 'https://www.lafeltrinelli.it/pensamentos-intrusivos-libro-inglese-leonardo-sales-santos/e/9786501626796'
+            },
+            audiobook: {
+                everand: '',
+                booktopia: '',
+                kobo: '',
+                overdrive: '',
+                barnesnoble: '',
+                googleBooks: 'https://play.google.com/store/audiobooks/details?id=AQAAAEDqgyLD2M',
+                spotifybooks: ''
+            }
+        };
+
         const intrusiveGedankenFormatLinks = {
             ebook: {
                 amazon: 'https://books2read.com/u/3RO1Rp?store=amazon&format=EBOOK',
@@ -3375,6 +3438,11 @@
 
             if (currentBookId === 'intrusive-thoughts' && currentBookLanguage === 'EN') {
                 renderFormatSections(intrusiveThoughtsFormatLinks);
+                return;
+            }
+
+            if (currentBookId === 'intrusive-thoughts' && currentBookLanguage === 'PT') {
+                renderFormatSections(pensamentosIntrusivosFormatLinks);
                 return;
             }
 

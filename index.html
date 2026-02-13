@@ -1226,7 +1226,22 @@
 
             <div class="link-item all w-full text-center pb-2 md:pb-3 pt-2">
                 <p class="text-xs md:text-sm lg:text-base uppercase tracking-widest text-purple-300 mb-3">Featured now</p>
-                <div class="w-full flex justify-center">
+                <div class="w-full flex flex-wrap justify-center gap-4 md:gap-6">
+                    <div data-release-id="friend-s2-pengyou" class="flex-none w-64 md:w-80 lg:w-96 snap-center relative aspect-square rounded-2xl overflow-hidden glass-card group/slide cursor-pointer border border-white/10 hover:border-emerald-500/50 transition-all">
+                        <img src="friens-cover.webp" alt="FRIEND S2 PENGYOU Cover" class="w-full h-full object-cover opacity-80 group-hover/slide:opacity-100 transition-opacity duration-500">
+                        <!-- Overlay com InformaÃ§Ãµes -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent flex flex-col justify-end p-4 md:p-5 lg:p-6">
+                            <h2 class="text-xl md:text-1xl lg:text-2xl font-bold text-white mb-2 md:mb-3 leading-tight">FRIEND S2 PENGYOU</h2>
+                            <div class="flex flex-wrap gap-1 md:gap-1.5">
+                                <span class="text-[9px] md:text-[10px] lg:text-xs px-2 md:px-2.5 py-0.5 md:py-1 bg-emerald-900/40 border border-emerald-500/20 rounded-full text-emerald-200 backdrop-blur-md">Single</span>
+                                <span class="text-[9px] md:text-[10px] lg:text-xs px-2 md:px-2.5 py-0.5 md:py-1 bg-white/5 border border-white/10 rounded-full text-neutral-300">Neoclassical</span>
+                                <span class="text-[9px] md:text-[10px] lg:text-xs px-2 md:px-2.5 py-0.5 md:py-1 bg-white/5 border border-white/10 rounded-full text-neutral-300">Alternative Downtempo</span>
+                            </div>
+                            <button type="button" class="mt-4 md:mt-5 px-4 py-2 bg-emerald-600/80 hover:bg-emerald-600/100 text-white text-sm md:text-base font-medium rounded-full backdrop-blur-sm border border-emerald-500/30 hover:border-emerald-400 transition-all" onclick="event.stopPropagation(); openStreamingModal('friend-s2-pengyou')">
+                                <i class="fas fa-play"></i> Tap to stream
+                            </button>
+                        </div>
+                    </div>
                     <div data-release-id="clubby-freestyle" class="flex-none w-64 md:w-80 lg:w-96 snap-center relative aspect-square rounded-2xl overflow-hidden glass-card group/slide cursor-pointer border border-white/10 hover:border-cyan-500/50 transition-all">
                         <img src="clubby freestyle cover.jpg" alt="CLUBBY FREESTYLE Cover" class="w-full h-full object-cover opacity-80 group-hover/slide:opacity-100 transition-opacity duration-500">
                         <!-- Overlay com Informações -->
@@ -1287,7 +1302,22 @@
             <div class="link-item music w-full hidden-tab relative">
                 <div id="singles-carousel" class="flex overflow-x-auto snap-x snap-mandatory gap-4 md:gap-6 lg:gap-8 pb-4 md:pb-6 no-scrollbar">
 
-                    <!-- Single Slide 1: CLUBBY FREESTYLE -->
+                    <!-- Single Slide 1: FRIEND S2 PENGYOU -->
+                    <div data-release-id="friend-s2-pengyou" class="flex-none w-64 md:w-80 lg:w-96 snap-center relative aspect-square rounded-2xl overflow-hidden glass-card group/slide cursor-pointer border border-white/10 hover:border-emerald-500/50 transition-all">
+                        <img src="friens-cover.webp" alt="FRIEND S2 PENGYOU Cover" class="w-full h-full object-cover opacity-80 group-hover/slide:opacity-100 transition-opacity duration-500">
+
+                        <!-- Overlay com InformaÃ§Ãµes -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent flex flex-col justify-end p-4 md:p-5 lg:p-6">
+                            <h3 class="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 md:mb-3 leading-tight">FRIEND S2 PENGYOU</h3>
+                            <div class="flex flex-wrap gap-1 md:gap-1.5">
+                                <span class="text-[9px] md:text-[10px] lg:text-xs px-2 md:px-2.5 py-0.5 md:py-1 bg-emerald-900/40 border border-emerald-500/20 rounded-full text-emerald-200 backdrop-blur-md">Single</span>
+                                <span class="text-[9px] md:text-[10px] lg:text-xs px-2 md:px-2.5 py-0.5 md:py-1 bg-white/5 border border-white/10 rounded-full text-neutral-300">Neoclassical</span>
+                                <span class="text-[9px] md:text-[10px] lg:text-xs px-2 md:px-2.5 py-0.5 md:py-1 bg-white/5 border border-white/10 rounded-full text-neutral-300">Alternative Downtempo</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Single Slide 2: CLUBBY FREESTYLE -->
                     <div data-release-id="clubby-freestyle" class="flex-none w-64 md:w-80 lg:w-96 snap-center relative aspect-square rounded-2xl overflow-hidden glass-card group/slide cursor-pointer border border-white/10 hover:border-cyan-500/50 transition-all">
                         <img src="CLUBBY-FREESTYLE-cover.webp" alt="CLUBBY FREESTYLE Cover" class="w-full h-full object-cover opacity-80 group-hover/slide:opacity-100 transition-opacity duration-500">
 
@@ -2010,6 +2040,31 @@
         // Streaming platform data for each release
         const releaseData = {
             // SINGLES
+            'friend-s2-pengyou': {
+                title: 'FRIEND S2 PENGYOU',
+                type: 'Single',
+                cover: 'friens-cover.webp',
+                spotifyEmbed: {
+                    src: 'https://open.spotify.com/embed/track/143MIKRgZT17arNNh4qyX5?utm_source=generator',
+                    height: 152
+                },
+                links: {
+                    spotify: 'https://open.spotify.com/track/143MIKRgZT17arNNh4qyX5',
+                    apple: 'https://geo.music.apple.com/us/album/friend-s2-pengyou/1874401229?i=1874401230&app=music&ls=1',
+                    tidal: 'http://www.tidal.com/track/494307461',
+                    youtube: 'https://music.youtube.com/watch?v=Ap3suzZ1Qlg',
+                    soundcloud: 'https://soundcloud.com/track_n10-music/friend-s2-pengyou?si=c8bee1a9a3224a7da225e14962736588&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing',
+                    amazon: 'https://music.amazon.com/tracks/B0GKHVXYPW/?ref=dm_ff_amazonmusic_3p',
+                    pandora: 'https://www.pandora.com/TR:191285753',
+                    beatport: 'https://www.beatport.com/release/friend-s2-pengyou-feat-leonardo-sales-santos/5869946',
+                    bandcamp: 'https://track-n10.bandcamp.com/track/friend-s2-pengyou',
+                    deezer: 'https://www.deezer.com/track/3811722802',
+                    audiomack: 'https://audiomack.com/track-n10/song/friend-s2-pengyou-feat-leonardo-sales-santos',
+                    boomplay: 'https://www.boomplay.com/songs/235790388?from=artists&srModel=COPYLINK&srList=WEB&share_content=music&share_channel=copylink&share_platform=web',
+                    anghami: 'https://play.anghami.com/song/1256285022',
+                    flo: 'https://www.music-flo.com/detail/album/449661447/albumtrack'
+                }
+            },
             'clubby-freestyle': {
                 title: 'CLUBBY FREESTYLE',
                 type: 'Single',

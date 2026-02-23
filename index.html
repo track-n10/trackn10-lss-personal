@@ -3301,6 +3301,70 @@
             }
         };
 
+        const pensieriIntrusiviFormatLinks = {
+            ebook: {
+                amazon: 'https://amzn.eu/d/0a4jC0d8',
+                applebooks: 'https://books.apple.com/us/book/pensieri-intrusivi/id6757889165',
+                googleBooks: 'https://play.google.com/store/books/details?id=KD6xEQAAQBAJ',
+                smashwords: 'https://www.smashwords.com/books/view/1945947',
+                ebookde: 'https://www.ebook.de/de/product/52444695/leonardo_sales_santos_pensieri_intrusivi.html',
+                gandhi: '',
+                buecherde: 'https://www.buecher.de/shop/home/artikeldetails/A1077990815',
+                hugendubel: 'https://www.hugendubel.de/de/ebook_epub/leonardo_sales_santos-pensieri_intrusivi-52444695-produkt-details.html',
+                booktopia: 'https://www.booktopia.com.au/pensieri-intrusivi-leonardo-sales-santos/book/9798224051427.html',
+                vivlio: 'https://shop.vivlio.com/product/9798232532734_9798232532734_10020/pensieri-intrusivi',
+                fable: 'https://fable.co/book/x-9798232532734',
+                fnac: 'https://www.fnac.com/livre-numerique/a22558717/Leonardo-Sales-Santos-Pensieri-Intrusivi',
+                indigo: 'https://www.indigo.ca/en-ca/pensieri-intrusivi/ca4e1921-deee-38b5-95c8-53cbb7d910d8.html',
+                kobo: 'https://www.kobo.com/pt/it/ebook/pensieri-intrusivi?sId=966a9e00-4add-443b-9cc7-38869afff5d8&ssId=2r-V06t_vBGO7texjyFR4',
+                overdrive: 'https://www.overdrive.com/media/12805932/pensieri-intrusivi',
+                barnesnoble: 'https://www.barnesandnoble.com/w/pensieri-intrusivi-leonardo-sales-santos/1149218074;jsessionid=31127E7227EF610E7B4D362C70049CFF.prodny_store01-atgap09?ean=2940182676663&st=AFF&2sid=Draft2Digital_7968444_NA&sourceId=AFFDraft2Digital',
+                bolcom: 'https://www.bol.com/be/fr/p/pensieri-intrusivi/9300000257785855/?referrer=socialshare_pdp_www',
+                hoopla: '',
+                casadellibro: 'https://www.casadellibro.com/ebook-pensieri-intrusivi-ebook/9798232532734/17904908',
+                lafeltrinelli: '',
+                bookshop: 'https://bookshop.org/p/books/pensieri-intrusivi-leonardo-sales-santos/0b60c5c8f19b802a?ean=9798232532734&next=t&digital=t',
+                payhip: '',
+                thalia: 'https://www.thalia.de/shop/home/artikeldetails/A1077990815',
+                angusrobertson: '',
+                everand: ''
+            },
+            paperback: {
+                amazon: 'https://amzn.eu/d/08mSqfjm',
+                ebookde: 'https://www.ebook.de/de/product/52453541/leonardo_sales_santos_pensieri_intrusivi.html',
+                walmart: 'https://www.walmart.com/ip/Pensieri-Intrusivi-Paperback-9798224051427/19279774318?classType=REGULAR',
+                buecherde: 'https://www.buecher.de/shop/home/artikeldetails/A1078002262',
+                hugendubel: 'https://www.hugendubel.de/de/taschenbuch/leonardo_sales_santos-pensieri_intrusivi-52453541-produkt-details.html',
+                booksamillion: 'https://www.booksamillion.com/p/Pensieri-Intrusivi/Leonardo-Sales-Santos/9798224051427',
+                foyles: 'https://www.foyles.co.uk/book/pensieri-intrusivi/leonardo-sales-santos/9798224051427',
+                blackwells: 'https://blackwells.co.uk/bookshop/product/9798224051427',
+                powells: '',
+                dymocks: '',
+                sanmin: '',
+                barnesnoble: 'https://www.barnesandnoble.com/w/pensieri-intrusivi-leonardo-sales-santos/1149218074?ean=9798224051427',
+                bolcom: '',
+                waterstones: 'https://www.waterstones.com/book/pensieri-intrusivi/leonardo-sales-santos/9798224051427',
+                hatchards: 'https://www.hatchards.co.uk/book/pensieri-intrusivi/leonardo-sales-santos/9798224051427',
+                fnac: '',
+                indiebookstores: 'https://www.indiebookstores.ca/book/9798224051427/',
+                bookshop: 'https://bookshop.org/p/books/pensieri-intrusivi-leonardo-sales-santos/0b60c5c8f19b802a?ean=9798224051427&next=t',
+                bbfs: '',
+                thalia: 'https://www.thalia.de/shop/home/artikeldetails/A1078002262',
+                angusrobertson: '',
+                lafeltrinelli: ''
+            },
+            audiobook: {
+                bolcom: 'https://www.bol.com/be/fr/p/pensieri-intrusivi/9300000260206638/?cid=1771527733233-7947422396198&bltgh=6428e75a-9762-43e9-ade8-2bb2e292810c.ProductList_Middle.3-0.RollupItem',
+                everand: 'https://www.everand.com/audiobook/989379080/Pensieri-Intrusivi',
+                booktopia: '',
+                kobo: 'https://www.kobo.com/pt/it/audiobook/pensieri-intrusivi-1',
+                overdrive: 'https://www.overdrive.com/media/12847590/pensieri-intrusivi',
+                barnesnoble: 'https://www.barnesandnoble.com/w/pensieri-intrusivi-leonardo-sales-santos/1149218074?ean=2940201865672',
+                googleBooks: 'https://play.google.com/store/audiobooks/details?id=AQAAAEAacncyfM',
+                spotifybooks: ''
+            }
+        };
+
         const intrusiveGedankenFormatLinks = {
             ebook: {
                 amazon: 'https://books2read.com/u/3RO1Rp?store=amazon&format=EBOOK',
@@ -3669,6 +3733,11 @@
 
             if (currentBookId === 'intrusive-thoughts' && currentBookLanguage === 'PT') {
                 renderFormatSections(pensamentosIntrusivosFormatLinks);
+                return;
+            }
+
+            if (currentBookId === 'intrusive-thoughts' && currentBookLanguage === 'IT') {
+                renderFormatSections(pensieriIntrusiviFormatLinks);
                 return;
             }
 

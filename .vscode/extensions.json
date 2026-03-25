@@ -1,5 +1,7 @@
 {
     "recommendations": [
-        "github.copilot-chat"
+        "github.copilot-chat",
+        "ms-vscode.vscode-js-debug",
+        "ritwickdey.liveserver"
     ]
 }

@@ -922,7 +922,7 @@ function scrollCarousel(carouselId, direction) {
         },
         sanmin: { 
             name: 'Sanmin', 
-            icon: 'https://www.google.com/s2/favicons?domain=sanmin.com.tw&sz=32' 
+            icon: 'https://www.sanmin.com.tw/favicon.ico' 
         },
         dymocks: { 
             name: 'Dymocks', 

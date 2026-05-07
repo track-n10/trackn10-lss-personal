@@ -8,7 +8,7 @@
             "file": "${workspaceFolder}/index.html",
             "webRoot": "${workspaceFolder}",
             "sourceMaps": true,
-            "userDataDir": "${workspaceFolder}/.vscode/chrome",
+            "userDataDir": "${env:TEMP}/trackn10-lss-personal/vscode-chrome-profile",
             "runtimeArgs": [
                 "--disable-web-security",
                 "--disable-features=VizDisplayCompositor"
@@ -21,7 +21,7 @@
             "file": "${workspaceFolder}/index.html",
             "webRoot": "${workspaceFolder}",
             "sourceMaps": true,
-            "userDataDir": "${workspaceFolder}/.vscode/edge"
+            "userDataDir": "${env:TEMP}/trackn10-lss-personal/vscode-edge-profile"
         },
         {
             "name": "Launch with Live Server",
@@ -30,7 +30,7 @@
             "url": "http://127.0.0.1:5500/index.html",
             "webRoot": "${workspaceFolder}",
             "sourceMaps": true,
-            "userDataDir": "${workspaceFolder}/.vscode/chrome"
+            "userDataDir": "${env:TEMP}/trackn10-lss-personal/vscode-chrome-profile"
         },
         {
             "name": "Attach to Chrome",

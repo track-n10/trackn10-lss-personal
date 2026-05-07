@@ -1,0 +1,27 @@
+# VS Code debug browser profiles
+/.vscode/chrome/
+/.vscode/edge/
+
+# OS/editor noise
+Thumbs.db
+.DS_Store
+
+# Generic local runtime artifacts
+*.log
+*.tmp
+*.temp
+*.out
+*.err
+*.pid
+
+# Local one-off command/debug outputs
+/augment_*.txt
+/dir*.txt
+/path.txt
+/pyver.txt
+/pylauncher*.txt
+/magick.txt
+/temp-output.txt
+/gitcmd.txt
+/gitls_sample.txt
+/sanity_ps_write.txt

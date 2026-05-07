@@ -1,0 +1,59 @@
+ Volume in drive C is Acer
+ Volume Serial Number is 381F-E2F3
+
+ Directory of C:\Users\leosa\Documents\GitHub\trackn10-lss-personal
+
+07/05/2026  13:43    <DIR>          .
+05/02/2026  10:37    <DIR>          ..
+19/03/2026  20:53    <DIR>          .vscode
+05/07/2025  14:11            89ÿ524 alln10 logo colorful.svg
+29/03/2026  01:49           193ÿ574 avatar.jpg
+27/04/2026  14:31            22ÿ047 books.html
+07/02/2026  15:20            33ÿ120 Browns-logo.png
+07/02/2026  15:48            94ÿ687 clubby freestyle cover.jpg
+05/02/2026  16:29         1ÿ236ÿ812 CLUBBY-FREESTYLE-cover.webp
+06/01/2026  17:09    <DIR>          copilot new workspace
+07/05/2026  13:43               176 dir2.txt
+07/05/2026  13:42             5ÿ860 dirlist.txt
+07/05/2026  13:22           899ÿ294 DO-NOT-BREATHE-artcover.webp
+22/08/2025  18:35            15ÿ406 docxfavicon.ico
+01/02/2026  22:30           216ÿ156 famous.webp
+04/01/2026  16:58            14ÿ103 favicon.ico
+13/02/2026  14:58           430ÿ860 friens-cover.webp
+28/02/2026  15:57           215ÿ464 GRAVITY-cover.webp
+10/02/2026  21:58            27ÿ734 hooplaicon.png
+01/02/2026  22:52           332ÿ782 human after all.webp
+01/02/2026  22:52            92ÿ946 ICONICRMX.webp
+27/04/2026  14:31            21ÿ945 index.html
+22/08/2025  18:35             2ÿ214 instagramfavicon.ico
+26/04/2026  20:21           301ÿ764 killed-on-my-dancefloor-artcover.webp
+22/08/2025  18:35             1ÿ099 LICENSE
+27/04/2026  14:16            20ÿ927 links.html
+05/02/2026  16:26           137ÿ114 LOST-HOPES-_-DREAMS-_Side-A_-cover.webp
+22/08/2025  18:35            15ÿ406 lyricsync10favicon.ico
+07/05/2026  13:43                97 magick.txt
+27/04/2026  14:20            58ÿ538 music.html
+06/02/2026  12:31           759ÿ628 neon dream vynil mock up2.png
+05/02/2026  16:23           580ÿ594 neon-dreams-album.webp
+07/05/2026  13:43               875 path.txt
+05/02/2026  16:26           209ÿ996 PLEASE_-I_M-A-STAR_-vol.1-cover.webp
+05/02/2026  16:26           209ÿ996 PLSim astar COVER.webp
+01/02/2026  22:53         1ÿ065ÿ116 Pure-EDM-Trance-cover.webp
+07/05/2026  13:42                40 pylauncher.txt
+07/05/2026  13:43                15 pylauncherver.txt
+07/05/2026  13:43                15 pyver.txt
+27/04/2026  14:34           139ÿ798 scripts.js
+22/08/2025  18:35               263 site.webmanifest
+27/04/2026  14:35             1ÿ022 sitemap.xml
+23/02/2026  10:54            29ÿ812 smashwords-logo.jpg
+27/04/2026  14:20            33ÿ005 styles.css
+07/05/2026  13:42                 7 temp-output.txt
+06/02/2026  10:21           164ÿ551 track-n10-vynil-cd.jpg
+06/02/2026  10:21           419ÿ472 track-n10-vynil-cd.webp
+03/03/2026  16:22           998ÿ336 TRACKN10-Full-Digital-Breakdown-cover.webp
+01/02/2026  22:33           419ÿ472 trackn10-mixtape-cover (1).webp
+05/02/2026  16:20         1ÿ485ÿ154 Ultra-Qualia-Libro-1-Lato-A-original_1.webp
+21/01/2026  23:07           337ÿ737 vecteezy_linktree-transparent-icon_48759320.png
+27/04/2026  14:16            12ÿ991 vinyls.html
+              48 File(s)     11ÿ347ÿ544 bytes
+               4 Dir(s)  644ÿ386ÿ893ÿ824 bytes free

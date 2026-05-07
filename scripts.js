@@ -52,6 +52,34 @@ function scrollCarousel(carouselId, direction) {
         // Streaming platform data for each release
         const releaseData = {
             // SINGLES
+            'do-not-breathe': {
+                title: 'DO NOT BREATHE',
+                type: 'Single',
+                cover: 'DO-NOT-BREATHE-artcover.webp',
+                spotifyEmbed: {
+                    src: 'https://open.spotify.com/embed/track/4UziyVFFPxt0xJpwLPm37T?utm_source=generator',
+                    height: 152
+                },
+                links: {
+                    spotify: 'https://open.spotify.com/track/4UziyVFFPxt0xJpwLPm37T',
+                    apple: 'https://geo.music.apple.com/us/album/do-not-breathe/1895805673?i=6764493353&app=music&ls=1',
+                    tidal: 'http://www.tidal.com/track/519993474',
+                    youtube: 'https://music.youtube.com/watch?v=C5cOL2xRzCM',
+                    soundcloud: 'https://soundcloud.com/track-n10/do-not-breathe?si=d1085528a8764ff28e05f0b2d388b33d&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing',
+                    amazon: 'https://music.amazon.com/tracks/B0GYVVZ5QZ/?ref=dm_ff_amazonmusic_3p',
+                    pandora: 'https://www.pandora.com/TR:203898500',
+                    beatport: '',
+                    bandcamp: 'https://track-n10.bandcamp.com/track/do-not-breathe',
+                    netease: '',
+                    deezer: 'https://www.deezer.com/track/3991411781',
+                    audiomack: 'https://audiomack.com/track-n10/song/do-not-breathe',
+                    boomplay: 'https://www.boomplay.com/songs/248121665?srModel=openapi_featurefm',
+                    anghami: '',
+                    flo: 'https://www.music-flo.com/detail/album/454736176/albumtrack',
+                    joox: '',
+                    qobuz: 'https://open.qobuz.com/album/l08q6d4a1ci55'
+                }
+            },
             'killed-on-my-dancefloor': {
                 title: 'Killed Me On My Dancefloor',
                 type: 'Single',

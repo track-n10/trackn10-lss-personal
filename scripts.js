@@ -52,6 +52,34 @@ function scrollCarousel(carouselId, direction) {
         // Streaming platform data for each release
         const releaseData = {
             // SINGLES
+            'hero3s': {
+                title: 'HERO3S',
+                type: 'Single',
+                cover: 'HERO3S-cover.webp',
+                spotifyEmbed: {
+                    src: 'https://open.spotify.com/embed/track/3azs6oiCerJwj95H7PiwdS?utm_source=generator',
+                    height: 152
+                },
+                links: {
+                    spotify: 'https://open.spotify.com/track/3azs6oiCerJwj95H7PiwdS',
+                    apple: 'https://geo.music.apple.com/au/album/hero3s/6767746485?i=6767746488&app=music&ls=1',
+                    tidal: 'http://www.tidal.com/track/522366556',
+                    youtube: 'https://music.youtube.com/watch?v=CJwlwZu4LMc',
+                    soundcloud: 'https://soundcloud.com/track-n10/hero3s?si=1670daedbe54496cbd95bbd620af31cb&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing',
+                    amazon: '',
+                    pandora: '',
+                    beatport: 'https://www.beatport.com/track/hero3s/28856250',
+                    bandcamp: 'https://track-n10.bandcamp.com/track/hero3s',
+                    netease: 'https://music.163.com/album?id=374950029&uct2=U2FsdGVkX18jUO/7t6cxaks7M/pqKOTV8R8UiQoCjXo=',
+                    deezer: 'https://www.deezer.com/track/4006435311',
+                    audiomack: '',
+                    boomplay: 'https://www.boomplay.com/songs/249128348?srModel=COPYLINK&srList=WEB&share_content=music&share_channel=copylink&share_platform=web',
+                    anghami: '',
+                    flo: 'https://www.music-flo.com/detail/album/455195108/albumtrack',
+                    joox: '',
+                    qobuz: 'https://open.qobuz.com/track/416585916'
+                }
+            },
             'do-not-breathe': {
                 title: 'DO NOT BREATHE',
                 type: 'Single',

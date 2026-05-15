@@ -76,7 +76,7 @@ function scrollCarousel(carouselId, direction) {
                     boomplay: 'https://www.boomplay.com/songs/249128348?srModel=COPYLINK&srList=WEB&share_content=music&share_channel=copylink&share_platform=web',
                     anghami: '',
                     flo: 'https://www.music-flo.com/detail/album/455195108/albumtrack',
-                    joox: '',
+                    joox: 'https://www.joox.com/hk/album/TU2O_Q1_ayKwO2jGyCtD2w==',
                     qobuz: 'https://open.qobuz.com/track/416585916'
                 }
             },
@@ -104,7 +104,7 @@ function scrollCarousel(carouselId, direction) {
                     boomplay: 'https://www.boomplay.com/songs/248121665?srModel=openapi_featurefm',
                     anghami: '',
                     flo: 'https://www.music-flo.com/detail/album/454736176/albumtrack',
-                    joox: '',
+                    joox: 'https://www.joox.com/hk/single/Q__8ghv6LpC1B7Nc_MBiVA==',
                     qobuz: 'https://open.qobuz.com/album/l08q6d4a1ci55'
                 }
             },
@@ -132,7 +132,7 @@ function scrollCarousel(carouselId, direction) {
                     boomplay: 'https://www.boomplay.com/albums/128503889?from=artists&srModel=COPYLINK&srList=WEB&share_content=album&share_channel=copylink&share_platform=web',
                     anghami: '',
                     flo: 'https://www.music-flo.com/detail/album/452836767/albumtrack',
-                    joox: '',
+                    joox: 'https://www.joox.com/hk/album/WTgJgE48XsG4AT5m6ZhGLQ==',
                     qobuz: 'https://open.qobuz.com/album/ssindsui1x0sq'
                 }
             },
@@ -161,89 +161,6 @@ function scrollCarousel(carouselId, direction) {
                     anghami: '',
                     flo: 'https://www.music-flo.com/detail/track/574632535/details',
                     qobuz: 'https://open.qobuz.com/track/392066677'
-                }
-            },
-            'friend-s2-pengyou': {
-                title: 'FRIEND S2 PENGYOU',
-                type: 'Single',
-                cover: 'friens-cover.webp',
-                spotifyEmbed: {
-                    src: 'https://open.spotify.com/embed/track/143MIKRgZT17arNNh4qyX5?utm_source=generator',
-                    height: 152
-                },
-                links: {
-                    spotify: 'https://open.spotify.com/track/143MIKRgZT17arNNh4qyX5',
-                    apple: 'https://geo.music.apple.com/us/album/friend-s2-pengyou/1874401229?i=1874401230&app=music&ls=1',
-                    tidal: 'http://www.tidal.com/track/494307461',
-                    youtube: 'https://music.youtube.com/watch?v=Ap3suzZ1Qlg',
-                    soundcloud: 'https://soundcloud.com/track_n10-music/friend-s2-pengyou?si=c8bee1a9a3224a7da225e14962736588&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing',
-                    amazon: 'https://music.amazon.com/tracks/B0GKHVXYPW/?ref=dm_ff_amazonmusic_3p',
-                    pandora: 'https://www.pandora.com/TR:191285753',
-                    beatport: 'https://www.beatport.com/release/friend-s2-pengyou-feat-leonardo-sales-santos/5869946',
-                    bandcamp: 'https://track-n10.bandcamp.com/track/friend-s2-pengyou',
-                    deezer: 'https://www.deezer.com/track/3811722802',
-                    audiomack: 'https://audiomack.com/track-n10/song/friend-s2-pengyou-feat-leonardo-sales-santos',
-                    boomplay: 'https://www.boomplay.com/songs/235790388?from=artists&srModel=COPYLINK&srList=WEB&share_content=music&share_channel=copylink&share_platform=web',
-                    anghami: 'https://play.anghami.com/song/1256285022',
-                    flo: 'https://www.music-flo.com/detail/album/449661447/albumtrack',
-                    netease: 'https://music.163.com/album?id=362872675&uct2=U2FsdGVkX1+eSKL97rJUZqnYzf3uzGUypruLZYcnrb0=',
-                    qobuz: 'https://open.qobuz.com/album/zrkbf7kzjb9i4'
-                }
-            },
-            'clubby-freestyle': {
-                title: 'CLUBBY FREESTYLE',
-                type: 'Single',
-                cover: 'clubby freestyle cover.jpg',
-                spotifyEmbed: {
-                    src: 'https://open.spotify.com/embed/track/4qEPVlsHoFVuRtfiU7kBc6?utm_source=generator',
-                    height: 352
-                },
-                links: {
-                    spotify: 'https://open.spotify.com/track/4qEPVlsHoFVuRtfiU7kBc6',
-                    apple: 'https://music.apple.com/pt/song/clubby-freestyle/1869566198',
-                    tidal: 'https://listen.tidal.com/track/490055419',
-                    youtube: 'https://music.youtube.com/playlist?list=OLAK5uy_lw1F1kwsBbyzB4wep4pCKSRUoO34HxbZg&si=R0wQesNJW3nwUuOX',
-                    soundcloud: 'https://soundcloud.com/track_n10-music/clubby-freestyle?si=507e76c3c39140b3b0d484781f4ce3c8&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing',
-                    amazon: 'https://music.amazon.com/albums/B0GH3KV6SX?marketplaceId=A3K6Y4MI8GDYMT&musicTerritory=PT&ref=dm_sh_mmmsSClspnp01zgzZARxKH1Hb&trackAsin=B0GH3BJH8R',
-                    pandora: 'https://www.pandora.com/TR:189163661',
-                    beatport: 'https://www.beatport.com/pt/release/clubby-freestyle/5835003',
-                    bandcamp: 'https://track-n10.bandcamp.com/track/clubby-freestyle',
-                    netease: 'https://y.music.163.com/m/song?id=3343105064&userid=13850510204&dlt=0846',
-                    deezer: 'https://www.deezer.com/track/3777119802',
-                    audiomack: 'https://audiomack.com/track-n10/song/clubby-freestyle?share-user-id=165688405',
-                    boomplay: 'https://www.boomplay.com/songs/233299607?from=artists&srModel=COPYLINK&srList=WEB&share_content=music&share_channel=copylink&share_platform=web',
-                    anghami: 'https://play.anghami.com/song/1252696509',
-                    flo: 'https://www.music-flo.com/detail/album/448959745/albumtrack',
-                    joox: 'https://www.joox.com/hk/album/TaByCPbQQ8fZP+f+EPTCvA==',
-                    qobuz: 'https://open.qobuz.com/track/384336937'
-                }
-            },
-            'human-after-all': {
-                title: 'HUMAN AFTER ALL/OVER AGAIN',
-                type: 'Double Single',
-                cover: 'https://live.staticflickr.com/65535/55025983784_c0d245234d_c.jpg',
-                spotifyEmbed: {
-                    src: 'https://open.spotify.com/embed/album/1KY3zzxYh3eSOUnmPMXEDM?utm_source=generator',
-                    height: 152
-                },
-                links: {
-                    spotify: 'https://open.spotify.com/album/1KY3zzxYh3eSOUnmPMXEDM',
-                    apple: 'https://geo.music.apple.com/album/_/1860161849',
-                    tidal: 'https://listen.tidal.com/album/480538431',
-                    youtube: 'https://music.youtube.com/playlist?list=OLAK5uy_mMui2x370ed4_IOIderDhoHQDiWJUhTEs&si=QfESsXP2pH2uyH4u',
-                    soundcloud: 'https://soundcloud.com/track-n10/sets/human-after-all-over-again',
-                    amazon: 'https://music.amazon.com/albums/B0G62Q773S',
-                    pandora: 'https://www.pandora.com/AL:57724591',
-                    beatport: 'https://www.beatport.com/release/human-after-all-over-again/5835004',
-                    bandcamp: 'https://trackn10.bandcamp.com/album/human-after-all-over-again',
-                    netease: 'http://music.163.com/album/354063421/?userid=13850510204',
-                    deezer: 'https://www.deezer.com/br/album/874163202',
-                    audiomack: 'https://audiomack.com/track-n10/album/human-after-all-over-again',
-                    boomplay: 'https://www.boomplay.com/albums/121294489',
-                    anghami: 'https://play.anghami.com/album/1079432085?refer=featurefm',
-                    flo: 'https://www.music-flo.com/detail/album/447052220/albumtrack',
-                    joox: 'https://www.joox.com/hk/album/wSo3Zht_hGUQKkx9D1meTQ==',
-                    qobuz: 'https://open.qobuz.com/album/dompxixho6e7h'
                 }
             },
             'iconic-remix': {
@@ -327,7 +244,7 @@ function scrollCarousel(carouselId, direction) {
                     boomplay: 'https://www.boomplay.com/albums/127827981?from=artists&srModel=COPYLINK&srList=WEB&share_content=album&share_channel=copylink&share_platform=web',
                     anghami: '',
                     flo: 'https://m.music-flo.com/detail/album/452258384',
-                    joox: '',
+                    joox: 'https://www.joox.com/hk/album/OeQd92v7gBhHVEvkAn_IxQ==',
                     qobuz: 'https://open.qobuz.com/album/x7bojt8j1n2er'
                 }
             },

@@ -805,6 +805,72 @@ body {
     }
 }
 
+/* Mobile tweaks: for narrower devices try to fit 3 icons per row by
+   reducing padding, gaps and icon sizes. This keeps logos untouched but
+   makes the surrounding glass block thinner. */
+@media (max-width: 767px) {
+    .link-item.music.w-full.grid,
+    .link-item.music.grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 0.5rem !important;
+    }
+    .link-item.music.grid a.link-btn.glass-card {
+        padding: 0.4rem !important;
+        min-height: 0 !important;
+    }
+    .link-item.music.grid a.link-btn.glass-card > .flex.items-center.justify-center {
+        margin-bottom: 0.125rem !important;
+    }
+    .link-item.music.grid a.link-btn.glass-card img {
+        width: 20px !important;
+        height: 20px !important;
+    }
+    .link-item.music.grid a.link-btn.glass-card h3 {
+        font-size: 0.85rem !important;
+    }
+    .link-item.music.grid a.link-btn.glass-card p {
+        font-size: 0.65rem !important;
+    }
+}
+
+/* Ajustes específicos para os blocos de plataformas na página de music
+   - diminuir o "padding" do bloco glass ao redor das logos (sem mexer nas logos)
+   - reduzir espaço interno do container do ícone
+   - garantir ao menos 3 colunas a partir do breakpoint md
+*/
+.link-item.music.w-full.grid {
+    /* móvel: 2 colunas (mantido), em md colocamos 3 colunas para encaixar mais ícones por linha */
+}
+.link-item.music.grid a.link-btn.glass-card {
+    /* sobrescreve os utilitários Tailwind inline que definem padding muito amplo */
+    padding: 0.5rem !important;
+    min-height: 0; /* evita altura extra criada por padding */
+}
+.link-item.music.grid a.link-btn.glass-card > .flex.items-center.justify-center {
+    margin-bottom: 0.25rem !important; /* logo fica mais próxima do texto */
+}
+
+@media (min-width: 768px) {
+    .link-item.music.w-full.grid,
+    .link-item.music.grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.75rem; /* um pouco menos para caber mais itens */
+    }
+    .link-item.music.grid a.link-btn.glass-card {
+        padding: 0.65rem !important;
+    }
+}
+
+@media (min-width: 1024px) {
+    .link-item.music.grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1rem;
+    }
+    .link-item.music.grid a.link-btn.glass-card {
+        padding: 0.75rem !important;
+    }
+}
+
 /* Book Modal Specific Styles */
 .book-modal-cover {
     width: 140px;

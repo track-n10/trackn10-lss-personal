@@ -3,7 +3,7 @@
     --avatar-mid-rgb: 145, 141, 153;
     --avatar-steel-rgb: 96, 108, 130;
     --avatar-bright-rgb: 250, 249, 248;
-    --page-base: #06070c;
+    --page-base: #060b13;
     --page-ink: #10131d;
 }
 
@@ -12,6 +12,13 @@ body {
     background-color: var(--page-base);
     color: white;
 }
+
+body[data-page="music"] {
+    background-color: #060b13;
+    overflow-x: hidden;
+    position: relative;
+}
+
 
 .animated-bg {
     background:
@@ -115,6 +122,33 @@ body {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
                 0 0 0 1px rgba(255, 255, 255, 0.05) inset,
                 0 0 22px rgba(var(--avatar-steel-rgb), 0.12);
+}
+
+/* Platforms card: preview-like glass background for the streaming platforms section */
+.platforms-card {
+    width: 100%;
+    padding: 18px;
+    background: rgba(16, 25, 43, 0.55); /* dark translucent blue */
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border-radius: 1.25rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    border-left: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), inset 0 0 20px rgba(45,122,255,0.03);
+    margin: 0.6rem 0 1rem 0;
+    position: relative;
+}
+.platforms-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #4da6ff, transparent);
+    box-shadow: 0 -10px 30px 2px rgba(77, 166, 255, 0.28);
+    border-radius: 50%;
+    pointer-events: none;
 }
 
 .link-btn {
@@ -783,6 +817,41 @@ body {
     box-shadow: 0 10px 25px rgba(226, 34, 109, 0.3), 0 0 30px rgba(226, 34, 109, 0.2);
 }
 
+/* Style FontAwesome icons used inside platform buttons (e.g., Bandcamp) so we avoid inline styles */
+.platform-btn i.fab {
+    font-size: 20px;
+    color: #22d3ee; /* cyan-like as used previously */
+    min-width: 22px;
+    display: inline-block;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+/* Music page: make platform buttons fill their grid cell and adjust icon sizes */
+body[data-page="music"] .platforms-card .platform-btn {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 12px 14px;
+    gap: 12px;
+}
+body[data-page="music"] .platforms-card .platform-btn img {
+    width: 36px;
+    height: 36px;
+}
+body[data-page="music"] .platforms-card .platform-btn i.fab {
+    font-size: 28px;
+    min-width: 36px;
+}
+body[data-page="music"] .platforms-card .platform-btn span {
+    text-align: left;
+    display: inline-block;
+}
+
+/* Slightly increase vertical spacing inside the platforms card */
+.platforms-card .link-item.music.w-full.grid {
+    gap: 0.85rem;
+}
+
 /* Modal scrollbar */
 .modal-content::-webkit-scrollbar {
     width: 6px;
@@ -833,43 +902,130 @@ body {
     }
 }
 
-/* Ajustes específicos para os blocos de plataformas na página de music
-   - diminuir o "padding" do bloco glass ao redor das logos (sem mexer nas logos)
-   - reduzir espaço interno do container do ícone
-   - garantir ao menos 3 colunas a partir do breakpoint md
-*/
-.link-item.music.w-full.grid {
-    /* móvel: 2 colunas (mantido), em md colocamos 3 colunas para encaixar mais ícones por linha */
-}
-.link-item.music.grid a.link-btn.glass-card {
-    /* sobrescreve os utilitários Tailwind inline que definem padding muito amplo */
-    padding: 0.5rem !important;
-    min-height: 0; /* evita altura extra criada por padding */
-}
-.link-item.music.grid a.link-btn.glass-card > .flex.items-center.justify-center {
-    margin-bottom: 0.25rem !important; /* logo fica mais próxima do texto */
+/* Scoped music page grid and button styles (inspired by musicgrigbuttonpreview.html) */
+body[data-page="music"] .link-item.music.w-full.grid,
+body[data-page="music"] .link-item.music.grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
 }
 
-@media (min-width: 768px) {
-    .link-item.music.w-full.grid,
-    .link-item.music.grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 0.75rem; /* um pouco menos para caber mais itens */
-    }
-    .link-item.music.grid a.link-btn.glass-card {
-        padding: 0.65rem !important;
-    }
-}
-
-@media (min-width: 1024px) {
-    .link-item.music.grid {
+@media (min-width: 640px) {
+    body[data-page="music"] .link-item.music.w-full.grid,
+    body[data-page="music"] .link-item.music.grid {
         grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 0.875rem;
+    }
+}
+@media (min-width: 768px) {
+    body[data-page="music"] .link-item.music.w-full.grid,
+    body[data-page="music"] .link-item.music.grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
         gap: 1rem;
     }
-    .link-item.music.grid a.link-btn.glass-card {
-        padding: 0.75rem !important;
+}
+@media (min-width: 1024px) {
+    body[data-page="music"] .link-item.music.w-full.grid,
+    body[data-page="music"] .link-item.music.grid {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 1.125rem;
     }
 }
+
+/* Button styling to match preview card design without touching logos */
+body[data-page="music"] .link-item.music.grid a.link-btn.glass-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 14px 12px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+    color: rgba(255,255,255,0.92);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.32s cubic-bezier(0.25,0.8,0.25,1);
+}
+
+body[data-page="music"] .link-item.music.grid a.link-btn.glass-card .flex.items-center.justify-center {
+    margin-bottom: 0.25rem;
+}
+
+body[data-page="music"] .link-item.music.grid a.link-btn.glass-card img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    opacity: 0.95;
+    transition: transform 0.28s ease, opacity 0.28s ease;
+}
+@media (min-width: 640px) {
+    body[data-page="music"] .link-item.music.grid a.link-btn.glass-card img { width: 36px; height: 36px; }
+}
+@media (min-width: 768px) {
+    body[data-page="music"] .link-item.music.grid a.link-btn.glass-card img { width: 40px; height: 40px; }
+}
+
+body[data-page="music"] .link-item.music.grid a.link-btn.glass-card:hover {
+    background: rgba(45,122,255,0.08);
+    border-color: rgba(77,166,255,0.22);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.35), inset 0 0 18px rgba(45,122,255,0.06);
+}
+
+body[data-page="music"] .link-item.music.grid a.link-btn.glass-card:hover img {
+    transform: scale(1.08);
+    opacity: 1;
+}
+
+/* Neon arc background elements (music page only) */
+body[data-page="music"] .neon-arc-bg {
+    position: fixed;
+    bottom: -30vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120vw;
+    height: 58vh;
+    border-radius: 50%;
+    border: 14px solid #2d7aff;
+    filter: blur(24px);
+    opacity: 0.55;
+    z-index: 0;
+    pointer-events: none;
+}
+body[data-page="music"] .neon-arc-core {
+    position: fixed;
+    bottom: -30vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120vw;
+    height: 58vh;
+    border-radius: 50%;
+    border: 4px solid #cce0ff;
+    filter: blur(2px);
+    opacity: 0.85;
+    z-index: 1;
+    box-shadow: 0 0 60px 18px rgba(45,122,255,0.75), inset 0 0 40px 6px rgba(45,122,255,0.45);
+    pointer-events: none;
+}
+
+/* small floating decorative badges (optional) */
+body[data-page="music"] .floating-badge {
+    position: absolute;
+    padding: 8px 14px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.78);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    z-index: 12;
+}
+body[data-page="music"] .badge-bottom-left { bottom: 30px; left: 28px; }
+body[data-page="music"] .badge-bottom-right { bottom: 30px; right: 28px; }
 
 /* Book Modal Specific Styles */
 .book-modal-cover {

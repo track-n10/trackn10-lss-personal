@@ -100,6 +100,7 @@ function scrollCarousel(carouselId, direction) {
                     beatport: 'https://www.beatport.com/track/hero3s/28856250',
                     bandcamp: 'https://track-n10.bandcamp.com/track/hero3s',
                     netease: 'https://music.163.com/album?id=374950029&uct2=U2FsdGVkX18jUO/7t6cxaks7M/pqKOTV8R8UiQoCjXo=',
+                    yandex: 'https://music.yandex.ru/album/42083153/track/151372548?utm_source=web&utm_medium=copy_link',
                     deezer: 'https://www.deezer.com/track/4006435311',
                     audiomack: 'https://audiomack.com/track-n10/song/hero3s',
                     boomplay: 'https://www.boomplay.com/songs/249128348?srModel=COPYLINK&srList=WEB&share_content=music&share_channel=copylink&share_platform=web',
@@ -134,7 +135,8 @@ function scrollCarousel(carouselId, direction) {
                     anghami: '',
                     flo: 'https://www.music-flo.com/detail/album/454736176/albumtrack',
                     joox: 'https://www.joox.com/hk/single/Q__8ghv6LpC1B7Nc_MBiVA==',
-                    qobuz: 'https://open.qobuz.com/album/l08q6d4a1ci55'
+                    qobuz: 'https://open.qobuz.com/album/l08q6d4a1ci55',
+                    yandex: 'https://music.yandex.ru/track/151011663'
                 }
             },
             'killed-on-my-dancefloor': {
@@ -162,7 +164,8 @@ function scrollCarousel(carouselId, direction) {
                     anghami: '',
                     flo: 'https://www.music-flo.com/detail/album/452836767/albumtrack',
                     joox: 'https://www.joox.com/hk/album/WTgJgE48XsG4AT5m6ZhGLQ==',
-                    qobuz: 'https://open.qobuz.com/album/ssindsui1x0sq'
+                    qobuz: 'https://open.qobuz.com/album/ssindsui1x0sq',
+                    yandex: 'https://music.yandex.ru/track/150754401'
                 }
             },
             'gravity': {
@@ -245,7 +248,8 @@ function scrollCarousel(carouselId, direction) {
                     anghami: 'https://play.anghami.com/song/1241068083?refer=featurefm',
                     flo: 'https://www.music-flo.com/detail/album/446095040/albumtrack', 
                     joox: 'https://www.joox.com/hk/album/F8+q2cakRdaSp3yhBZyAkQ==',
-                    qobuz: 'https://open.qobuz.com/track/370253013'
+                    qobuz: 'https://open.qobuz.com/track/370253013',
+                    yandex: 'https://music.yandex.ru/track/149666585'
                 }
             },
             // ALBUMS
@@ -274,7 +278,8 @@ function scrollCarousel(carouselId, direction) {
                     anghami: '',
                     flo: 'https://m.music-flo.com/detail/album/452258384',
                     joox: 'https://www.joox.com/hk/album/OeQd92v7gBhHVEvkAn_IxQ==',
-                    qobuz: 'https://open.qobuz.com/album/x7bojt8j1n2er'
+                    qobuz: 'https://open.qobuz.com/album/x7bojt8j1n2er',
+                    yandex: 'https://music.yandex.ru/album/41329978?utm_source=web&utm_medium=copy_link'
                 }
             },
             'track-n10-album': {
@@ -302,7 +307,8 @@ function scrollCarousel(carouselId, direction) {
                     anghami: 'https://play.anghami.com/album/1076896209',
                     flo: 'https://www.music-flo.com/detail/album/445080425/albumtrack',
                     joox: 'https://www.joox.com/hk/album/zJHPja5ccay+FLQeHWlgPw==',
-                    qobuz: 'https://open.qobuz.com/album/he6s8mg9x9npc'
+                    qobuz: 'https://open.qobuz.com/album/he6s8mg9x9npc',
+                    yandex: 'https://music.yandex.ru/album/40935946'
                 }
             },
             'neon-dreams': {
@@ -330,7 +336,8 @@ function scrollCarousel(carouselId, direction) {
                     anghami: 'https://play.anghami.com/album/1072579932',
                     flo: 'https://www.music-flo.com/detail/album/441545781/albumtrack',
                     joox: 'https://www.joox.com/hk/album/hYTFCr39nLkCu2JZijx6AQ==',
-                    qobuz: 'https://open.qobuz.com/album/etiqzvebc3voc'
+                    qobuz: 'https://open.qobuz.com/album/etiqzvebc3voc',
+                    yandex: 'https://music.yandex.ru/album/41974920?utm_source=web&utm_medium=copy_link'
                 }
             },
             'lost-hopes-dreams': {
@@ -358,7 +365,8 @@ function scrollCarousel(carouselId, direction) {
                     anghami: 'https://play.anghami.com/album/1070092957',   
                     flo: 'https://www.music-flo.com/detail/album/439307246/albumtrack',
                     joox: 'https://www.joox.com/hk/album/8lBqod9PBZZwAt6ODQ8FHg==',
-                    qobuz: 'https://open.qobuz.com/album/cre29toicuw7b'
+                    qobuz: 'https://open.qobuz.com/album/cre29toicuw7b',
+                    yandex: 'https://music.yandex.ru/album/41846635?utm_source=web&utm_medium=copy_link'
                 }
             },
             'please-im-a-star': {
@@ -414,7 +422,8 @@ function scrollCarousel(carouselId, direction) {
                     anghami: 'https://play.anghami.com/album/1068160927',
                     flo: 'https://www.music-flo.com/detail/album/437541403/albumtrack',
                     joox: 'https://www.joox.com/hk/album/ABmbUdGpR3OCnwmdfFvahw==',
-                    qobuz: 'https://open.qobuz.com/album/jrhxnnacmf6xb'
+                    qobuz: 'https://open.qobuz.com/album/jrhxnnacmf6xb',
+                    yandex: 'https://music.yandex.ru/album/40935616?utm_source=web&utm_medium=copy_link'
                 }
             }
         };

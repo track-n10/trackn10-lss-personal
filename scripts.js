@@ -52,6 +52,35 @@ function scrollCarousel(carouselId, direction) {
         // Streaming platform data for each release
         const releaseData = {
             // SINGLES
+            'h4nds-up': {
+                title: 'H4NDS UP',
+                type: 'Single',
+                cover: 'H4NDS-UP_artcover.webp',
+                spotifyEmbed: {
+                    src: 'https://open.spotify.com/embed/track/5lwilDhQm8F6fPwHa4fzwU?utm_source=generator',
+                    height: 152
+                },
+                links: {
+                    spotify: 'https://open.spotify.com/track/5lwilDhQm8F6fPwHa4fzwU',
+                    apple: 'https://geo.music.apple.com/us/album/h4nds-up/6770180005?i=6770180006&app=music&ls=1',
+                    tidal: 'http://www.tidal.com/track/525280588',
+                    youtube: 'https://music.youtube.com/watch?v=qE9jwH9ez3M',
+                    soundcloud: 'https://soundcloud.com/track-n10/h4nds-up',
+                    amazon: 'https://music.amazon.com/tracks/B0H21JKJQW/?ref=dm_ff_amazonmusic_3p',
+                    pandora: '',
+                    beatport: 'https://www.beatport.com/release/h4nds-up/6944866',
+                    bandcamp: 'https://track-n10.bandcamp.com/track/h4nds-up',
+                    netease: 'https://music.163.com/album?id=376679268&uct2=U2FsdGVkX18aynevXnkqZ+VcHIkF9x9fWb2ijf1J56g=',
+                    yandex: 'https://music.yandex.ru/track/151635401',
+                    deezer: 'https://www.deezer.com/track/4025598711',
+                    audiomack: 'https://audiomack.com/track-n10/song/h4nds-up',
+                    boomplay: 'https://www.boomplay.com/songs/250555756?srModel=COPYLINK&srList=WEB&share_content=music&share_channel=copylink&share_platform=web',
+                    anghami: '',
+                    flo: 'https://www.music-flo.com/detail/album/455775473/albumtrack',
+                    joox: '',
+                    qobuz: 'https://open.qobuz.com/track/419192821'
+                }
+            },
             'hero3s': {
                 title: 'HERO3S',
                 type: 'Single',
@@ -402,6 +431,7 @@ function scrollCarousel(carouselId, direction) {
             beatport: { name: 'Beatport', icon: 'https://logosandtypes.com/wp-content/uploads/2024/06/beatport.svg' },
             bandcamp: { name: 'Bandcamp', icon: 'https://cdn.simpleicons.org/bandcamp/629AA9' },
             netease: { name: 'NetEase Cloud Music', icon: 'https://cdn.simpleicons.org/neteasecloudmusic/C20C0C' },
+            yandex: { name: 'Yandex Music', icon: 'yandexlogo.png' },
             deezer: { name: 'Deezer', icon: 'https://vectorseek.com/wp-content/uploads/2023/11/Deezer-Icon-Logo-Vector.svg-.png' },
             audiomack: { name: 'Audiomack', icon: 'https://cdn.simpleicons.org/audiomack/FFA200' },
             boomplay: { name: 'Boomplay', icon: 'https://vectorseek.com/wp-content/uploads/2023/11/Boomplay-Icon-Logo-Vector.svg-.png' },
@@ -1632,7 +1662,7 @@ function scrollCarousel(carouselId, direction) {
 
             // Build platform buttons
             grid.innerHTML = '';
-            const platformOrder = ['spotify', 'apple', 'tidal', 'youtube', 'soundcloud', 'amazon', 'pandora', 'beatport', 'bandcamp', 'netease', 'deezer', 'audiomack', 'boomplay', 'anghami', 'flo', 'joox', 'qobuz'];
+            const platformOrder = ['spotify', 'apple', 'tidal', 'youtube', 'soundcloud', 'amazon', 'pandora', 'beatport', 'bandcamp', 'netease', 'yandex', 'deezer', 'audiomack', 'boomplay', 'anghami', 'flo', 'joox', 'qobuz'];
 
             platformOrder.forEach(platform => {
                 const url = release.links[platform];

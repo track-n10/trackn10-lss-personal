@@ -394,7 +394,8 @@ function scrollCarousel(carouselId, direction) {
                     anghami: 'https://play.anghami.com/album/1069249735',
                     flo: 'https://www.music-flo.com/detail/album/438575177/albumtrack',
                     joox: 'https://www.joox.com/hk/album/loS5171E+slpTfCMnqCoGA==',
-                    qobuz: 'https://open.qobuz.com/album/u3je85qxq5jqc'
+                    qobuz: 'https://open.qobuz.com/album/u3je85qxq5jqc',
+                    yandex: 'https://music.yandex.ru/album/41974921'
                 }
             },
             'discon10-rmx': {

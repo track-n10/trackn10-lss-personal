@@ -52,6 +52,35 @@ function scrollCarousel(carouselId, direction) {
         // Streaming platform data for each release
         const releaseData = {
             // SINGLES
+            'mycatsnameisbriza': {
+                title: "MY CAT'S NAME IS BRIZA",
+                type: 'Single',
+                cover: 'mycatsnameisbriza-cover.webp',
+                spotifyEmbed: {
+                    src: 'https://open.spotify.com/embed/track/3Bh2GACgJrqIxARRiGOyzs?utm_source=generator',
+                    height: 152
+                },
+                links: {
+                    spotify: 'https://open.spotify.com/track/3Bh2GACgJrqIxARRiGOyzs',
+                    apple: 'https://geo.music.apple.com/us/album/my-cats-name-is-briza/6781798373?i=6781798374&app=music&ls=1',
+                    tidal: 'http://www.tidal.com/track/534107201',
+                    youtube: 'https://music.youtube.com/watch?v=3tOLOPwnkDk',
+                    soundcloud: '',
+                    amazon: 'https://music.amazon.com/tracks/B0H5P1CBB7/?ref=dm_ff_amazonmusic_3p',
+                    pandora: '',
+                    beatport: 'https://www.beatport.com/track/my-cats-name-is-briza/29363506',
+                    bandcamp: 'https://track-n10.bandcamp.com/track/my-cats-name-is-briza',
+                    netease: '',
+                    yandex: '',
+                    deezer: 'https://www.deezer.com/track/4092382391',
+                    audiomack: 'https://audiomack.com/track-n10/song/my-cats-name-is-briza?utm_source=featurefm&utm_campaign=onelink&utm_medium=website',
+                    boomplay: 'https://www.boomplay.com/songs/255343693?srModel=COPYLINK&srList=WEB&share_content=music&share_channel=copylink&share_platform=web',
+                    anghami: '',
+                    flo: '',
+                    joox: '',
+                    qobuz: 'https://open.qobuz.com/album/djz0i5d58kphh'
+                }
+            },
             'h4nds-up': {
                 title: 'H4NDS UP',
                 type: 'Single',

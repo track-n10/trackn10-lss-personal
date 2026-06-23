@@ -70,13 +70,13 @@ function scrollCarousel(carouselId, direction) {
                     pandora: '',
                     beatport: 'https://www.beatport.com/track/my-cats-name-is-briza/29363506',
                     bandcamp: 'https://track-n10.bandcamp.com/track/my-cats-name-is-briza',
-                    netease: '',
+                    netease: 'https://music.163.com/album?id=382142665&uct2=U2FsdGVkX1/TmqEwtXAaieC+i5cn4fqwPn+ZQvd0E1o=',
                     yandex: '',
                     deezer: 'https://www.deezer.com/track/4092382391',
                     audiomack: 'https://audiomack.com/track-n10/song/my-cats-name-is-briza?utm_source=featurefm&utm_campaign=onelink&utm_medium=website',
                     boomplay: 'https://www.boomplay.com/songs/255343693?srModel=COPYLINK&srList=WEB&share_content=music&share_channel=copylink&share_platform=web',
                     anghami: '',
-                    flo: '',
+                    flo: 'https://www.music-flo.com/detail/album/457664475/albumtrack',
                     joox: '',
                     qobuz: 'https://open.qobuz.com/album/djz0i5d58kphh'
                 }

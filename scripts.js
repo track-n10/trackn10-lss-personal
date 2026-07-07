@@ -52,6 +52,35 @@ function scrollCarousel(carouselId, direction) {
         // Streaming platform data for each release
         const releaseData = {
             // SINGLES
+            'pop-power': {
+                title: 'POP POWER',
+                type: 'Single',
+                cover: 'popowerc- cover.webp',
+                spotifyEmbed: {
+                    src: 'https://open.spotify.com/embed/album/5CzzyUgcvbIkFP0KKGSEXE?utm_source=generator&si=e2e39693210a4f82',
+                    height: 152
+                },
+                links: {
+                    spotify: 'https://open.spotify.com/album/5CzzyUgcvbIkFP0KKGSEXE',
+                    apple: 'https://geo.music.apple.com/us/album/pop-power-single/6786013492?app=music&ls=1',
+                    tidal: 'http://www.tidal.com/album/538396038',
+                    youtube: 'https://music.youtube.com/playlist?list=OLAK5uy_nTKbo1_xsQ_3ZauCTP5RM6QxFyaBZsHSY',
+                    soundcloud: '',
+                    amazon: 'https://music.amazon.com/albums/B0H6YK8F6Y?ref=dm_ff_amazonmusic_3p',
+                    pandora: '',
+                    beatport: 'https://www.beatport.com/release/pop-power/7141893',
+                    bandcamp: 'https://track-n10.bandcamp.com/album/pop-power',
+                    netease: '',
+                    yandex: '',
+                    deezer: 'https://www.deezer.com/album/1017513161',
+                    audiomack: 'https://audiomack.com/track-n10/album/pop-power?utm_source=featurefm&utm_campaign=onelink&utm_medium=website',
+                    boomplay: '',
+                    anghami: '',
+                    flo: '',
+                    joox: '',
+                    qobuz: 'https://open.qobuz.com/album/ileoaxz427otz'
+                }
+            },
             'mycatsnameisbriza': {
                 title: "MY CAT'S NAME IS BRIZA",
                 type: 'Single',

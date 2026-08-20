@@ -52,6 +52,35 @@ function scrollCarousel(carouselId, direction) {
         // Streaming platform data for each release
         const releaseData = {
             // SINGLES
+            'trancia': {
+                title: 'TRANCIA',
+                type: 'Single',
+                cover: 'trancia-cover.webp',
+                spotifyEmbed: {
+                    src: 'https://open.spotify.com/embed/album/50I0J5Qy04ESqEgAKn8wWQ?utm_source=generator&si=54a00c7918624883',
+                    height: 152
+                },
+                links: {
+                    spotify: '',
+                    apple: '',
+                    tidal: '',
+                    youtube: '',
+                    soundcloud: '',
+                    amazon: '',
+                    pandora: '',
+                    beatport: '',
+                    bandcamp: '',
+                    netease: '',
+                    yandex: '',
+                    deezer: '',
+                    audiomack: '',
+                    boomplay: '',
+                    anghami: '',
+                    flo: '',
+                    joox: '',
+                    qobuz: ''
+                }
+            },
             'pop-power': {
                 title: 'POP POWER',
                 type: 'Single',

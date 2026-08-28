@@ -66,19 +66,19 @@ function scrollCarousel(carouselId, direction) {
                     tidal: 'https://listen.tidal.com/track/552179708',
                     youtube: 'https://music.youtube.com/watch?v=DEJE6nSVeHg',
                     soundcloud: 'https://soundcloud.com/track-n10/trancia',
-                    amazon: '',
-                    pandora: '',
+                    amazon: 'https://music.amazon.com/tracks/B0HF67HBHT/?ref=dm_ff_amazonmusic_3pwwwwwwwwwwwwwwww',
+                    pandora: 'https://pandora.app.link/?$desktop_url=https%3A%2F%2Fwww.pandora.com%2Fartist%2Ftrack-n10%2Ftrancia%2Ftrancia%2FTRvKwXplr5Ptq4k&$ios_deeplink_path=pandorav4%3A%2F%2Fbackstage%2Ftrack%3Ftoken%3DTR%3A212083709&$android_deeplink_path=pandorav4%3A%2F%2Fbackstage%2Ftrack%3Ftoken%3DTR%3A212083709&~channel=Partner%20Catalog%20Search%20API',
                     beatport: 'https://www.beatport.com/pt/release/trancia/7347997',
                     bandcamp: 'https://track-n10.bandcamp.com/track/trancia',
                     netease: '',
                     yandex: '',
-                    deezer: '',
+                    deezer: 'https://www.deezer.com/track/4222499592',
                     audiomack: 'https://audiomack.com/track-n10/song/trancia-1',
-                    boomplay: '',
+                    boomplay: 'https://www.boomplay.com/songs/264372398?srModel=openapi_featurefm',
                     anghami: '',
-                    flo: '',
+                    flo: 'https://www.music-flo.com/detail/album/462042321/albumtrack',
                     joox: '',
-                    qobuz: ''
+                    qobuz: 'https://open.qobuz.com/track/447026637'
                 }
             },
             'pop-power': {

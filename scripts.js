@@ -84,7 +84,7 @@ function scrollCarousel(carouselId, direction) {
             'pop-power': {
                 title: 'POP POWER',
                 type: 'Single',
-                cover: 'popowerc- cover.webp',
+                cover: 'pop-power-cover.webp',
                 spotifyEmbed: {
                     src: 'https://open.spotify.com/embed/album/5CzzyUgcvbIkFP0KKGSEXE?utm_source=generator&si=e2e39693210a4f82',
                     height: 152

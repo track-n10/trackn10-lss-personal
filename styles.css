@@ -481,7 +481,7 @@ body[data-page="music"] {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
+    display: flex;
 }
 .avatar-frame::after {
     content: '';

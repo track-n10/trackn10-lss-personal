@@ -471,9 +471,11 @@ body[data-page="music"] {
 
 .avatar-frame {
     position: relative;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100vw;
     height: clamp(220px, 38vw, 520px);
-    margin: 0 calc(50% - 50vw);
+    margin: 0;
     overflow: hidden;
     border-radius: 0;
 }
@@ -484,23 +486,9 @@ body[data-page="music"] {
     object-position: center top;
     display: block;
 }
-.avatar-frame::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    background:
-        linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(var(--avatar-dark-rgb), 0.14) 58%, rgba(var(--avatar-dark-rgb), 0.56) 78%, rgba(var(--avatar-dark-rgb), 0.92) 100%);
-}
 @media (min-width: 768px) {
     .avatar-frame {
-        height: clamp(300px, 32vw, 520px);
-    }
-    .avatar-frame::after {
-        background:
-            linear-gradient(180deg, rgba(0, 0, 0, 0) 42%, rgba(var(--avatar-dark-rgb), 0.16) 58%, rgba(var(--avatar-dark-rgb), 0.58) 80%, rgba(var(--avatar-dark-rgb), 0.94) 100%),
-            linear-gradient(90deg, rgba(var(--avatar-dark-rgb), 0.7) 0%, rgba(var(--avatar-dark-rgb), 0.18) 18%, rgba(0, 0, 0, 0) 38%),
-            linear-gradient(270deg, rgba(var(--avatar-dark-rgb), 0.7) 0%, rgba(var(--avatar-dark-rgb), 0.18) 18%, rgba(0, 0, 0, 0) 38%);
+        height: clamp(360px, 40vw, 600px);
     }
 }
 

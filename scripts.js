@@ -139,64 +139,6 @@ function scrollCarousel(carouselId, direction) {
                     qobuz: 'https://open.qobuz.com/album/djz0i5d58kphh'
                 }
             },
-            'h4nds-up': {
-                title: 'H4NDS UP',
-                type: 'Single',
-                cover: 'H4NDS-UP_artcover.webp',
-                spotifyEmbed: {
-                    src: 'https://open.spotify.com/embed/track/5lwilDhQm8F6fPwHa4fzwU?utm_source=generator',
-                    height: 152
-                },
-                links: {
-                    spotify: 'https://open.spotify.com/track/5lwilDhQm8F6fPwHa4fzwU',
-                    apple: 'https://geo.music.apple.com/us/album/h4nds-up/6770180005?i=6770180006&app=music&ls=1',
-                    tidal: 'http://www.tidal.com/track/525280588',
-                    youtube: 'https://music.youtube.com/watch?v=qE9jwH9ez3M',
-                    soundcloud: 'https://soundcloud.com/track-n10/h4nds-up',
-                    amazon: 'https://music.amazon.com/tracks/B0H21JKJQW/?ref=dm_ff_amazonmusic_3p',
-                    pandora: 'https://pandora.app.link/?$desktop_url=https%3A%2F%2Fwww.pandora.com%2Fartist%2Ftrack-n10%2Fh4nds-up%2Fh4nds-up%2FTRmgkz3lk3j5vdJ&$ios_deeplink_path=pandorav4%3A%2F%2Fbackstage%2Ftrack%3Ftoken%3DTR%3A205933299&$android_deeplink_path=pandorav4%3A%2F%2Fbackstage%2Ftrack%3Ftoken%3DTR%3A205933299&~channel=Partner%20Catalog%20Search%20API',
-                    beatport: 'https://www.beatport.com/release/h4nds-up/6944866',
-                    bandcamp: 'https://track-n10.bandcamp.com/track/h4nds-up',
-                    netease: 'https://music.163.com/album?id=376679268&uct2=U2FsdGVkX18aynevXnkqZ+VcHIkF9x9fWb2ijf1J56g=',
-                    yandex: 'https://music.yandex.ru/track/151635401',
-                    deezer: 'https://www.deezer.com/track/4025598711',
-                    audiomack: 'https://audiomack.com/track-n10/song/h4nds-up',
-                    boomplay: 'https://www.boomplay.com/songs/250555756?srModel=COPYLINK&srList=WEB&share_content=music&share_channel=copylink&share_platform=web',
-                    anghami: '',
-                    flo: 'https://www.music-flo.com/detail/album/455775473/albumtrack',
-                    joox: '',
-                    qobuz: 'https://open.qobuz.com/track/419192821'
-                }
-            },
-            'hero3s': {
-                title: 'HERO3S',
-                type: 'Single',
-                cover: 'HERO3S-cover.webp',
-                spotifyEmbed: {
-                    src: 'https://open.spotify.com/embed/track/3azs6oiCerJwj95H7PiwdS?utm_source=generator',
-                    height: 152
-                },
-                links: {
-                    spotify: 'https://open.spotify.com/track/3azs6oiCerJwj95H7PiwdS',
-                    apple: 'https://geo.music.apple.com/au/album/hero3s/6767746485?i=6767746488&app=music&ls=1',
-                    tidal: 'http://www.tidal.com/track/522366556',
-                    youtube: 'https://music.youtube.com/watch?v=CJwlwZu4LMc',
-                    soundcloud: 'https://soundcloud.com/track-n10/hero3s?si=1670daedbe54496cbd95bbd620af31cb&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing',
-                    amazon: 'https://music.amazon.com/tracks/B0GZT6FDRH/?ref=dm_ff_amazonmusic_3p',
-                    pandora: 'https://pandora.app.link/?$desktop_url=https%3A%2F%2Fwww.pandora.com%2Fartist%2Ftrack-n10%2Fhero3s%2Fhero3s%2FTR2vJ7b32d9tdpm&$ios_deeplink_path=pandorav4%3A%2F%2Fbackstage%2Ftrack%3Ftoken%3DTR%3A205933297&$android_deeplink_path=pandorav4%3A%2F%2Fbackstage%2Ftrack%3Ftoken%3DTR%3A205933297&~channel=Partner%20Catalog%20Search%20API',
-                    beatport: 'https://www.beatport.com/track/hero3s/28856250',
-                    bandcamp: 'https://track-n10.bandcamp.com/track/hero3s',
-                    netease: 'https://music.163.com/album?id=374950029&uct2=U2FsdGVkX18jUO/7t6cxaks7M/pqKOTV8R8UiQoCjXo=',
-                    yandex: 'https://music.yandex.ru/album/42083153/track/151372548?utm_source=web&utm_medium=copy_link',
-                    deezer: 'https://www.deezer.com/track/4006435311',
-                    audiomack: 'https://audiomack.com/track-n10/song/hero3s',
-                    boomplay: 'https://www.boomplay.com/songs/249128348?srModel=COPYLINK&srList=WEB&share_content=music&share_channel=copylink&share_platform=web',
-                    anghami: '',
-                    flo: 'https://www.music-flo.com/detail/album/455195108/albumtrack',
-                    joox: 'https://www.joox.com/hk/album/TU2O_Q1_ayKwO2jGyCtD2w==',
-                    qobuz: 'https://open.qobuz.com/track/416585916'
-                }
-            },
             'do-not-breathe': {
                 title: 'DO NOT BREATHE',
                 type: 'Single',
@@ -226,62 +168,6 @@ function scrollCarousel(carouselId, direction) {
                     yandex: 'https://music.yandex.ru/track/151011663'
                 }
             },
-            'killed-on-my-dancefloor': {
-                title: 'Killed Me On My Dancefloor',
-                type: 'Single',
-                cover: 'killed-on-my-dancefloor-artcover.webp',
-                spotifyEmbed: {
-                    src: 'https://open.spotify.com/embed/track/590sLu3s920fUkkPoS50pQ?utm_source=generator',
-                    height: 152
-                },
-                links: {
-                    spotify: 'https://open.spotify.com/track/590sLu3s920fUkkPoS50pQ',
-                    apple: 'https://geo.music.apple.com/us/album/killed-me-on-my-dancefloor/1888559325?i=1888559386&app=music&ls=1',
-                    tidal: 'http://www.tidal.com/track/510546445',
-                    youtube: 'https://music.youtube.com/watch?v=cdUYNDQ6oEk',
-                    soundcloud: 'https://soundcloud.com/track-n10/sets/killed-me-on-my-dancefloor',
-                    amazon: 'https://music.amazon.com/tracks/B0GV3636H8/?ref=dm_ff_amazonmusic_3p',
-                    pandora: 'https://pandora.app.link/?$desktop_url=https%3A%2F%2Fwww.pandora.com%2Fartist%2Ftrack-n10%2Fkilled-me-on-my-dancefloor%2Fkilled-me-on-my-dancefloor%2FTR4t75Xq7rhjwl2&$ios_deeplink_path=pandorav4%3A%2F%2Fbackstage%2Ftrack%3Ftoken%3DTR%3A199398813&$android_deeplink_path=pandorav4%3A%2F%2Fbackstage%2Ftrack%3Ftoken%3DTR%3A199398813&~channel=Partner%20Catalog%20Search%20API',
-                    beatport: '',
-                    bandcamp: 'https://track-n10.bandcamp.com/track/killed-me-on-my-dancefloor',
-                    netease: 'https://music.163.com/album?id=368133578&uct2=U2FsdGVkX1+Ti8JrMyoG76x4MSFmZyZ0sbwQg7RxIXM=',
-                    deezer: 'https://www.deezer.com/track/3924433801',
-                    audiomack: 'https://audiomack.com/track-n10/song/killed-me-on-my-dancefloor-1?utm_source=featurefm&utm_campaign=onelink&utm_medium=website',
-                    boomplay: 'https://www.boomplay.com/albums/128503889?from=artists&srModel=COPYLINK&srList=WEB&share_content=album&share_channel=copylink&share_platform=web',
-                    anghami: '',
-                    flo: 'https://www.music-flo.com/detail/album/452836767/albumtrack',
-                    joox: 'https://www.joox.com/hk/album/WTgJgE48XsG4AT5m6ZhGLQ==',
-                    qobuz: 'https://open.qobuz.com/album/ssindsui1x0sq',
-                    yandex: 'https://music.yandex.ru/track/150754401'
-                }
-            },
-            'gravity': {
-                title: 'GRAVITY',
-                type: 'Single',
-                cover: 'GRAVITY-cover.webp',
-                spotifyEmbed: {
-                    src: 'https://open.spotify.com/embed/track/67YxJhR1kmjsZmICpiC9X0?utm_source=generator',
-                    height: 152
-                },
-                links: {
-                    spotify:'https://open.spotify.com/intl-pt/track/67YxJhR1kmjsZmICpiC9X0?si=3687c6679c14418b',
-                    apple: 'https://geo.music.apple.com/pt/album/_/1876353886?app=music&at=1000lHKX&ct=linktree_http&i=1876353888&itscg=30200&itsct=lt_m&ls=1&mt=1',
-                    tidal: 'https://listen.tidal.com/track/497521583',
-                    youtube: 'https://music.youtube.com/watch?v=Xsl9Fadyfhs',
-                    soundcloud: 'https://soundcloud.com/track-n10/sets/gravity-328039287',
-                    amazon: 'https://music.amazon.com/albums/B0GMKC7WQ8?trackAsin=B0GMK3B759',
-                    pandora: 'https://www.pandora.com/TR:192506662',
-                    beatport: 'https://www.beatport.com/pt/track/gravity-pulling-me-makes-me-wanna-sped-up/24023109',
-                    bandcamp: 'https://track-n10.bandcamp.com/album/gravity',
-                    netease: 'https://music.163.com/album?id=361564841&uct2=U2FsdGVkX1+Pimw0z7ZXtDdnm9tMIMwPW597K6CHrTk=',
-                    deezer: 'https://www.deezer.com/track/3833050861',
-                    audiomack: 'https://audiomack.com/song/track-n10/gravity-pulling-me-makes-me-wanna-sped-up-sped-up?utm_source=featurefm&utm_campaign=onelink&utm_medium=website',
-                    boomplay: 'https://www.boomplay.com/songs/237287404?srModel=COPYLINK&srList=WEB&share_content=music&share_channel=copylink&share_platform=web',
-                    anghami: '',
-                    flo: 'https://www.music-flo.com/detail/track/574632535/details',
-                    qobuz: 'https://open.qobuz.com/track/392066677'
-                }
-            },
             'iconic-remix': {
                 title: 'ICONIC (TRACK_N10 Remix)',
                 type: 'Remix Single',
@@ -308,35 +194,6 @@ function scrollCarousel(carouselId, direction) {
                     flo: 'https://www.music-flo.com/detail/track/561402279/details',
                     joox: 'https://www.joox.com/hk/single/tAihJLzjp+rsWAhk9c_s5Q==',
                     qobuz: 'https://open.qobuz.com/track/367622941'
-                }
-            },
-            'famous': {
-                title: 'FAMOUS (THAT AMOUS S2)',
-                type: 'Single',
-                cover: 'https://live.staticflickr.com/65535/55025983769_9ae54324af_c.jpg',
-                spotifyEmbed: {
-                    src: 'https://open.spotify.com/embed/track/74jIYF5lU82HMQhpxRKSya?utm_source=generator',
-                    height: 352
-                },
-                links: {
-                    spotify: 'https://open.spotify.com/track/74jIYF5lU82HMQhpxRKSya',
-                    apple: 'https://geo.music.apple.com/album/_/1855251927',
-                    tidal: 'https://listen.tidal.com/track/475238054',
-                    youtube: 'https://music.youtube.com/watch?v=k0FqO35W88U&si=dWgViEtg85q14jd7',
-                    soundcloud: 'https://soundcloud.com/track-n10/famous',
-                    amazon: 'https://music.amazon.com/albums/B0G2YT6862?trackAsin=B0G2YN5SPQ',
-                    pandora: 'https://www.pandora.com/TR:181097686',
-                    beatport: 'https://www.beatport.com/track/famous/22706105',
-                    bandcamp: 'https://track-n10.bandcamp.com/track/famous',
-                    netease: 'https://y.music.163.com/m/song?id=3319792051&userid=13850510204&dlt=0846',
-                    deezer: 'https://www.deezer.com/album/859666272',
-                    audiomack: 'https://audiomack.com/track-n10/song/famous?share-user-id=165688405',
-                    boomplay: 'https://www.boomplay.com/songs/224080488?srModel=COPYLINK&srList=WEB&share_content=music&share_channel=copylink&share_platform=web',
-                    anghami: 'https://play.anghami.com/song/1241068083?refer=featurefm',
-                    flo: 'https://www.music-flo.com/detail/album/446095040/albumtrack', 
-                    joox: 'https://www.joox.com/hk/album/F8+q2cakRdaSp3yhBZyAkQ==',
-                    qobuz: 'https://open.qobuz.com/track/370253013',
-                    yandex: 'https://music.yandex.ru/track/149666585'
                 }
             },
             // ALBUMS
@@ -454,35 +311,6 @@ function scrollCarousel(carouselId, direction) {
                     joox: 'https://www.joox.com/hk/album/8lBqod9PBZZwAt6ODQ8FHg==',
                     qobuz: 'https://open.qobuz.com/album/cre29toicuw7b',
                     yandex: 'https://music.yandex.ru/album/41846635?utm_source=web&utm_medium=copy_link'
-                }
-            },
-            'please-im-a-star': {
-                title: "PLEASE, I'M A STAR! vol.1",
-                type: 'Album',
-                cover: 'PLSim astar COVER.webp',
-                spotifyEmbed: {
-                    src: 'https://open.spotify.com/embed/album/6WEoMhVy04gyQGKIusL6km?utm_source=generator',
-                    height: 152
-                },
-                links: {
-                    spotify: 'https://open.spotify.com/album/2XYZ4E7S9D3Fq3q3q3q3q3',
-                    apple: 'https://music.apple.com/us/album/please-im-a-star-vol-1/1787130801',
-                    tidal: 'https://tidal.com/browse/album/401685114',
-                    youtube: 'https://music.youtube.com/playlist?list=OLAK5uy_nN3N3N3N3N3N3N3N3N3N3N3N3N3N3N3N3',
-                    soundcloud: 'https://soundcloud.com/trackn10/sets/please-im-a-star-vol-1',
-                    amazon: 'https://music.amazon.com/albums/B0DT7X5KP5',
-                    pandora: 'https://www.pandora.com/AL:48729235',
-                    beatport: 'https://www.beatport.com/pt/release/please-im-a-star-vol1/5509630',
-                    bandcamp: 'https://trackn10.bandcamp.com/album/please-im-a-star-vol-1',
-                    netease: 'https://y.music.163.com/m/album?id=273012769&userid=13850510204',
-                    deezer: 'https://www.deezer.com/album/676713831',
-                    audiomack: 'https://audiomack.com/track_n10/album/please-im-a-star-vol-1',
-                    boomplay: 'https://www.boomplay.com/albums/111172050',
-                    anghami: 'https://play.anghami.com/album/1069249735',
-                    flo: 'https://www.music-flo.com/detail/album/438575177/albumtrack',
-                    joox: 'https://www.joox.com/hk/album/loS5171E+slpTfCMnqCoGA==',
-                    qobuz: 'https://open.qobuz.com/album/u3je85qxq5jqc',
-                    yandex: 'https://music.yandex.ru/album/41974921'
                 }
             },
             'discon10-rmx': {

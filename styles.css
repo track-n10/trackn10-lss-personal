@@ -1962,6 +1962,47 @@ body[data-page="music"] .platforms-card::after {
     background: linear-gradient(90deg, transparent, var(--interior-red), transparent);
     box-shadow: 0 -10px 30px 2px rgba(155, 0, 20, 0.3);
 }
+body[data-page="music"] .release-tile {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+body[data-page="music"] .release-cta {
+    display: flex;
+    min-height: 2.9rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    padding: 0.65rem 1rem;
+    border: 1px solid rgba(240, 181, 188, 0.48);
+    border-radius: 9999px;
+    background: linear-gradient(135deg, rgba(155, 0, 20, 0.92), rgba(95, 0, 14, 0.92));
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    line-height: 1.35;
+    text-decoration: none;
+    box-shadow: 0 6px 18px rgba(80, 0, 10, 0.2);
+    transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+body[data-page="music"] .release-cta:hover {
+    transform: translateY(-2px);
+    border-color: #f0b5bc;
+    background: linear-gradient(135deg, #b60018, #790010);
+    box-shadow: 0 10px 24px rgba(80, 0, 10, 0.32);
+}
+body[data-page="music"] .release-cta:focus-visible {
+    outline: 2px solid #f0b5bc;
+    outline-offset: 3px;
+}
+body[data-page="music"] .release-cta > i:first-child {
+    font-size: 0.95rem;
+}
+body[data-page="music"] .release-cta > i:last-child {
+    font-size: 0.7rem;
+    opacity: 0.8;
+}
 
 /* Light editorial sections break up the dark content pages. */
 body[data-page]:not([data-page="home"]) {

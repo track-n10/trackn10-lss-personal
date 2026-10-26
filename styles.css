@@ -1532,26 +1532,28 @@ body[data-page="home"] .home-hero {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    width: 100vw;
+    max-width: none;
     min-height: clamp(34rem, 72svh, 48rem);
-    margin-bottom: clamp(1.5rem, 4vw, 3rem);
+    margin: 0 calc(50% - 50vw) clamp(1.5rem, 4vw, 3rem);
     padding: clamp(1.5rem, 5vw, 4rem);
     overflow: hidden;
     text-align: left;
 }
 body[data-page="home"] .home-hero .avatar-frame {
     position: absolute;
-    inset: 0 auto auto 50%;
+    inset: 0;
     z-index: 0;
-    width: 100vw;
+    width: 100%;
     height: 100%;
     margin: 0;
-    transform: translateX(-50%);
+    transform: none;
     background: var(--home-red);
 }
 body[data-page="home"] .home-hero .avatar-frame img {
     filter: grayscale(100%) contrast(1.12);
     mix-blend-mode: multiply;
-    object-position: center 38%;
+    object-position: center top;
 }
 body[data-page="home"] .home-hero .avatar-frame::after {
     position: absolute;

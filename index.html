@@ -66,6 +66,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap"></noscript>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap"></noscript>
 
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
@@ -82,9 +84,9 @@
 
     <div class="animated-bg" aria-hidden="true"></div>
 
-    <main class="w-full max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-5xl mx-auto flex flex-col items-center relative z-10 px-4 pb-10 md:pb-16">
+    <main class="home-main w-full max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-5xl mx-auto flex flex-col items-center relative z-10 px-4 pb-10 md:pb-16">
 
-        <section class="text-center space-y-4 md:space-y-5 mt-0 mb-6 md:mb-8 fade-in w-full" aria-labelledby="hero-title">
+        <section class="home-hero text-center space-y-4 md:space-y-5 mt-0 mb-6 md:mb-8 fade-in w-full" aria-labelledby="hero-title">
             <a class="avatar-frame block cursor-pointer" href="index.html" aria-label="Go to homepage">
                 <img
                     src="avatar.webp"
@@ -94,7 +96,7 @@
                 >
             </a>
 
-            <div class="flex flex-col items-center w-full">
+            <div class="home-identity flex flex-col items-center w-full">
                 <h1 id="hero-title" class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-widest text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]">TRACK_N10</h1>
                 <h2 class="text-md md:text-lg lg:text-xl text-neutral-400 font-light mt-1 md:mt-2 tracking-wide">LEONARDO SALES SANTOS</h2>
 
@@ -114,49 +116,49 @@
             </div>
         </section>
 
-        <nav class="flex flex-wrap justify-center gap-2 md:gap-3 mb-8 md:mb-10 w-full sticky top-4 z-50 p-2 md:p-3 rounded-2xl backdrop-blur-md bg-black/20 border border-white/5" aria-label="Primary navigation">
+        <nav class="home-nav flex flex-wrap justify-center gap-2 md:gap-3 mb-8 md:mb-10 w-full sticky top-4 z-50 p-2 md:p-3 rounded-2xl backdrop-blur-md bg-black/20 border border-white/5" aria-label="Primary navigation">
             <a href="index.html" data-nav-page="home" class="cta-btn primary" aria-current="page">
-                <i class="fas fa-house"></i>
+                <i class="fas fa-house" aria-hidden="true"></i>
                 Home
             </a>
             <a href="music.html" data-nav-page="music" class="cta-btn secondary">
-                <i class="fas fa-headphones"></i>
+                <i class="fas fa-wave-square" aria-hidden="true"></i>
                 My music
             </a>
             <a href="books.html" data-nav-page="books" class="cta-btn secondary">
-                <i class="fas fa-book-open"></i>
+                <i class="fas fa-book-open-reader" aria-hidden="true"></i>
                 My books
             </a>
             <a href="vinyls.html" data-nav-page="vinyls" class="cta-btn secondary">
-                <i class="fas fa-record-vinyl"></i>
+                <i class="fas fa-compact-disc" aria-hidden="true"></i>
                 Vinyls/CD
             </a>
             <a href="links.html" data-nav-page="links" class="cta-btn secondary">
-                <i class="fas fa-link"></i>
+                <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
                 Extra links
             </a>
             <a href="about.html" data-nav-page="about" class="cta-btn secondary">
-                <i class="fas fa-user"></i>
+                <i class="fas fa-user-astronaut" aria-hidden="true"></i>
                 About
             </a>
         </nav>
 
-        <section class="w-full mb-8 md:mb-10" aria-labelledby="hub-heading">
+        <section class="home-destinations w-full mb-8 md:mb-10" aria-labelledby="hub-heading">
             <h2 id="hub-heading" class="text-xs md:text-sm uppercase tracking-widest text-cyan-400 text-center mb-4">Where do you want to go?</h2>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
                 <a href="music.html" class="glass-card link-btn hub-cta border border-violet-500/20 hover:border-violet-400/50 group">
-                    <i class="fas fa-headphones hub-icon text-violet-300" aria-hidden="true"></i>
+                    <i class="fas fa-wave-square hub-icon text-violet-300" aria-hidden="true"></i>
                     <span class="text-lg font-bold text-white group-hover:text-violet-200">Listen to my music</span>
                     <span class="text-xs text-neutral-400 mt-1">Singles, albums &amp; streaming</span>
                 </a>
                 <a href="books.html" class="glass-card link-btn hub-cta border border-amber-500/20 hover:border-amber-400/50 group">
-                    <i class="fas fa-book-open hub-icon text-amber-300" aria-hidden="true"></i>
+                    <i class="fas fa-book-open-reader hub-icon text-amber-300" aria-hidden="true"></i>
                     <span class="text-lg font-bold text-white group-hover:text-amber-200">Read my books</span>
                     <span class="text-xs text-neutral-400 mt-1"><em>Ultra Qualia</em> &amp; <em>Intrusive Thoughts</em></span>
                 </a>
                 <a href="vinyls.html" class="glass-card link-btn hub-cta border border-orange-500/20 hover:border-orange-400/50 group">
-                    <i class="fas fa-record-vinyl hub-icon text-orange-300" aria-hidden="true"></i>
+                    <i class="fas fa-compact-disc hub-icon text-orange-300" aria-hidden="true"></i>
                     <span class="text-lg font-bold text-white group-hover:text-orange-200">Vinyls &amp; CDs</span>
                     <span class="text-xs text-neutral-400 mt-1">Physical releases</span>
                 </a>
@@ -168,7 +170,7 @@
             </div>
         </section>
 
-        <section class="w-full mb-8 md:mb-10" aria-labelledby="latest-heading">
+        <section class="home-latest w-full mb-8 md:mb-10" aria-labelledby="latest-heading">
             <p id="latest-heading" class="text-xs md:text-sm uppercase tracking-widest text-purple-300 text-center mb-3">Just dropped</p>
 
             <a href="music.html#trancia" class="glass-card latest-strip link-btn border border-lime-500/20 hover:border-lime-400/40 group w-full">
@@ -183,7 +185,7 @@
             </a>
         </section>
 
-        <section class="w-full mb-6 md:mb-8 fade-in" aria-labelledby="about-teaser-heading">
+        <section class="home-about w-full mb-6 md:mb-8 fade-in" aria-labelledby="about-teaser-heading">
             <div class="glass-card rounded-2xl p-6 md:p-8 border border-white/20 relative overflow-hidden">
                 <div class="absolute top-0 right-0 w-48 h-48 bg-gradient-to-br from-purple-500/15 to-transparent rounded-full blur-3xl" aria-hidden="true"></div>
 
